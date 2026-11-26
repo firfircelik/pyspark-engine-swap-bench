@@ -162,3 +162,63 @@ sfp = pd.read_csv(f"{R}/sf100/final/sf100_attempts.csv") if os.path.exists(f"{R}
 PL = pd.DataFrame(plan); PL.to_csv(f"{OUT}/rep_plan.csv", index=False)
 print(PL.round(2).to_string()); print("TOTAL add hours", PL.add_hours.sum().round(2))
 if sfp is not None: print(sfp.columns.tolist()); print(sfp.head(3).to_string())
+
+# ---------- REVISION (2026-11-26, after technical review) ----------
+# Primary Table 1 interval: engine-stratified Welch-type CI on log totals. Run-to-run variance of log(total) is pooled
+# only within an engine (each SF30 TPC-H cell with n=2 contributes 1 df); df by Welch-Satterthwaite.
+# Sensitivity: cell-specific Welch (each cell's own variance). AAL-iso and SF100 rows: [min, max] ratio of rep totals only.
+ENG = lambda c: next(e for e in ["spark420", "spark413", "comet420", "sail", "duckdb"] if c.startswith(e))
+cellv = []
+for (c, cfg), g in p2[p2.wl == "tpch"].groupby(["cond", "cfg"]):
+    t = np.log(g.groupby("rep").wall_s.sum().values)
+    if len(t) > 1: cellv.append(dict(cond=c, cfg=cfg, engine=ENG(cfg), var=t.var(ddof=1), dof=len(t) - 1))
+CV = pd.DataFrame(cellv)
+EV = CV.groupby("engine").apply(lambda d: pd.Series(dict(var=(d["var"] * d.dof).sum() / d.dof.sum(), dof=d.dof.sum(), cells=len(d))), include_groups=False)
+EV["sd"] = np.sqrt(EV["var"]); EV.to_csv(f"{OUT}/noise_by_engine_total.csv")
+perq_df = pd.DataFrame(perq)
+t1 = []
+for (name, df, filt, a, b), r in zip(CRIT, res):
+    sub = df
+    for k, v in filt.items(): sub = sub[sub[k] == v]
+    qs = sorted(set(sub[sub.cfg == a].q) & set(sub[sub.cfg == b].q), key=lambda s: (len(s), s))
+    ra_ = sub[(sub.cfg == a) & sub.q.isin(qs)].groupby("rep").wall_s.sum(); rb_ = sub[(sub.cfg == b) & sub.q.isin(qs)].groupby("rep").wall_s.sum()
+    pq = perq_df[perq_df.comparison == name]
+    lrq = np.log(pq.ratio.values)
+    row = dict(comparison=name, n_queries=len(qs), reps_a=len(ra_), reps_b=len(rb_), ratio=r["ratio"],
+               min_ratio=ra_.min() / rb_.max(), max_ratio=ra_.max() / rb_.min(),
+               queries_faster=r["queries_faster"], fully_separated_faster=int((pq.cliffs_delta == -1).sum()),
+               fully_separated_slower=int((pq.cliffs_delta == 1).sum()),
+               perq_median_ratio=float(np.exp(np.median(lrq))), perq_min_ratio=float(pq.ratio.min()), perq_max_ratio=float(pq.ratio.max()),
+               wilcoxon_these_queries_p=r["query_level_wilcoxon_p"])
+    if "SF30" in name:
+        lr_ = math.log(r["ratio"]); ea, eb = ENG(a), ENG(b); na, nb = r["reps_a"], r["reps_b"]
+        va, vb = EV.loc[ea, "var"] / na, EV.loc[eb, "var"] / nb
+        dfw = (va + vb) ** 2 / (va ** 2 / EV.loc[ea, "dof"] + vb ** 2 / EV.loc[eb, "dof"]); se = math.sqrt(va + vb); tc = stats.t.ppf(0.975, dfw)
+        row.update(strat_lo=math.exp(lr_ - tc * se), strat_hi=math.exp(lr_ + tc * se), strat_df=dfw, strat_p=2 * stats.t.sf(abs(lr_ / se), dfw))
+        ca = CV[(CV.cond == filt["cond"]) & (CV.cfg == a)].iloc[0]; cb = CV[(CV.cond == filt["cond"]) & (CV.cfg == b)].iloc[0]
+        va, vb = ca["var"] / na, cb["var"] / nb; dfc = (va + vb) ** 2 / (va ** 2 / ca.dof + vb ** 2 / cb.dof); se = math.sqrt(va + vb); tc = stats.t.ppf(0.975, dfc)
+        row.update(cell_lo=math.exp(lr_ - tc * se), cell_hi=math.exp(lr_ + tc * se), cell_df=dfc)
+        lo_p, hi_p = [x for x in P[P.comparison == name][["pooled_lo", "pooled_hi"]].values[0]]
+        row.update(old_pooled_lo=lo_p, old_pooled_hi=hi_p)
+    t1.append(row)
+T1 = pd.DataFrame(t1)
+# Holm across the family of 10 Table 1 comparisons; the two rows without a test (AAL-iso, SF100) enter as p = 1
+T1["strat_p_holm10"] = multipletests(T1.strat_p.fillna(1.0).values, method="holm")[1]
+T1.loc[T1.strat_p.isna(), "strat_p_holm10"] = np.nan
+T1.to_csv(f"{OUT}/table1_revised.csv", index=False)
+print(EV.round(4).to_string()); print(T1.round(4).to_string())
+
+# ---------- rep plan summary (numbers quoted in the paper) ----------
+ST = pd.DataFrame([json.loads(l) for l in open(f"{R}/phase2/state.jsonl")])
+spk = ST[(ST.wl == "tpch") & ST.cfg.str.match(r"spark4(20|13)") & ST.rep.isin([1, 2])]
+pj = spk.groupby("id").agg(n=("attempt", "count"), ok=("status", lambda s: (s == "ok").any()))
+retry = pj.n.sum() / pj.ok.sum()
+PL["retry_factor"] = np.where(PL.cfg.str.startswith("spark"), retry, 1.0); PL["add_hours_with_retries"] = PL.add_hours * PL.retry_factor
+PL.to_csv(f"{OUT}/rep_plan.csv", index=False)
+sa = pd.read_csv(f"{R}/sf100/final/sf100_attempts.csv"); sa = sa[(sa.status == "ok") & sa.cfg.isin(["duckdb", "spark420-classic"]) & (sa.superseded != True)]
+sf_h = 3 * sa.groupby("cfg").elapsed_s.median().sum() / 3600
+json.dump(dict(add_hours_no_retry=float(PL.add_hours.sum()), spark_tpch_retry_factor=float(retry), spark_tpch_jobs=int(len(pj)),
+               add_hours_with_retries=float(PL.add_hours_with_retries.sum()), sf100_3_more_reps_duckdb_spark_hours=float(sf_h),
+               sf100_median_elapsed_s=sa.groupby("cfg").elapsed_s.median().to_dict(),
+               total_hours=float(PL.add_hours_with_retries.sum() + sf_h)), open(f"{OUT}/rep_plan_summary.json", "w"), indent=1)
+print(open(f"{OUT}/rep_plan_summary.json").read())

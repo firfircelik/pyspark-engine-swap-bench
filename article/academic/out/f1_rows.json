@@ -1,0 +1,19 @@
+{
+ "updated_rows_spark": 683346,
+ "updated_rows_sail": 683346,
+ "total_rows_spark": 6828731,
+ "total_rows_sail": 6828731,
+ "non_updated_diffs": 0,
+ "measured_mismatches": 631,
+ "measured_sail_lower_by_one_cent": 631,
+ "diffs_vs_spark420_comet420-classic": 0,
+ "diffs_vs_spark420_spark413-classic": 0,
+ "diffs_vs_spark420_duckdb": 0,
+ "diffs_vs_spark420_sail-reorder": 631,
+ "model_population": 683346,
+ "model_mismatches": 631,
+ "set_intersection": 631,
+ "only_measured": 0,
+ "only_model": 0,
+ "value_match_on_intersection": 631
+}

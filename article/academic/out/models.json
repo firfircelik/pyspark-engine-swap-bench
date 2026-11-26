@@ -101,6 +101,153 @@
     "ratio_vs_ondemand_duckdb_vm": 1.5231035721201927
    }
   ],
-  "vm_capacity_runs_per_day_duckdb": 1561.5398517983012
- }
+  "vm_capacity_runs_per_day_duckdb": 1561.5398517983012,
+  "ratio_dbx_vs_vm_zero_startup": 23.45158328380234,
+  "ratio_dbx_vs_vm_price_pm50_range": [
+   7.817194427934113,
+   70.35474985140702
+  ],
+  "ratio_fabric_vs_vm_zero_startup": 18.039679449078726,
+  "ratio_fabric_vs_vm_price_pm50_range": [
+   6.013226483026242,
+   54.11903834723618
+  ]
+ },
+ "latency_revised": {
+  "spark420": {
+   "mean_totals": {
+    "A_loop": 443.983,
+    "C_loop": 440.087,
+    "A_proxy0": 494.802,
+    "C_proxy0": 495.8615,
+    "A_proxy10": 532.065,
+    "C_proxy10": 702.024
+   },
+   "gap_loopback_s": 3.896000000000015,
+   "gap_proxy0_s": -1.0594999999999573,
+   "slope_gap_s_per_ms": 16.88995,
+   "Lstar_ms": -0.06272961139612357,
+   "Lstar_ci_ms": [
+    -1.9137418462251317,
+    1.2862715307678463
+   ],
+   "Lstar_sim_no_breakeven_frac": 1.5e-05,
+   "sigma_total": 0.02191671517740512,
+   "sigma_dof": 7.0,
+   "hiding_factor_aal": 28.28435713710649,
+   "hiding_factor_classic": 11.223573637300673,
+   "perq_n": 22,
+   "perq_breakeven_nan": 0,
+   "perq_median_breakeven_ms_excl_nan": -0.862218624545736,
+   "perq_aal_ahead_at_proxy0": 14,
+   "perq_aal_ahead_at_proxy10": 22
+  },
+  "spark413": {
+   "mean_totals": {
+    "A_loop": 510.62750000000005,
+    "C_loop": 434.267,
+    "A_proxy0": 486.0935,
+    "C_proxy0": 463.414,
+    "A_proxy10": 621.8795,
+    "C_proxy10": 691.361
+   },
+   "gap_loopback_s": 76.36050000000006,
+   "gap_proxy0_s": 22.67950000000002,
+   "slope_gap_s_per_ms": 9.2161,
+   "Lstar_ms": 2.460856544525343,
+   "Lstar_ci_ms": [
+    -3.4659901183586825,
+    6.654910553087573
+   ],
+   "Lstar_sim_no_breakeven_frac": 0.00847,
+   "sigma_total": 0.036681065255725606,
+   "sigma_dof": 7.0,
+   "hiding_factor_aal": 10.191956460901713,
+   "hiding_factor_classic": 10.150956143314016,
+   "perq_n": 22,
+   "perq_breakeven_nan": 3,
+   "perq_median_breakeven_ms_excl_nan": 3.095019290870961,
+   "perq_aal_ahead_at_proxy0": 7,
+   "perq_aal_ahead_at_proxy10": 21
+  }
+ },
+ "sail_q18_attempts": [
+  {
+   "sf": 30,
+   "cond": "local",
+   "cfg": "sail-noreorder",
+   "q18": "ok",
+   "n": 3
+  },
+  {
+   "sf": 30,
+   "cond": "local",
+   "cfg": "sail-noreorder",
+   "q18": "oom/server died",
+   "n": 1
+  },
+  {
+   "sf": 30,
+   "cond": "local",
+   "cfg": "sail-reorder",
+   "q18": "ok",
+   "n": 2
+  },
+  {
+   "sf": 30,
+   "cond": "local",
+   "cfg": "sail-reorder",
+   "q18": "oom/server died",
+   "n": 2
+  },
+  {
+   "sf": 30,
+   "cond": "loopback",
+   "cfg": "sail-noreorder",
+   "q18": "ok",
+   "n": 3
+  },
+  {
+   "sf": 30,
+   "cond": "loopback",
+   "cfg": "sail-reorder",
+   "q18": "ok",
+   "n": 3
+  },
+  {
+   "sf": 30,
+   "cond": "proxy0",
+   "cfg": "sail-noreorder",
+   "q18": "ok",
+   "n": 2
+  },
+  {
+   "sf": 30,
+   "cond": "proxy0",
+   "cfg": "sail-reorder",
+   "q18": "ok",
+   "n": 2
+  },
+  {
+   "sf": 30,
+   "cond": "proxy10",
+   "cfg": "sail-noreorder",
+   "q18": "ok",
+   "n": 2
+  },
+  {
+   "sf": 30,
+   "cond": "proxy10",
+   "cfg": "sail-reorder",
+   "q18": "ok",
+   "n": 2
+  },
+  {
+   "sf": 100,
+   "cond": "local",
+   "cfg": "sail-reorder",
+   "q18": "oom/server died",
+   "n": 6
+  }
+ ]
 }

@@ -1,7 +1,10 @@
 """Shared loaders. Only reads published result files; no benchmark runs."""
 import json, glob, os
 import numpy as np, pandas as pd
-ROOT = "/workspace/engine-swap"; R = f"{ROOT}/results"; OUT = f"{ROOT}/article/academic/out"
+# ROOT: env var ENGINE_SWAP_ROOT, else the checkout root (this file is article/academic/analysis/common.py).
+from pathlib import Path
+ROOT = os.environ.get("ENGINE_SWAP_ROOT", str(Path(__file__).resolve().parents[3]))
+R = f"{ROOT}/results"; OUT = os.environ.get("ENGINE_SWAP_OUT", f"{ROOT}/article/academic/out")
 RNG = np.random.default_rng(20261126)
 
 def phase2():

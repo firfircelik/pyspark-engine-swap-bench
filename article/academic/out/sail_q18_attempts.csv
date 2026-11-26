@@ -1,0 +1,32 @@
+sf,cond,cfg,run,superseded,q18,peak_tree_rss_gb,cg_memory_peak_gb
+30,local,sail-noreorder,rep1_a1,False,oom/server died,9.45068032,9.663840256
+30,local,sail-noreorder,rep1_a2,False,ok,9.14552832,9.663840256
+30,local,sail-noreorder,rep2_a1,False,ok,9.404686336,9.663860736
+30,local,sail-noreorder,rep3_a1,False,ok,9.537028096,9.663860736
+30,local,sail-reorder,rep1_a1,False,oom/server died,,
+30,local,sail-reorder,rep1_a1_1795302638,False,oom/server died,8.935817216,9.663676416
+30,local,sail-reorder,rep1_a2,False,ok,9.265913856,9.663721472
+30,local,sail-reorder,rep2_a1,False,ok,9.103712256,9.663860736
+30,loopback,sail-noreorder,rep1_a1,False,ok,8.535621632,9.663840256
+30,loopback,sail-noreorder,rep2_a1,False,ok,8.425414656,9.663860736
+30,loopback,sail-noreorder,rep3_a1,False,ok,8.606806016,9.663860736
+30,loopback,sail-reorder,rep1_a1,False,ok,8.811057152,9.663721472
+30,loopback,sail-reorder,rep2_a1,False,ok,8.575266816,9.663840256
+30,loopback,sail-reorder,rep3_a1,False,ok,8.699367424,9.663860736
+30,proxy0,sail-noreorder,rep1_a1,False,ok,8.44169216,9.663721472
+30,proxy0,sail-noreorder,rep2_a1,False,ok,8.514793472,9.663860736
+30,proxy0,sail-reorder,rep1_a1,False,ok,8.76998656,9.667076096
+30,proxy0,sail-reorder,rep2_a1,False,ok,8.28540928,9.663860736
+30,proxy10,sail-noreorder,rep1_a1,False,ok,8.126029824,9.667076096
+30,proxy10,sail-noreorder,rep2_a1,False,ok,8.469983232,9.663860736
+30,proxy10,sail-reorder,rep1_a1,False,ok,8.370733056,9.663721472
+30,proxy10,sail-reorder,rep2_a1,False,ok,8.353292288,9.663840256
+100,local,sail-reorder,rep1_a1,True,other error,0.509304832,9.663873024
+100,local,sail-reorder,rep1_a2,True,other error,0.51116032,9.663873024
+100,local,sail-reorder,rep1_a3,True,other error,0.631738368,9.663873024
+100,local,sail-reorder,rep1_a4,False,oom/server died,9.157005312,9.663873024
+100,local,sail-reorder,rep1_a5,False,oom/server died,9.093955584,9.663873024
+100,local,sail-reorder,rep1_a6,False,oom/server died,9.177268224,9.663873024
+100,local,sail-reorder,rep2_a1,False,oom/server died,8.68419584,9.663873024
+100,local,sail-reorder,rep2_a2,False,oom/server died,9.583919104,9.663873024
+100,local,sail-reorder,rep2_a3,False,oom/server died,9.0447872,9.663873024

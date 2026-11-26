@@ -4,16 +4,16 @@ import json, sys, math
 from decimal import Decimal, ROUND_HALF_UP, ROUND_HALF_EVEN, getcontext
 import numpy as np
 getcontext().prec = 80
-OUT = "/workspace/engine-swap/article/academic/out"
+import os
+from common import ROOT, OUT
 res = {}
 
 def exact(x): return str(Decimal(x))
 def spark_cast(x, s=2):      # Spark: Decimal(double) via Scala BigDecimal.decimal(d) = Double.toString(d) (shortest repr), then HALF_UP
     return Decimal(repr(x)).quantize(Decimal(1).scaleb(-s), ROUND_HALF_UP)
 def arrow_cast(x, s=2):      # arrow-cast float_to_decimal: (10^s * x) in binary64, f64::round (half away from zero)
-    y = (10.0 ** s) * x
-    r = math.floor(abs(y) + 0.5) * (1 if y >= 0 else -1)
-    return Decimal(int(r)).scaleb(-s)
+    y = (10.0 ** s) * x                      # fl(10^s * x)
+    return Decimal(y).quantize(Decimal(1), ROUND_HALF_UP).scaleb(-s)   # exact half away from zero, as Rust f64::round
 def exact_half_up(x, s=2): return Decimal(x).quantize(Decimal(1).scaleb(-s), ROUND_HALF_UP)
 
 f1 = []
@@ -32,12 +32,17 @@ c4.append(dict(decimal=big, exact_binary64=exact(vb), ulp=math.ulp(vb), spark_ha
                rust_fmt_exact_binary=str(Decimal(vb).quantize(Decimal("0.01")))))
 res["C4_examples"] = c4
 res["two_pow_53"] = 2 ** 53
+# cent resolution: binary64 spacing exceeds 0.01 from 2^46 on (ulp = 2^-6 = 0.015625 in [2^46, 2^47))
+cent = []
+for v in ["70368744177663.99", "70368744177664.01", "70368744177664.02", "35184372088832.01"]:
+    f = float(v); cent.append(dict(decimal=v, exact_binary64=exact(f), ulp=math.ulp(f), cents_preserved=str(Decimal(f).quantize(Decimal("0.01"))) == v))
+res["C4_cent_resolution"] = dict(two_pow_46=2 ** 46, ulp_at_2_46=math.ulp(float(2 ** 46)), examples=cent)
 
 # ---- F1 population: ETL E6 rows (orders in 1995 with o_orderkey % 10 == 0), SF30 ----
 try:
     import duckdb
     con = duckdb.connect()
-    rows = con.execute("""select o_orderkey, cast(o_totalprice as varchar) p from read_parquet('/workspace/engine-swap/data/tpch-sf30/orders/*.parquet')
+    rows = con.execute(f"""select o_orderkey, cast(o_totalprice as varchar) p from read_parquet('{ROOT}/data/tpch-sf30/orders/*.parquet')
                           where year(o_orderdate)=1995 and o_orderkey % 10 = 0""").fetchall()
     n = len(rows); diff_arrow = 0; diff_exact = 0; ex = []
     for k, p in rows:
@@ -47,7 +52,8 @@ try:
             diff_arrow += 1
             if len(ex) < 5: ex.append(dict(o_orderkey=k, o_totalprice=p, product_shortest=repr(x), product_exact=exact(x), spark=str(sp), arrow=str(ar)))
         if eh != sp: diff_exact += 1
-    res["F1_population"] = dict(rows=n, mismatches_arrow_model=diff_arrow, mismatches_exact_half_up_model=diff_exact, measured_mismatches=631, examples=ex)
+    res["F1_population"] = dict(rows=n, mismatches_arrow_model=diff_arrow, mismatches_exact_half_up_model=diff_exact, examples=ex,
+        measured=(json.load(open(f"{OUT}/f1_rows.json")) if os.path.exists(f"{OUT}/f1_rows.json") else "run f1_rows.py (needs the archived E6 outputs)"))
 except Exception as e:
     res["F1_population"] = dict(error=str(e))
 json.dump(res, open(f"{OUT}/ieee.json", "w"), indent=1, default=str)

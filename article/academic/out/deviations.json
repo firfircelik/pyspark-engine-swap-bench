@@ -1,0 +1,85 @@
+{
+ "progress_log_first_starts": 125,
+ "progress_log_order_inversions_vs_plan": 0,
+ "progress_log_starts": 158,
+ "retries_run_immediately": 23,
+ "retries_run_later": 9,
+ "published_runs": 102,
+ "published_window": [
+  "2026-11-21 21:17:42.654400+03:00",
+  "2026-11-26 00:25:52.090864+03:00"
+ ],
+ "protocol_events": {
+  "comet_arena_adopted": {
+   "at": "2026-11-21 23:05:00+03:00",
+   "published_runs_before": 5,
+   "comet_published_runs_before": 0
+  },
+  "box_restore": {
+   "at": "2026-11-22 01:41:00+03:00",
+   "published_runs_before": 23,
+   "comet_published_runs_before": 5
+  },
+  "freeze_rule_refined": {
+   "at": "2026-11-22 04:35:00+03:00",
+   "published_runs_before": 45,
+   "comet_published_runs_before": 11
+  }
+ },
+ "attempts_total": 156,
+ "attempts_by_status": {
+  "ok": 122,
+  "frozen": 19,
+  "failed": 6,
+  "qerror": 6,
+  "timeout": 3
+ },
+ "query_errors_total": 15,
+ "query_errors_by_engine": {
+  "spark420": 8,
+  "spark413": 4,
+  "sail": 2,
+  "comet420": 1
+ },
+ "query_errors_spark_oom": 7,
+ "manual_extra_attempts": [
+  "r2-loopback-spark420-analytics-tpch"
+ ],
+ "spark_tpch_retry_factor_reps12": 1.4285714285714286,
+ "spark_tpch_jobs_reps12": 28,
+ "order": {
+  "1": {
+   "planned": 51,
+   "started": 48,
+   "kendall_tau": 1.0,
+   "jobs_started_after_a_later_planned_job": 0
+  },
+  "2": {
+   "planned": 51,
+   "started": 51,
+   "kendall_tau": 1.0,
+   "jobs_started_after_a_later_planned_job": 0
+  },
+  "3": {
+   "planned": 51,
+   "started": 23,
+   "kendall_tau": 1.0,
+   "jobs_started_after_a_later_planned_job": 0
+  }
+ },
+ "first_attempts_started_before_an_earlier_rep_finished": 0,
+ "rep3_complete_tpch_cells": [
+  "local/comet420-default",
+  "local/sail-noreorder",
+  "local/spark413-default",
+  "loopback/comet420-analytics",
+  "loopback/comet420-classic",
+  "loopback/sail-noreorder",
+  "loopback/sail-reorder",
+  "loopback/spark413-classic",
+  "loopback/spark420-analytics",
+  "loopback/spark420-classic",
+  "proxy0/comet420-classic",
+  "proxy0/spark413-classic"
+ ]
+}

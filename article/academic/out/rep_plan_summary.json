@@ -1,0 +1,12 @@
+{
+ "add_hours_no_retry": 4.85495125,
+ "spark_tpch_retry_factor": 1.4285714285714286,
+ "spark_tpch_jobs": 28,
+ "add_hours_with_retries": 6.720954464285714,
+ "sf100_3_more_reps_duckdb_spark_hours": 0.37645833333333334,
+ "sf100_median_elapsed_s": {
+  "duckdb": 62.35,
+  "spark420-classic": 389.4
+ },
+ "total_hours": 7.097412797619047
+}

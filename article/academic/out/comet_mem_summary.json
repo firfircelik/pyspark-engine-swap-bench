@@ -1,0 +1,75 @@
+{
+ "peaks": [
+  {
+   "run": "A_3g_4g_q18",
+   "peak_tree_rss_gb": 8.041930752,
+   "rc": 0.0
+  },
+  {
+   "run": "B_3g_3g_all",
+   "peak_tree_rss_gb": 9.201721344,
+   "rc": 0.0
+  },
+  {
+   "run": "C2_2g_3g_all",
+   "peak_tree_rss_gb": 8.091480064,
+   "rc": 0.0
+  },
+  {
+   "run": "C_2g_3g_all",
+   "peak_tree_rss_gb": NaN,
+   "rc": NaN
+  },
+  {
+   "run": "D_2g_3g_gc_all",
+   "peak_tree_rss_gb": 9.545699328,
+   "rc": 0.0
+  },
+  {
+   "run": "E_2g_3g_arena2_run1",
+   "peak_tree_rss_gb": 5.39506688,
+   "rc": 0.0
+  },
+  {
+   "run": "E_2g_3g_arena2_run2",
+   "peak_tree_rss_gb": 5.079236608,
+   "rc": 0.0
+  },
+  {
+   "run": "E_2g_3g_arena2_run3",
+   "peak_tree_rss_gb": 5.511622656,
+   "rc": 0.0
+  }
+ ],
+ "arena2_vs_default_C2_perq_ratio": {
+  "n": 22,
+  "median": 1.2953681127925158,
+  "min": 0.9172232563232237,
+  "max": 1.8109836564815753,
+  "by_query": {
+   "1": 1.207,
+   "2": 1.181,
+   "3": 1.811,
+   "4": 1.387,
+   "5": 1.54,
+   "6": 1.294,
+   "7": 1.502,
+   "8": 1.33,
+   "9": 1.445,
+   "10": 1.45,
+   "11": 1.268,
+   "12": 1.236,
+   "13": 1.296,
+   "14": 1.202,
+   "15": 1.513,
+   "16": 1.658,
+   "17": 1.082,
+   "18": 1.002,
+   "19": 0.917,
+   "20": 1.612,
+   "21": 1.017,
+   "22": 1.256
+  }
+ },
+ "note": "diagnostic runs; the arena runs each had one box freeze, so the timing ratio is indicative only"
+}

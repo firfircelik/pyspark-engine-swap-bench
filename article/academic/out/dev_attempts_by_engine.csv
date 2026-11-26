@@ -1,0 +1,11 @@
+engine,wl,attempts,ok,frozen,qerror,timeout,failed,jobs
+comet420,etl,12,11,0,0,0,1,11
+comet420,tpch,24,18,1,1,0,4,18
+duckdb,etl,5,5,0,0,0,0,5
+duckdb,tpch,8,8,0,0,0,0,8
+sail,etl,10,9,1,0,0,0,9
+sail,tpch,21,19,2,0,0,0,19
+spark413,etl,11,10,1,0,0,0,10
+spark413,tpch,28,18,7,1,1,1,19
+spark420,etl,9,8,1,0,0,0,8
+spark420,tpch,28,16,6,4,2,0,18

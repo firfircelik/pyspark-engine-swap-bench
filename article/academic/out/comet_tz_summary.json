@@ -1,0 +1,23 @@
+{
+ "source": "results/probes/comet_tz_v2.jsonl",
+ "probe_rows": 70,
+ "rows_differing": 23,
+ "zones": [
+  "Africa/Casablanca",
+  "America/Edmonton",
+  "America/Havana",
+  "America/Sao_Paulo",
+  "America/Yellowknife",
+  "Europe/Chisinau",
+  "UTC"
+ ],
+ "zones_with_differences": {
+  "America/Havana": 5,
+  "America/Edmonton": 5,
+  "America/Yellowknife": 5,
+  "Africa/Casablanca": 6,
+  "Europe/Chisinau": 2
+ },
+ "n_zones": 7,
+ "n_zones_differing": 5
+}

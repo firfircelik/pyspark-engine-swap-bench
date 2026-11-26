@@ -1,0 +1,8 @@
+engine,kind,n
+comet420,Py4JJavaError,1
+sail,SERVER_DIED,2
+spark413,NoSpaceLeft,1
+spark413,SparkOutOfMemoryError,3
+spark420,FAILED_READ_FILE,2
+spark420,Py4JJavaError,2
+spark420,SparkOutOfMemoryError,4

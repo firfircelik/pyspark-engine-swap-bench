@@ -132,3 +132,64 @@ json.dump(out, open(f"{OUT}/models.json", "w"), indent=1, default=float)
 pd.set_option("display.width", 250); pd.set_option("display.max_columns", 30)
 print(L[L.q == "TOTAL"].round(4).to_string()); print(L[L.q != "TOTAL"][["version", "q", "G_aal", "G_cl", "conc_aal", "conc_cl", "gap_at_0ms_s", "breakeven_ms", "be_lo_ms", "be_hi_ms"]].round(2).to_string())
 print(pd.DataFrame(fit_rows).round(1).to_string()); print(S.round(3).to_string()); print(RS.sort_values(["q", "sf"]).round(2).to_string()); print(json.dumps(out, indent=1, default=float))
+
+# ---------- REVISION (2026-11-26, after technical review) ----------
+# (a) Break-even L* as a two-point interpolation between the proxy0 and proxy10 means (the 3-parameter model is exactly
+# identified, so L* depends only on these four cell means; linearity in L is untested). Interval under the Table 1
+# noise model (engine-stratified log-total SD, uncertainty in sigma propagated by a scaled inverse chi-square draw).
+NE = pd.read_csv(f"{OUT}/noise_by_engine_total.csv", index_col=0)
+rev = {}
+rng = np.random.default_rng(20261126)
+for ver in ["spark420", "spark413"]:
+    tot = t[t.cfg.str.startswith(ver)].groupby(["cfg", "cond", "rep"]).wall_s.sum().reset_index()
+    m = tot.groupby(["cfg", "cond"]).wall_s.mean()
+    n = tot.groupby(["cfg", "cond"]).wall_s.count()
+    A0, A10, C0, C10 = m[(f"{ver}-analytics", "proxy0")], m[(f"{ver}-analytics", "proxy10")], m[(f"{ver}-classic", "proxy0")], m[(f"{ver}-classic", "proxy10")]
+    AL, CL = m[(f"{ver}-analytics", "loopback")], m[(f"{ver}-classic", "loopback")]
+    gap0 = A0 - C0; slope = ((C10 - C0) - (A10 - A0)) / 10.0
+    Lstar = gap0 / slope if slope > 0 else np.nan
+    s2, dof = NE.loc[ver, "var"], NE.loc[ver, "dof"]
+    B = 200000
+    sig = np.sqrt(s2 * dof / rng.chisquare(dof, B))
+    def sim(mu, k): return mu * np.exp(rng.normal(0, 1, (B, k)) * sig[:, None]).mean(1)
+    k = 2
+    a0, a10, c0, c10 = sim(A0, k), sim(A10, k), sim(C0, k), sim(C10, k)
+    sl = ((c10 - c0) - (a10 - a0)) / 10.0
+    Ls = np.where(sl > 0, (a0 - c0) / sl, np.nan)
+    # latency-hiding factor = summed added request latency / added wall time  (G * 10 ms / (t10 - t0))
+    G = t[t.cfg.str.startswith(ver)].groupby(["cfg", "cond", "rep"]).s3_get.sum().groupby(["cfg", "cond"]).median()
+    hide = lambda c: G[(c, "proxy10")] * 0.010 / (m[(c, "proxy10")] - m[(c, "proxy0")])
+    per_q = L[(L.version == ver) & (L.q != "TOTAL")]
+    rev[ver] = dict(mean_totals=dict(A_loop=AL, C_loop=CL, A_proxy0=A0, C_proxy0=C0, A_proxy10=A10, C_proxy10=C10),
+                    gap_loopback_s=AL - CL, gap_proxy0_s=gap0, slope_gap_s_per_ms=slope, Lstar_ms=Lstar,
+                    Lstar_ci_ms=np.nanquantile(Ls, [0.025, 0.975]).tolist(), Lstar_sim_no_breakeven_frac=float(np.isnan(Ls).mean()),
+                    sigma_total=float(math.sqrt(s2)), sigma_dof=float(dof),
+                    hiding_factor_aal=hide(f"{ver}-analytics"), hiding_factor_classic=hide(f"{ver}-classic"),
+                    perq_n=int(len(per_q)), perq_breakeven_nan=int(per_q.breakeven_ms.isna().sum()),
+                    perq_median_breakeven_ms_excl_nan=float(per_q.breakeven_ms.median()),
+                    perq_aal_ahead_at_proxy0=int((per_q.gap_at_0ms_s < 0).sum()),
+                    perq_aal_ahead_at_proxy10=int(((per_q.gap_at_0ms_s - per_q.slope_gap_s_per_ms * 10) < 0).sum()))
+out["latency_revised"] = rev
+# (b) cost: robustness of the per-run cost ratio to price error (each of r_D and r_V off by up to +/-50%)
+base = (t_spark * r_dbx) / (t_duck * r_vm)
+out["cost"]["ratio_dbx_vs_vm_zero_startup"] = base
+out["cost"]["ratio_dbx_vs_vm_price_pm50_range"] = [base * 0.5 / 1.5, base * 1.5 / 0.5]
+out["cost"]["ratio_fabric_vs_vm_zero_startup"] = (t_spark * r_fab) / (t_duck * r_vm)
+out["cost"]["ratio_fabric_vs_vm_price_pm50_range"] = [out["cost"]["ratio_fabric_vs_vm_zero_startup"] / 3, out["cost"]["ratio_fabric_vs_vm_zero_startup"] * 3]
+# (c) Sail Q18 attempts at SF30 and SF100 (status per attempt; cgroup memory.peak per attempt)
+q18 = []
+for d in sorted(glob.glob(f"{R}/phase2/*/tpch/sail-*/rep*")) + sorted(glob.glob(f"{R}/sf100/local/tpch/sail-reorder/rep*")):
+    qf, sf_ = f"{d}/queries.jsonl", f"{d}/summary.jsonl"
+    if not os.path.exists(qf): continue
+    ev = [json.loads(l) for l in open(qf)]
+    e18 = [e for e in ev if e.get("event") == "query" and e.get("q") == 18]
+    sm = json.loads(open(sf_).readline()) if os.path.exists(sf_) and os.path.getsize(sf_) else {}
+    err = (e18[0].get("error") or "") if e18 else ""
+    status = "ok" if e18 and not err else ("oom/server died" if ("SERVER_DIED" in err or "SparkConnectGrpc" in err) else ("other error" if err else "not reached"))
+    q18.append(dict(sf=100 if "/sf100/" in d else 30, cond=d.split("/")[-4], cfg=d.split("/")[-2], run=os.path.basename(d),
+                    superseded=d in sup, q18=status, peak_tree_rss_gb=sm.get("peak_tree_rss_bytes", np.nan) / 1e9 if sm else np.nan,
+                    cg_memory_peak_gb=sm.get("cg_memory_peak", np.nan) / 1e9 if sm else np.nan))
+Q18 = pd.DataFrame(q18); Q18.to_csv(f"{OUT}/sail_q18_attempts.csv", index=False)
+out["sail_q18_attempts"] = Q18[~Q18.superseded].groupby(["sf", "cond", "cfg", "q18"]).size().rename("n").reset_index().to_dict("records")
+json.dump(out, open(f"{OUT}/models.json", "w"), indent=1, default=float)
+print(json.dumps(rev, indent=1, default=float)); print(Q18.to_string()); print(out["cost"])
