@@ -1,0 +1,35 @@
+2026-11-26 11:00:18 START r1-local-sail-reorder-tpch attempt 1 memavail=11.0GB disk=31.5GB
+2026-11-26 11:00:21 END r1-local-sail-reorder-tpch status=qerror rc=0 3.4s errors=[1, 3, 6, 12, 18] frozen=[]
+2026-11-26 11:00:21 START r1-local-sail-reorder-tpch attempt 2 memavail=11.0GB disk=31.5GB
+2026-11-26 11:00:23 END r1-local-sail-reorder-tpch status=qerror rc=0 2.0s errors=[1, 3, 6, 12, 18] frozen=[]
+2026-11-26 11:00:23 START r1-local-sail-reorder-tpch attempt 3 memavail=10.9GB disk=31.5GB
+2026-11-26 11:00:26 END r1-local-sail-reorder-tpch status=qerror rc=0 3.0s errors=[1, 3, 6, 12, 18] frozen=[]
+2026-11-26 11:00:26 START r1-local-comet420-classic-tpch attempt 1 memavail=11.0GB disk=31.7GB
+2026-11-26 11:01:26 END r1-local-comet420-classic-tpch status=qerror rc=0 59.8s errors=[1, 3, 6, 12, 18] frozen=[]
+2026-11-26 11:01:26 START r1-local-comet420-classic-tpch attempt 2 memavail=11.1GB disk=31.5GB
+2026-11-26 11:02:45 END r1-local-comet420-classic-tpch status=qerror rc=0 78.9s errors=[1, 3, 6, 12, 18] frozen=[]
+2026-11-26 11:06:40 START r1-local-sail-reorder-tpch attempt 4 memavail=10.8GB disk=32.2GB
+2026-11-26 11:07:32 END r1-local-sail-reorder-tpch status=qerror rc=0 52.2s errors=[18] frozen=[]
+2026-11-26 11:07:32 START r1-local-sail-reorder-tpch attempt 5 memavail=11.1GB disk=32.2GB
+2026-11-26 11:08:15 END r1-local-sail-reorder-tpch status=qerror rc=0 43.5s errors=[18] frozen=[]
+2026-11-26 11:08:16 START r1-local-sail-reorder-tpch attempt 6 memavail=10.6GB disk=32.2GB
+2026-11-26 11:08:57 END r1-local-sail-reorder-tpch status=qerror rc=0 41.0s errors=[18] frozen=[]
+2026-11-26 11:08:57 START r1-local-comet420-classic-tpch attempt 3 memavail=10.9GB disk=32.2GB
+2026-11-26 11:12:19 END r1-local-comet420-classic-tpch status=ok rc=0 202.3s errors=[] frozen=[]
+2026-11-26 11:12:19 START r1-local-spark420-classic-tpch attempt 1 memavail=10.9GB disk=32.2GB
+2026-11-26 11:19:04 END r1-local-spark420-classic-tpch status=ok rc=0 405.0s errors=[] frozen=[]
+2026-11-26 11:19:04 START r1-local-duckdb-tpch attempt 1 memavail=10.8GB disk=32.2GB
+2026-11-26 11:20:27 END r1-local-duckdb-tpch status=ok rc=0 82.9s errors=[] frozen=[]
+2026-11-26 11:20:27 START r2-local-sail-reorder-tpch attempt 1 memavail=10.8GB disk=32.2GB
+2026-11-26 11:21:37 END r2-local-sail-reorder-tpch status=qerror rc=0 70.3s errors=[18] frozen=[]
+2026-11-26 11:21:37 START r2-local-sail-reorder-tpch attempt 2 memavail=11.4GB disk=32.2GB
+2026-11-26 11:22:22 END r2-local-sail-reorder-tpch status=qerror rc=0 44.6s errors=[18] frozen=[]
+2026-11-26 11:22:22 START r2-local-sail-reorder-tpch attempt 3 memavail=11.1GB disk=32.2GB
+2026-11-26 11:23:04 END r2-local-sail-reorder-tpch status=qerror rc=0 42.5s errors=[18] frozen=[]
+2026-11-26 11:23:04 START r2-local-comet420-classic-tpch attempt 1 memavail=11.1GB disk=32.2GB
+2026-11-26 11:26:26 END r2-local-comet420-classic-tpch status=ok rc=0 201.9s errors=[] frozen=[]
+2026-11-26 11:26:26 START r2-local-duckdb-tpch attempt 1 memavail=10.6GB disk=32.2GB
+2026-11-26 11:27:08 END r2-local-duckdb-tpch status=ok rc=0 41.8s errors=[] frozen=[]
+2026-11-26 11:27:08 START r2-local-spark420-classic-tpch attempt 1 memavail=11.1GB disk=32.2GB
+2026-11-26 11:33:22 END r2-local-spark420-classic-tpch status=ok rc=0 373.8s errors=[] frozen=[]
+2026-11-26 11:33:22 ALL JOBS DONE

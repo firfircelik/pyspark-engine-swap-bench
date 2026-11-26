@@ -1,0 +1,6 @@
+ENGINE spark 4.2.0
+R1 percentile_approx schema: struct<m:decimal(15,2)> value: 20.00
+R1b percentile_approx array schema: struct<m:array<decimal(15,2)>> value: [Decimal('10.00'), Decimal('30.00')]
+R2 describe: [('count', '3'), ('mean', '2.333333'), ('stddev', '1.5275252316519465'), ('min', '1.00'), ('max', '4.00')]
+R2b summary: [('count', '3'), ('mean', '2.333333'), ('stddev', '1.5275252316519465'), ('min', '1.00'), ('25%', '1.0'), ('50%', '2.0'), ('75%', '4.0'), ('max', '4.00')]
+R3 date_trunc schema: struct<m:timestamp> value: 1993-10-01 02:00:00 as string: 1993-10-01 00:00:00

@@ -1,0 +1,1 @@
+{"event": "session", "session_s": 3.323, "version": "4.2.0", "format": "iceberg", "label": "comet420-classic", "pid": 1723558, "base": "s3a://tpch/iceberg/sf1", "workload": "tpch"}

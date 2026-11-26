@@ -1,0 +1,3 @@
+ENGINE sail (pyspark client 4.2.0)
+C7_cast | ERROR NumberFormatException Cannot cast string '1e3' to value of Decimal128(38, 10) type
+C7_try_cast | struct<a:decimal(10,0)> | [(None,)]

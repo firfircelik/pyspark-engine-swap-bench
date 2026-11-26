@@ -1,0 +1,6 @@
+{"label": "spark420-classic", "rc": 0, "elapsed_s": 87.3, "peak_tree_rss_bytes": 6006968320, "cpu_user_s": 316.7, "cpu_sys_s": 44.6, "ru_maxrss_kb_largest_child": 5738372}
+{"label": "spark420-analytics", "rc": 0, "elapsed_s": 41.518, "peak_tree_rss_bytes": 6825070592, "cpu_user_s": 169.3, "cpu_sys_s": 20.1, "ru_maxrss_kb_largest_child": 6539628}
+{"label": "comet420-analytics", "rc": 0, "elapsed_s": 20.027, "peak_tree_rss_bytes": 2545180672, "cpu_user_s": 49.0, "cpu_sys_s": 3.3, "ru_maxrss_kb_largest_child": 2422020}
+{"label": "sail-noreorder", "rc": 0, "elapsed_s": 9.177, "peak_tree_rss_bytes": 2469675008, "cpu_user_s": 16.1, "cpu_sys_s": 13.6, "ru_maxrss_kb_largest_child": 2274444}
+{"label": "duckdb", "rc": 0, "elapsed_s": 3.275, "peak_tree_rss_bytes": 2776735744, "cpu_user_s": 9.2, "cpu_sys_s": 2.8, "ru_maxrss_kb_largest_child": 2843940}
+{"label": "spark420-classic", "rc": 0, "elapsed_s": 53.311, "peak_tree_rss_bytes": 5754077184, "cpu_user_s": 178.9, "cpu_sys_s": 21.3, "ru_maxrss_kb_largest_child": 5492560}

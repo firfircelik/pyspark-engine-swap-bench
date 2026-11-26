@@ -1,0 +1,316 @@
+2026-11-21 21:17:24 START r1-proxy10-spark420-classic-etl attempt 1 memavail=10.8GB disk=30.2GB
+2026-11-21 21:21:52 END r1-proxy10-spark420-classic-etl status=ok rc=0 268.1s errors=[] frozen=[]
+2026-11-21 21:23:52 START r1-proxy10-spark413-classic-etl attempt 1 memavail=11.1GB disk=30.6GB
+2026-11-21 21:28:02 END r1-proxy10-spark413-classic-etl status=ok rc=0 249.6s errors=[] frozen=[]
+2026-11-21 21:28:52 START r1-loopback-comet420-analytics-tpch attempt 1 memavail=11.0GB disk=30.1GB
+2026-11-21 21:31:51 END r1-loopback-comet420-analytics-tpch status=failed rc=247 179.2s errors=[18] frozen=[]
+2026-11-21 21:31:51 START r1-loopback-spark413-analytics-etl attempt 1 memavail=11.1GB disk=24.4GB
+2026-11-21 21:34:29 END r1-loopback-spark413-analytics-etl status=ok rc=0 157.9s errors=[] frozen=[]
+2026-11-21 21:54:15 START r1-loopback-comet420-analytics-tpch attempt 2 memavail=11.3GB disk=23.9GB
+2026-11-21 21:57:26 END r1-loopback-comet420-analytics-tpch status=failed rc=247 190.6s errors=[18] frozen=[]
+2026-11-21 21:57:26 START r1-loopback-duckdb-tpch attempt 1 memavail=11.1GB disk=17.3GB
+2026-11-21 21:58:24 END r1-loopback-duckdb-tpch status=ok rc=0 58.0s errors=[] frozen=[]
+2026-11-21 21:58:24 START r1-loopback-spark413-analytics-tpch attempt 1 memavail=10.9GB disk=17.2GB
+2026-11-21 22:10:29 END r1-loopback-spark413-analytics-tpch status=frozen rc=0 724.8s errors=[9] frozen=[{'q': 2, 'gap_s': 22.2}, {'q': 18, 'gap_s': 138.6}]
+2026-11-21 22:19:36 START r1-proxy10-spark413-analytics-etl attempt 1 memavail=11.0GB disk=17.2GB
+2026-11-21 22:24:02 END r1-proxy10-spark413-analytics-etl status=ok rc=0 265.9s errors=[] frozen=[]
+2026-11-21 23:00:34 START r1-loopback-spark413-analytics-tpch attempt 2 memavail=11.0GB disk=29.9GB
+2026-11-21 23:12:09 START r1-loopback-comet420-analytics-tpch attempt 3 memavail=11.6GB disk=30.0GB
+2026-11-21 23:19:08 END r1-loopback-comet420-analytics-tpch status=ok rc=0 419.8s errors=[] frozen=[]
+2026-11-21 23:19:08 START r1-loopback-spark413-analytics-tpch attempt 2 memavail=11.0GB disk=30.0GB
+2026-11-21 23:28:52 END r1-loopback-spark413-analytics-tpch status=ok rc=0 583.1s errors=[18] frozen=[]
+2026-11-21 23:28:52 START r1-proxy0-sail-reorder-tpch attempt 1 memavail=10.8GB disk=30.1GB
+2026-11-21 23:30:25 END r1-proxy0-sail-reorder-tpch status=ok rc=0 93.2s errors=[] frozen=[]
+2026-11-21 23:30:25 START r1-proxy10-spark420-analytics-etl attempt 1 memavail=10.9GB disk=30.0GB
+2026-11-21 23:34:31 END r1-proxy10-spark420-analytics-etl status=ok rc=0 245.9s errors=[] frozen=[]
+2026-11-21 23:34:31 START r1-proxy0-spark413-analytics-tpch attempt 1 memavail=10.9GB disk=28.8GB
+2026-11-21 23:44:18 END r1-proxy0-spark413-analytics-tpch status=ok rc=0 587.0s errors=[] frozen=[]
+2026-11-21 23:44:18 START r1-proxy10-sail-noreorder-tpch attempt 1 memavail=10.9GB disk=30.0GB
+2026-11-21 23:46:22 END r1-proxy10-sail-noreorder-tpch status=ok rc=0 123.9s errors=[] frozen=[]
+2026-11-21 23:46:22 START r1-loopback-spark413-classic-tpch attempt 1 memavail=11.1GB disk=30.0GB
+2026-11-21 23:55:27 END r1-loopback-spark413-classic-tpch status=frozen rc=0 545.4s errors=[] frozen=[{'q': 10, 'gap_s': 5.7}]
+2026-11-21 23:55:27 START r1-loopback-spark413-classic-tpch attempt 2 memavail=10.6GB disk=30.0GB
+2026-11-22 00:04:25 END r1-loopback-spark413-classic-tpch status=ok rc=0 537.8s errors=[] frozen=[]
+2026-11-22 00:04:28 START r1-loopback-spark413-analytics-tpch attempt 3 memavail=11.1GB disk=29.9GB
+2026-11-22 00:14:10 END r1-loopback-spark413-analytics-tpch status=ok rc=0 581.3s errors=[] frozen=[]
+2026-11-22 00:14:10 START r1-proxy0-spark413-classic-tpch attempt 1 memavail=11.2GB disk=30.0GB
+2026-11-22 00:23:29 END r1-proxy0-spark413-classic-tpch status=ok rc=0 559.4s errors=[] frozen=[]
+2026-11-22 00:23:29 START r1-proxy10-comet420-classic-etl attempt 1 memavail=11.3GB disk=29.9GB
+2026-11-22 00:26:34 END r1-proxy10-comet420-classic-etl status=ok rc=0 184.6s errors=[] frozen=[]
+2026-11-22 00:26:34 START r1-loopback-duckdb-etl attempt 1 memavail=11.2GB disk=28.9GB
+2026-11-22 00:27:03 END r1-loopback-duckdb-etl status=ok rc=0 29.4s errors=[] frozen=[]
+2026-11-22 00:27:03 START r1-proxy0-comet420-classic-tpch attempt 1 memavail=11.1GB disk=28.6GB
+2026-11-22 00:33:15 END r1-proxy0-comet420-classic-tpch status=ok rc=0 371.6s errors=[] frozen=[]
+2026-11-22 00:33:15 START r1-loopback-spark413-classic-etl attempt 1 memavail=10.9GB disk=29.6GB
+2026-11-22 00:35:53 END r1-loopback-spark413-classic-etl status=ok rc=0 157.6s errors=[] frozen=[]
+2026-11-22 00:35:53 START r1-proxy0-spark420-classic-tpch attempt 1 memavail=11.3GB disk=28.6GB
+2026-11-22 00:45:42 END r1-proxy0-spark420-classic-tpch status=ok rc=0 589.2s errors=[] frozen=[]
+2026-11-22 00:45:42 START r1-local-comet420-default-tpch attempt 1 memavail=11.3GB disk=29.6GB
+2026-11-22 00:51:09 END r1-local-comet420-default-tpch status=ok rc=0 326.8s errors=[] frozen=[]
+2026-11-22 00:51:09 START r1-proxy10-comet420-analytics-tpch attempt 1 memavail=11.8GB disk=29.6GB
+2026-11-22 00:57:39 END r1-proxy10-comet420-analytics-tpch status=frozen rc=0 389.9s errors=[] frozen=[{'q': 7, 'gap_s': 5.0}]
+2026-11-22 00:57:39 START r1-proxy10-comet420-analytics-tpch attempt 2 memavail=11.3GB disk=29.6GB
+2026-11-22 01:04:05 END r1-proxy10-comet420-analytics-tpch status=ok rc=0 386.1s errors=[] frozen=[]
+2026-11-22 01:04:05 START r1-loopback-sail-noreorder-etl attempt 1 memavail=11.4GB disk=29.6GB
+2026-11-22 01:04:31 END r1-loopback-sail-noreorder-etl status=ok rc=0 25.6s errors=[] frozen=[]
+2026-11-22 01:04:31 START r1-loopback-spark420-classic-tpch attempt 1 memavail=11.3GB disk=29.4GB
+2026-11-22 01:13:19 END r1-loopback-spark420-classic-tpch status=ok rc=0 528.2s errors=[] frozen=[]
+2026-11-22 01:13:19 START r1-proxy10-spark420-analytics-tpch attempt 1 memavail=11.3GB disk=29.6GB
+2026-11-22 01:23:43 END r1-proxy10-spark420-analytics-tpch status=ok rc=0 624.0s errors=[] frozen=[]
+2026-11-22 01:23:44 START r1-local-sail-reorder-tpch attempt 1 memavail=10.8GB disk=29.6GB
+2026-11-22 02:10:38 START r1-local-sail-reorder-tpch attempt 1 memavail=12.3GB disk=31.6GB
+2026-11-22 02:11:55 END r1-local-sail-reorder-tpch status=frozen rc=0 76.6s errors=[18] frozen=[{'q': 18, 'gap_s': 5.3}]
+2026-11-22 02:11:55 START r1-local-sail-reorder-tpch attempt 2 memavail=13.4GB disk=31.5GB
+2026-11-22 02:12:49 END r1-local-sail-reorder-tpch status=ok rc=0 54.1s errors=[] frozen=[]
+2026-11-22 02:12:49 START r1-proxy0-sail-noreorder-tpch attempt 1 memavail=13.2GB disk=31.5GB
+2026-11-22 02:15:14 END r1-proxy0-sail-noreorder-tpch status=ok rc=0 145.1s errors=[] frozen=[]
+2026-11-22 02:15:14 START r1-loopback-sail-reorder-tpch attempt 1 memavail=13.8GB disk=31.5GB
+2026-11-22 02:16:35 END r1-loopback-sail-reorder-tpch status=ok rc=0 81.2s errors=[] frozen=[]
+2026-11-22 02:16:35 START r1-proxy0-comet420-analytics-tpch attempt 1 memavail=13.7GB disk=31.5GB
+2026-11-22 02:16:42 END r1-proxy0-comet420-analytics-tpch status=failed rc=1 6.8s errors=[] frozen=[]
+2026-11-22 02:16:42 START r1-loopback-comet420-analytics-etl attempt 1 memavail=13.6GB disk=31.5GB
+2026-11-22 02:16:47 END r1-loopback-comet420-analytics-etl status=failed rc=1 5.3s errors=[] frozen=[]
+2026-11-22 02:16:47 START r1-proxy10-comet420-classic-tpch attempt 1 memavail=13.7GB disk=31.5GB
+2026-11-22 02:16:50 END r1-proxy10-comet420-classic-tpch status=failed rc=1 3.1s errors=[] frozen=[]
+2026-11-22 02:16:50 START r1-proxy0-spark420-analytics-tpch attempt 1 memavail=13.6GB disk=31.5GB
+2026-11-22 02:26:38 END r1-proxy0-spark420-analytics-tpch status=ok rc=0 587.8s errors=[] frozen=[]
+2026-11-22 02:26:38 START r1-proxy0-comet420-analytics-tpch attempt 2 memavail=13.5GB disk=31.4GB
+2026-11-22 02:32:38 END r1-proxy0-comet420-analytics-tpch status=ok rc=0 360.0s errors=[] frozen=[]
+2026-11-22 02:32:38 START r1-loopback-comet420-analytics-etl attempt 2 memavail=12.6GB disk=30.4GB
+2026-11-22 02:34:24 END r1-loopback-comet420-analytics-etl status=ok rc=0 106.0s errors=[] frozen=[]
+2026-11-22 02:34:24 START r1-proxy10-comet420-classic-tpch attempt 2 memavail=12.6GB disk=29.3GB
+2026-11-22 02:41:00 END r1-proxy10-comet420-classic-tpch status=ok rc=0 395.9s errors=[] frozen=[]
+2026-11-22 02:41:00 START r1-local-spark413-default-tpch attempt 1 memavail=12.3GB disk=30.4GB
+2026-11-22 02:48:51 END r1-local-spark413-default-tpch status=ok rc=0 470.6s errors=[] frozen=[]
+2026-11-22 02:48:51 START r1-loopback-spark420-analytics-tpch attempt 1 memavail=12.3GB disk=30.4GB
+2026-11-22 02:57:42 END r1-loopback-spark420-analytics-tpch status=qerror rc=0 530.8s errors=[12] frozen=[]
+2026-11-22 02:57:42 START r1-loopback-spark420-analytics-tpch attempt 2 memavail=12.7GB disk=30.4GB
+2026-11-22 03:06:43 END r1-loopback-spark420-analytics-tpch status=ok rc=0 540.8s errors=[] frozen=[]
+2026-11-22 03:06:43 START r1-proxy10-duckdb-tpch attempt 1 memavail=12.3GB disk=30.4GB
+2026-11-22 03:08:18 END r1-proxy10-duckdb-tpch status=ok rc=0 95.4s errors=[] frozen=[]
+2026-11-22 03:08:18 START r1-loopback-comet420-classic-etl attempt 1 memavail=12.3GB disk=30.4GB
+2026-11-22 03:10:14 END r1-loopback-comet420-classic-etl status=ok rc=0 115.8s errors=[] frozen=[]
+2026-11-22 03:10:14 START r1-proxy10-sail-reorder-tpch attempt 1 memavail=12.6GB disk=29.3GB
+2026-11-22 03:12:19 END r1-proxy10-sail-reorder-tpch status=ok rc=0 125.0s errors=[] frozen=[]
+2026-11-22 03:12:19 START r1-local-spark420-default-tpch attempt 1 memavail=12.5GB disk=29.2GB
+2026-11-22 03:20:20 END r1-local-spark420-default-tpch status=frozen rc=0 481.4s errors=[] frozen=[{'q': 1, 'gap_s': 2.1}]
+2026-11-22 03:20:20 START r1-local-spark420-default-tpch attempt 2 memavail=12.6GB disk=30.4GB
+2026-11-22 03:28:03 END r1-local-spark420-default-tpch status=ok rc=0 462.8s errors=[] frozen=[]
+2026-11-22 03:28:03 START r1-proxy10-sail-reorder-etl attempt 1 memavail=12.8GB disk=30.4GB
+2026-11-22 03:28:57 END r1-proxy10-sail-reorder-etl status=ok rc=0 54.0s errors=[] frozen=[]
+2026-11-22 03:28:57 START r1-proxy10-comet420-analytics-etl attempt 1 memavail=12.6GB disk=30.1GB
+2026-11-22 03:32:08 END r1-proxy10-comet420-analytics-etl status=ok rc=0 190.4s errors=[] frozen=[]
+2026-11-22 03:32:08 START r1-loopback-sail-reorder-etl attempt 1 memavail=12.5GB disk=29.0GB
+2026-11-22 03:32:34 END r1-loopback-sail-reorder-etl status=ok rc=0 26.1s errors=[] frozen=[]
+2026-11-22 03:32:34 START r1-proxy10-spark413-analytics-tpch attempt 1 memavail=12.5GB disk=28.7GB
+2026-11-22 03:44:48 END r1-proxy10-spark413-analytics-tpch status=ok rc=0 734.0s errors=[] frozen=[]
+2026-11-22 03:44:48 START r1-loopback-spark420-analytics-etl attempt 1 memavail=12.5GB disk=30.1GB
+2026-11-22 03:47:22 END r1-loopback-spark420-analytics-etl status=ok rc=0 153.8s errors=[] frozen=[]
+2026-11-22 03:47:22 START r1-proxy0-duckdb-tpch attempt 1 memavail=12.5GB disk=29.0GB
+2026-11-22 03:48:31 END r1-proxy0-duckdb-tpch status=ok rc=0 69.3s errors=[] frozen=[]
+2026-11-22 03:48:31 START r1-proxy10-spark420-classic-tpch attempt 1 memavail=12.5GB disk=30.1GB
+2026-11-22 04:01:54 END r1-proxy10-spark420-classic-tpch status=ok rc=0 802.6s errors=[] frozen=[]
+2026-11-22 04:01:54 START r1-loopback-comet420-classic-tpch attempt 1 memavail=12.4GB disk=30.1GB
+2026-11-22 04:08:29 END r1-loopback-comet420-classic-tpch status=ok rc=0 395.1s errors=[] frozen=[]
+2026-11-22 04:08:29 START r1-proxy10-spark413-classic-tpch attempt 1 memavail=12.6GB disk=30.1GB
+2026-11-22 04:21:29 END r1-proxy10-spark413-classic-tpch status=frozen rc=0 779.6s errors=[] frozen=[{'q': 21, 'gap_s': 2.5}]
+2026-11-22 04:21:29 START r1-proxy10-spark413-classic-tpch attempt 2 memavail=12.3GB disk=30.1GB
+2026-11-22 04:34:37 END r1-proxy10-spark413-classic-tpch status=ok rc=0 788.0s errors=[] frozen=[]
+2026-11-22 04:34:49 START r1-loopback-spark420-classic-etl attempt 1 memavail=12.6GB disk=30.1GB
+2026-11-22 04:37:29 END r1-loopback-spark420-classic-etl status=ok rc=0 159.5s errors=[] frozen=[]
+2026-11-22 04:37:29 START r1-local-duckdb-tpch attempt 1 memavail=12.5GB disk=28.9GB
+2026-11-22 04:38:19 END r1-local-duckdb-tpch status=ok rc=0 50.2s errors=[] frozen=[]
+2026-11-22 04:38:19 START r1-loopback-sail-noreorder-tpch attempt 1 memavail=12.4GB disk=28.9GB
+2026-11-22 04:39:53 END r1-loopback-sail-noreorder-tpch status=ok rc=0 94.2s errors=[] frozen=[]
+2026-11-22 04:39:53 START r1-proxy10-sail-noreorder-etl attempt 1 memavail=12.6GB disk=30.1GB
+2026-11-22 04:40:22 END r1-proxy10-sail-noreorder-etl status=ok rc=0 28.7s errors=[] frozen=[]
+2026-11-22 04:40:22 START r1-local-sail-noreorder-tpch attempt 1 memavail=12.5GB disk=29.8GB
+2026-11-22 04:41:20 END r1-local-sail-noreorder-tpch status=frozen rc=0 58.5s errors=[18] frozen=[{'q': 18, 'gap_s': 5.3}]
+2026-11-22 04:41:20 START r1-local-sail-noreorder-tpch attempt 2 memavail=12.4GB disk=29.8GB
+2026-11-22 04:42:08 END r1-local-sail-noreorder-tpch status=ok rc=0 47.2s errors=[] frozen=[]
+2026-11-22 04:42:08 START r1-proxy10-duckdb-etl attempt 1 memavail=12.1GB disk=29.8GB
+2026-11-22 04:42:33 END r1-proxy10-duckdb-etl status=ok rc=0 25.7s errors=[] frozen=[]
+2026-11-22 04:42:33 START r2-loopback-spark413-analytics-tpch attempt 1 memavail=12.5GB disk=29.4GB
+2026-11-22 04:52:53 END r2-loopback-spark413-analytics-tpch status=ok rc=0 620.0s errors=[] frozen=[]
+2026-11-22 04:52:53 START r2-proxy0-duckdb-tpch attempt 1 memavail=12.6GB disk=30.1GB
+2026-11-22 04:54:07 END r2-proxy0-duckdb-tpch status=ok rc=0 73.9s errors=[] frozen=[]
+2026-11-22 04:54:07 START r2-proxy10-spark413-analytics-etl attempt 1 memavail=12.4GB disk=30.1GB
+2026-11-22 04:58:22 END r2-proxy10-spark413-analytics-etl status=ok rc=0 255.0s errors=[] frozen=[]
+2026-11-22 04:58:22 START r2-loopback-spark420-classic-etl attempt 1 memavail=12.6GB disk=28.9GB
+2026-11-22 05:00:52 END r2-loopback-spark420-classic-etl status=ok rc=0 149.5s errors=[] frozen=[]
+2026-11-22 05:00:52 START r2-proxy0-comet420-classic-tpch attempt 1 memavail=12.6GB disk=28.9GB
+2026-11-22 05:06:46 END r2-proxy0-comet420-classic-tpch status=ok rc=0 354.3s errors=[] frozen=[]
+2026-11-22 05:06:46 START r2-proxy10-sail-reorder-tpch attempt 1 memavail=12.6GB disk=30.1GB
+2026-11-22 05:08:52 END r2-proxy10-sail-reorder-tpch status=ok rc=0 125.2s errors=[] frozen=[]
+2026-11-22 05:08:52 START r2-proxy10-spark413-analytics-tpch attempt 1 memavail=12.3GB disk=30.1GB
+2026-11-22 05:20:26 END r2-proxy10-spark413-analytics-tpch status=ok rc=0 694.6s errors=[] frozen=[]
+2026-11-22 05:20:26 START r2-loopback-comet420-classic-tpch attempt 1 memavail=12.6GB disk=30.1GB
+2026-11-22 05:26:08 END r2-loopback-comet420-classic-tpch status=ok rc=0 341.5s errors=[] frozen=[]
+2026-11-22 05:26:08 START r2-loopback-spark413-analytics-etl attempt 1 memavail=12.6GB disk=30.1GB
+2026-11-22 05:28:56 END r2-loopback-spark413-analytics-etl status=ok rc=0 168.0s errors=[] frozen=[]
+2026-11-22 05:28:56 START r2-proxy10-comet420-classic-tpch attempt 1 memavail=12.5GB disk=29.7GB
+2026-11-22 05:35:35 END r2-proxy10-comet420-classic-tpch status=ok rc=0 399.4s errors=[] frozen=[]
+2026-11-22 05:35:36 START r2-loopback-spark413-classic-tpch attempt 1 memavail=12.2GB disk=30.1GB
+2026-11-22 05:44:23 END r2-loopback-spark413-classic-tpch status=frozen rc=0 527.7s errors=[12] frozen=[{'q': 18, 'gap_s': 2.1}]
+2026-11-22 05:44:23 START r2-loopback-spark413-classic-tpch attempt 2 memavail=12.3GB disk=30.1GB
+2026-11-22 05:52:48 END r2-loopback-spark413-classic-tpch status=ok rc=0 504.8s errors=[] frozen=[]
+2026-11-22 05:52:48 START r2-loopback-sail-reorder-tpch attempt 1 memavail=12.2GB disk=30.0GB
+2026-11-22 05:53:57 END r2-loopback-sail-reorder-tpch status=ok rc=0 68.7s errors=[] frozen=[]
+2026-11-22 05:53:57 START r2-local-spark420-default-tpch attempt 1 memavail=12.6GB disk=30.0GB
+2026-11-22 06:01:57 END r2-local-spark420-default-tpch status=ok rc=0 479.6s errors=[] frozen=[]
+2026-11-22 06:01:57 START r2-loopback-sail-noreorder-tpch attempt 1 memavail=12.8GB disk=30.0GB
+2026-11-22 06:03:12 END r2-loopback-sail-noreorder-tpch status=ok rc=0 75.1s errors=[] frozen=[]
+2026-11-22 06:03:12 START r2-loopback-comet420-analytics-tpch attempt 1 memavail=12.6GB disk=30.0GB
+2026-11-22 06:08:47 END r2-loopback-comet420-analytics-tpch status=ok rc=0 335.4s errors=[] frozen=[]
+2026-11-22 06:08:47 START r2-proxy0-sail-reorder-tpch attempt 1 memavail=12.2GB disk=30.0GB
+2026-11-22 06:10:15 END r2-proxy0-sail-reorder-tpch status=ok rc=0 87.2s errors=[] frozen=[]
+2026-11-22 06:10:15 START r2-loopback-duckdb-etl attempt 1 memavail=12.6GB disk=30.0GB
+2026-11-22 06:10:36 END r2-loopback-duckdb-etl status=ok rc=0 21.2s errors=[] frozen=[]
+2026-11-22 06:10:36 START r2-proxy0-spark413-analytics-tpch attempt 1 memavail=12.4GB disk=29.7GB
+2026-11-22 06:20:00 END r2-proxy0-spark413-analytics-tpch status=ok rc=0 564.2s errors=[] frozen=[]
+2026-11-22 06:20:00 START r2-loopback-spark420-analytics-etl attempt 1 memavail=12.3GB disk=30.0GB
+2026-11-22 06:22:45 END r2-loopback-spark420-analytics-etl status=frozen rc=0 164.7s errors=[] frozen=[{'q': 'E4_highcard_agg', 'gap_s': 23.5}]
+2026-11-22 06:22:45 START r2-loopback-spark420-analytics-etl attempt 2 memavail=12.1GB disk=28.9GB
+2026-11-22 06:25:10 END r2-loopback-spark420-analytics-etl status=ok rc=0 145.1s errors=[] frozen=[]
+2026-11-22 06:25:10 START r2-proxy10-spark413-classic-etl attempt 1 memavail=12.4GB disk=28.9GB
+2026-11-22 06:29:24 END r2-proxy10-spark413-classic-etl status=ok rc=0 254.1s errors=[] frozen=[]
+2026-11-22 06:29:24 START r2-proxy0-comet420-analytics-tpch attempt 1 memavail=12.4GB disk=29.7GB
+2026-11-22 06:35:11 END r2-proxy0-comet420-analytics-tpch status=ok rc=0 346.5s errors=[] frozen=[]
+2026-11-22 06:35:11 START r2-proxy10-duckdb-etl attempt 1 memavail=12.6GB disk=30.0GB
+2026-11-22 06:35:37 END r2-proxy10-duckdb-etl status=ok rc=0 26.7s errors=[] frozen=[]
+2026-11-22 06:35:37 START r2-proxy10-comet420-classic-etl attempt 1 memavail=12.5GB disk=29.6GB
+2026-11-22 06:38:35 END r2-proxy10-comet420-classic-etl status=ok rc=0 177.5s errors=[] frozen=[]
+2026-11-22 06:38:35 START r2-proxy10-sail-reorder-etl attempt 1 memavail=12.3GB disk=28.5GB
+2026-11-22 06:39:04 END r2-proxy10-sail-reorder-etl status=ok rc=0 29.2s errors=[] frozen=[]
+2026-11-22 06:39:04 START r2-proxy10-comet420-analytics-tpch attempt 1 memavail=12.4GB disk=29.9GB
+2026-11-22 06:45:23 END r2-proxy10-comet420-analytics-tpch status=qerror rc=0 378.5s errors=[3] frozen=[]
+2026-11-22 06:45:23 START r2-proxy10-comet420-analytics-tpch attempt 2 memavail=12.5GB disk=30.0GB
+2026-11-22 06:51:38 END r2-proxy10-comet420-analytics-tpch status=ok rc=0 374.8s errors=[] frozen=[]
+2026-11-22 06:51:38 START r2-proxy10-spark413-classic-tpch attempt 1 memavail=12.6GB disk=30.0GB
+2026-11-22 07:04:27 END r2-proxy10-spark413-classic-tpch status=ok rc=0 769.3s errors=[] frozen=[]
+2026-11-22 07:04:27 START r2-local-sail-reorder-tpch attempt 1 memavail=12.4GB disk=30.0GB
+2026-11-22 07:05:23 END r2-local-sail-reorder-tpch status=ok rc=0 56.0s errors=[] frozen=[]
+2026-11-22 07:05:23 START r2-proxy0-sail-noreorder-tpch attempt 1 memavail=12.3GB disk=30.0GB
+2026-11-22 07:06:56 END r2-proxy0-sail-noreorder-tpch status=ok rc=0 93.1s errors=[] frozen=[]
+2026-11-22 07:06:56 START r2-proxy10-spark420-classic-etl attempt 1 memavail=12.3GB disk=30.0GB
+2026-11-22 07:11:07 END r2-proxy10-spark420-classic-etl status=ok rc=0 250.8s errors=[] frozen=[]
+2026-11-22 07:11:07 START r2-proxy0-spark420-analytics-tpch attempt 1 memavail=12.5GB disk=29.0GB
+2026-11-22 07:20:43 END r2-proxy0-spark420-analytics-tpch status=ok rc=0 575.9s errors=[] frozen=[]
+2026-11-22 07:20:43 START r2-local-spark413-default-tpch attempt 1 memavail=12.4GB disk=30.0GB
+2026-11-22 07:28:31 END r2-local-spark413-default-tpch status=ok rc=0 468.4s errors=[] frozen=[]
+2026-11-22 07:28:32 START r2-proxy10-sail-noreorder-etl attempt 1 memavail=12.2GB disk=30.0GB
+2026-11-22 07:29:04 END r2-proxy10-sail-noreorder-etl status=ok rc=0 32.3s errors=[] frozen=[]
+2026-11-22 07:29:04 START r2-local-comet420-default-tpch attempt 1 memavail=12.5GB disk=29.7GB
+2026-11-22 07:34:20 END r2-local-comet420-default-tpch status=ok rc=0 315.9s errors=[] frozen=[]
+2026-11-22 07:34:20 START r2-proxy10-comet420-analytics-etl attempt 1 memavail=12.8GB disk=30.0GB
+2026-11-22 07:37:31 END r2-proxy10-comet420-analytics-etl status=ok rc=0 191.2s errors=[] frozen=[]
+2026-11-22 07:37:31 START r2-proxy0-spark413-classic-tpch attempt 1 memavail=12.4GB disk=28.8GB
+2026-11-22 07:46:50 END r2-proxy0-spark413-classic-tpch status=frozen rc=0 559.4s errors=[] frozen=[{'q': 8, 'gap_s': 2.2}]
+2026-11-22 07:46:50 START r2-proxy0-spark413-classic-tpch attempt 2 memavail=12.2GB disk=30.0GB
+2026-11-22 07:55:51 END r2-proxy0-spark413-classic-tpch status=ok rc=0 540.9s errors=[] frozen=[]
+2026-11-22 07:55:51 START r2-local-sail-noreorder-tpch attempt 1 memavail=12.5GB disk=30.0GB
+2026-11-22 07:56:47 END r2-local-sail-noreorder-tpch status=ok rc=0 56.1s errors=[] frozen=[]
+2026-11-22 07:56:47 START r2-proxy10-duckdb-tpch attempt 1 memavail=12.5GB disk=30.0GB
+2026-11-22 07:58:35 END r2-proxy10-duckdb-tpch status=ok rc=0 107.2s errors=[] frozen=[]
+2026-11-22 07:58:35 START r2-proxy10-spark420-analytics-tpch attempt 1 memavail=12.3GB disk=30.0GB
+2026-11-22 08:08:57 END r2-proxy10-spark420-analytics-tpch status=qerror rc=0 621.9s errors=[18] frozen=[]
+2026-11-22 08:08:57 START r2-proxy10-spark420-analytics-tpch attempt 2 memavail=12.4GB disk=30.0GB
+2026-11-22 08:19:14 END r2-proxy10-spark420-analytics-tpch status=ok rc=0 617.8s errors=[] frozen=[]
+2026-11-22 08:19:15 START r2-local-duckdb-tpch attempt 1 memavail=12.1GB disk=30.0GB
+2026-11-22 08:20:04 END r2-local-duckdb-tpch status=ok rc=0 49.8s errors=[] frozen=[]
+2026-11-22 08:20:04 START r2-loopback-sail-noreorder-etl attempt 1 memavail=11.8GB disk=30.0GB
+2026-11-22 08:20:31 END r2-loopback-sail-noreorder-etl status=frozen rc=0 27.1s errors=[] frozen=[{'q': 'E2_join_agg', 'gap_s': 2.2}]
+2026-11-22 08:20:31 START r2-loopback-sail-noreorder-etl attempt 2 memavail=12.0GB disk=29.7GB
+2026-11-22 08:20:53 END r2-loopback-sail-noreorder-etl status=ok rc=0 21.8s errors=[] frozen=[]
+2026-11-22 08:20:53 START r2-loopback-comet420-classic-etl attempt 1 memavail=12.1GB disk=29.4GB
+2026-11-22 08:22:38 END r2-loopback-comet420-classic-etl status=ok rc=0 105.0s errors=[] frozen=[]
+2026-11-22 08:22:38 START r2-loopback-sail-reorder-etl attempt 1 memavail=12.2GB disk=28.3GB
+2026-11-22 08:22:59 END r2-loopback-sail-reorder-etl status=ok rc=0 20.2s errors=[] frozen=[]
+2026-11-22 08:22:59 START r2-proxy10-spark420-analytics-etl attempt 1 memavail=12.3GB disk=28.0GB
+2026-11-22 08:26:58 END r2-proxy10-spark420-analytics-etl status=ok rc=0 239.2s errors=[] frozen=[]
+2026-11-22 08:26:58 START r2-proxy10-sail-noreorder-tpch attempt 1 memavail=12.4GB disk=28.8GB
+2026-11-22 08:29:06 END r2-proxy10-sail-noreorder-tpch status=ok rc=0 127.7s errors=[] frozen=[]
+2026-11-22 08:29:06 START r2-proxy0-spark420-classic-tpch attempt 1 memavail=12.2GB disk=28.8GB
+2026-11-22 08:38:42 END r2-proxy0-spark420-classic-tpch status=ok rc=0 576.3s errors=[] frozen=[]
+2026-11-22 08:38:42 START r2-loopback-spark420-classic-tpch attempt 1 memavail=12.4GB disk=30.0GB
+2026-11-22 08:47:28 END r2-loopback-spark420-classic-tpch status=ok rc=0 526.4s errors=[] frozen=[]
+2026-11-22 08:47:28 START r2-loopback-spark420-analytics-tpch attempt 1 memavail=12.4GB disk=29.9GB
+2026-11-22 08:56:33 END r2-loopback-spark420-analytics-tpch status=qerror rc=0 544.9s errors=[3] frozen=[]
+2026-11-22 08:56:33 START r2-loopback-spark420-analytics-tpch attempt 2 memavail=12.4GB disk=29.9GB
+2026-11-22 09:05:37 END r2-loopback-spark420-analytics-tpch status=frozen rc=0 543.7s errors=[] frozen=[{'q': 8, 'gap_s': 2.3}]
+2026-11-22 09:05:37 START r2-loopback-spark420-analytics-tpch attempt 3 memavail=12.1GB disk=29.9GB
+2026-11-22 09:14:19 END r2-loopback-spark420-analytics-tpch status=qerror rc=0 521.9s errors=[12] frozen=[]
+2026-11-22 09:14:19 START r2-loopback-duckdb-tpch attempt 1 memavail=12.5GB disk=29.9GB
+2026-11-22 09:15:15 END r2-loopback-duckdb-tpch status=ok rc=0 55.9s errors=[] frozen=[]
+2026-11-22 09:15:15 START r2-proxy10-spark420-classic-tpch attempt 1 memavail=12.3GB disk=29.9GB
+2026-11-22 09:28:13 END r2-proxy10-spark420-classic-tpch status=ok rc=0 778.4s errors=[] frozen=[]
+2026-11-22 09:28:13 START r2-loopback-comet420-analytics-etl attempt 1 memavail=12.0GB disk=29.9GB
+2026-11-22 09:30:01 END r2-loopback-comet420-analytics-etl status=ok rc=0 107.4s errors=[] frozen=[]
+2026-11-22 09:30:01 START r2-loopback-spark413-classic-etl attempt 1 memavail=12.4GB disk=28.9GB
+2026-11-22 09:32:35 END r2-loopback-spark413-classic-etl status=ok rc=0 153.6s errors=[] frozen=[]
+2026-11-22 09:32:35 START r3-proxy10-spark413-classic-etl attempt 1 memavail=12.5GB disk=27.8GB
+2026-11-22 09:36:53 END r3-proxy10-spark413-classic-etl status=ok rc=0 258.0s errors=[] frozen=[]
+2026-11-22 09:36:53 START r3-loopback-sail-noreorder-tpch attempt 1 memavail=12.3GB disk=28.9GB
+2026-11-22 09:38:10 END r3-loopback-sail-noreorder-tpch status=ok rc=0 77.7s errors=[] frozen=[]
+2026-11-22 09:38:10 START r3-loopback-comet420-analytics-etl attempt 1 memavail=12.4GB disk=28.9GB
+2026-11-22 09:39:53 END r3-loopback-comet420-analytics-etl status=ok rc=0 102.8s errors=[] frozen=[]
+2026-11-22 09:39:53 START r3-proxy0-comet420-classic-tpch attempt 1 memavail=12.5GB disk=29.5GB
+2026-11-22 09:46:15 END r3-proxy0-comet420-classic-tpch status=ok rc=0 381.4s errors=[] frozen=[]
+2026-11-22 09:46:15 START r3-loopback-comet420-classic-etl attempt 1 memavail=12.1GB disk=29.9GB
+2026-11-22 09:48:05 END r3-loopback-comet420-classic-etl status=ok rc=0 110.6s errors=[] frozen=[]
+2026-11-22 09:48:05 START r3-loopback-spark420-analytics-tpch attempt 1 memavail=12.5GB disk=28.8GB
+2026-11-22 09:57:16 END r3-loopback-spark420-analytics-tpch status=frozen rc=0 551.1s errors=[] frozen=[{'q': 7, 'gap_s': 2.0}]
+2026-11-22 09:57:17 START r3-loopback-spark420-analytics-tpch attempt 2 memavail=12.2GB disk=29.9GB
+2026-11-22 10:06:25 END r3-loopback-spark420-analytics-tpch status=ok rc=0 548.4s errors=[] frozen=[]
+2026-11-22 10:06:25 START r3-proxy10-comet420-analytics-etl attempt 1 memavail=12.3GB disk=29.9GB
+2026-11-22 10:09:29 END r3-proxy10-comet420-analytics-etl status=ok rc=0 183.5s errors=[] frozen=[]
+2026-11-22 10:09:29 START r3-loopback-comet420-analytics-tpch attempt 1 memavail=12.5GB disk=28.8GB
+2026-11-22 10:15:56 END r3-loopback-comet420-analytics-tpch status=ok rc=0 388.0s errors=[] frozen=[]
+2026-11-22 10:15:57 START r3-loopback-sail-reorder-tpch attempt 1 memavail=12.1GB disk=29.9GB
+2026-11-22 10:17:12 END r3-loopback-sail-reorder-tpch status=ok rc=0 75.2s errors=[] frozen=[]
+2026-11-22 10:17:12 START r3-local-sail-noreorder-tpch attempt 1 memavail=12.6GB disk=29.9GB
+2026-11-22 10:18:32 END r3-local-sail-noreorder-tpch status=ok rc=0 80.6s errors=[] frozen=[]
+2026-11-22 10:18:32 START r3-loopback-spark420-classic-tpch attempt 1 memavail=12.2GB disk=29.9GB
+2026-11-22 10:27:29 END r3-loopback-spark420-classic-tpch status=ok rc=0 536.3s errors=[] frozen=[]
+2026-11-22 10:27:29 START r3-proxy0-spark413-classic-tpch attempt 1 memavail=12.5GB disk=29.9GB
+2026-11-22 10:36:29 END r3-proxy0-spark413-classic-tpch status=ok rc=0 540.5s errors=[] frozen=[]
+2026-11-22 10:36:30 START r3-loopback-spark413-classic-etl attempt 1 memavail=12.2GB disk=29.9GB
+2026-11-22 10:38:59 END r3-loopback-spark413-classic-etl status=frozen rc=0 149.3s errors=[] frozen=[{'q': 'E6_upsert_antijoin_union', 'gap_s': 2.2}]
+2026-11-22 10:38:59 START r3-loopback-spark413-classic-etl attempt 2 memavail=12.2GB disk=28.7GB
+2026-11-22 10:41:25 END r3-loopback-spark413-classic-etl status=ok rc=0 145.6s errors=[] frozen=[]
+2026-11-22 10:41:25 START r3-loopback-spark413-classic-tpch attempt 1 memavail=12.6GB disk=28.7GB
+2026-11-22 10:49:47 END r3-loopback-spark413-classic-tpch status=ok rc=0 502.8s errors=[] frozen=[]
+2026-11-22 10:49:47 START r3-local-comet420-default-tpch attempt 1 memavail=12.2GB disk=29.9GB
+2026-11-22 10:55:09 END r3-local-comet420-default-tpch status=ok rc=0 321.9s errors=[] frozen=[]
+2026-11-22 10:55:09 START r3-local-spark413-default-tpch attempt 1 memavail=12.8GB disk=29.9GB
+2026-11-22 11:02:37 END r3-local-spark413-default-tpch status=ok rc=0 447.3s errors=[] frozen=[]
+2026-11-22 11:02:37 START r3-loopback-duckdb-etl attempt 1 memavail=12.6GB disk=29.9GB
+2026-11-22 11:03:00 END r3-loopback-duckdb-etl status=ok rc=0 23.3s errors=[] frozen=[]
+2026-11-22 11:03:00 START r3-loopback-comet420-classic-tpch attempt 1 memavail=12.3GB disk=29.5GB
+2026-11-22 11:08:29 END r3-loopback-comet420-classic-tpch status=ok rc=0 329.3s errors=[] frozen=[]
+2026-11-22 11:08:29 START r3-proxy10-spark413-classic-tpch attempt 1 memavail=12.6GB disk=29.9GB
+2026-11-22 11:27:38 END r3-proxy10-spark413-classic-tpch status=frozen rc=0 1148.6s errors=[] frozen=[{'q': 8, 'gap_s': 2.1}, {'q': 19, 'gap_s': 365.3}]
+2026-11-22 11:27:38 START r3-proxy10-spark413-classic-tpch attempt 2 memavail=11.9GB disk=29.9GB
+2026-11-22 14:04:59 END r3-proxy10-spark413-classic-tpch status=timeout rc=247 9440.5s errors=[] frozen=[]
+2026-11-22 14:05:00 START r3-proxy10-sail-noreorder-etl attempt 1 memavail=12.1GB disk=29.9GB
+2026-11-22 14:06:57 END r3-proxy10-sail-noreorder-etl status=ok rc=0 117.2s errors=[] frozen=[]
+2026-11-22 14:06:57 START r3-proxy0-spark420-classic-tpch attempt 1 memavail=12.1GB disk=62.6GB
+2026-11-22 14:36:17 END r3-proxy0-spark420-classic-tpch status=frozen rc=56 1759.4s errors=[1, 2] frozen=[{'q': 1, 'gap_s': 1722.0}]
+2026-11-22 14:36:17 START r3-proxy0-spark420-classic-tpch attempt 2 memavail=12.4GB disk=62.7GB
+2026-11-22 16:15:02 END r3-proxy0-spark420-classic-tpch status=frozen rc=247 5924.9s errors=[] frozen=[{'q': 5, 'gap_s': 3734.9}, {'q': 7, 'gap_s': 70.1}]
+2026-11-22 16:15:03 START r3-proxy0-spark420-classic-tpch attempt 3 memavail=12.4GB disk=62.7GB
+2026-11-22 19:54:30 END r3-proxy0-spark420-classic-tpch status=timeout rc=247 13166.9s errors=[] frozen=[]
+2026-11-22 19:54:30 START r3-proxy10-spark420-classic-tpch attempt 1 memavail=11.7GB disk=62.7GB
+2026-11-22 20:57:10 END r3-proxy10-spark420-classic-tpch status=frozen rc=56 3759.6s errors=[3, 4] frozen=[{'q': 3, 'gap_s': 3616.1}]
+2026-11-22 20:57:12 START r3-proxy10-spark420-classic-tpch attempt 2 memavail=12.5GB disk=62.7GB
+2026-11-23 07:46:50 END r3-proxy10-spark420-classic-tpch status=timeout rc=247 38978.4s errors=[] frozen=[]
+2026-11-23 07:46:53 START r3-loopback-spark413-analytics-tpch attempt 1 memavail=11.8GB disk=62.7GB
+2026-11-23 07:58:20 END r3-loopback-spark413-analytics-tpch status=qerror rc=0 687.4s errors=[12] frozen=[]
+2026-11-23 07:58:20 START r3-loopback-spark413-analytics-tpch attempt 2 memavail=11.0GB disk=62.4GB
+2026-11-23 09:03:27 END r3-loopback-spark413-analytics-tpch status=frozen rc=0 3907.2s errors=[] frozen=[{'q': 19, 'gap_s': 3162.6}]
+2026-11-23 09:03:28 START r3-loopback-spark413-analytics-tpch attempt 3 memavail=10.7GB disk=62.4GB
+2026-11-23 09:03:58 END r3-loopback-spark413-analytics-tpch status=failed rc=-15 29.9s errors=[] frozen=[]
+2026-11-23 09:03:58 STOP file found, exiting
+2026-11-23 09:04:25 ALL JOBS DONE (rep 3 dropped per Firat approval 2026-11-23 09:01 Europe/Istanbul; analysis uses reps 1-2; r2-loopback-spark420-analytics-tpch extra attempt deferred until after aal-iso)
+2026-11-26 00:25:37 START r2-loopback-spark420-analytics-tpch attempt 4 (manual extra after aal-iso) memavail=11.9GB outdir=/workspace/engine-swap/results/phase2/loopback/tpch/spark420-analytics/rep2_a4
+2026-11-26 00:34:15 END r2-loopback-spark420-analytics-tpch status=ok rc=0 518.1s errors=[] frozen=[] stalled=False

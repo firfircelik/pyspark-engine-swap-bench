@@ -1,0 +1,3 @@
+ENGINE spark (pyspark client 4.2.0)
+C1_from_utc_timestamp | struct<havana:string,edmonton:string,yellowknife:string,casablanca:string,control_istanbul:string> | [('2026-11-21 14:00:00', '2027-01-15 12:00:00', '2027-01-15 12:00:00', '2027-04-01 12:00:00', '2025-06-01 15:00:00')]
+C1_session_tz_havana | struct<local_str:string,h:int> | [('2026-11-21 14:00:00', 14)]

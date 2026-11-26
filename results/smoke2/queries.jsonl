@@ -1,0 +1,3 @@
+{"event": "session", "session_s": 0.293, "version": "4.2.0", "label": "sail-reorder", "pid": 335379, "base": "s3a://tpch/tpch-sf10"}
+{"event": "register", "s": 0.12, "s3": {"GetObject": 50.0, "_sent_bytes": 25184739.0, "ListObjectsV2": 8.0}, "label": "sail-reorder", "pid": 335379, "base": "s3a://tpch/tpch-sf10"}
+{"event": "query", "q": 6, "start": 1795281675.019589, "end": 1795281675.6431684, "wall_s": 0.624, "rows": 1, "s3": {"GetObject": 528.0, "_sent_bytes": 640797862.0, "ListObjectsV2": 1.0}, "error": null, "hash_ordered": "99210af50cdcffe0", "hash_set": "99210af50cdcffe0", "label": "sail-reorder", "pid": 335379, "base": "s3a://tpch/tpch-sf10"}

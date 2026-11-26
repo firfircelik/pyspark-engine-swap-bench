@@ -1,0 +1,106 @@
+{
+ "sail_q18_oom": {
+  "points": {
+   "10": 3.871748096,
+   "30": 9.184813056
+  },
+  "exponent": 0.786305837590762,
+  "sf_at_cap": 32.00308397635818,
+  "cap_gb": 9.663676416,
+  "linear_r0": 1.2152156159999994,
+  "linear_r1": 0.26565324800000006,
+  "linear_sf_at_cap": 31.802588011270984
+ },
+ "cost": {
+  "rates": {
+   "vm": 0.388,
+   "dbx": 1.144,
+   "fabric": 0.88
+  },
+  "fixed_vm_month": 279.36,
+  "fixed_f4_month": 633.6,
+  "grid": [
+   {
+    "platform": "databricks_jobs",
+    "startup_s": 0,
+    "billed_startup_s": 0,
+    "per_run": 0.13984986888888887,
+    "breakeven_runs_per_day_vs_alwayson_vm": 66.58568988290159,
+    "ratio_vs_ondemand_duckdb_vm": 23.451583283802336
+   },
+   {
+    "platform": "fabric_payg",
+    "startup_s": 0,
+    "billed_startup_s": 0.0,
+    "per_run": 0.10757682222222223,
+    "breakeven_runs_per_day_vs_alwayson_vm": 86.56139684777204,
+    "ratio_vs_ondemand_duckdb_vm": 18.039679449078726
+   },
+   {
+    "platform": "databricks_jobs",
+    "startup_s": 60,
+    "billed_startup_s": 60,
+    "per_run": 0.15891653555555554,
+    "breakeven_runs_per_day_vs_alwayson_vm": 58.596797164286436,
+    "ratio_vs_ondemand_duckdb_vm": 12.7849069590534
+   },
+   {
+    "platform": "fabric_payg",
+    "startup_s": 60,
+    "billed_startup_s": 0.0,
+    "per_run": 0.10757682222222223,
+    "breakeven_runs_per_day_vs_alwayson_vm": 86.56139684777204,
+    "ratio_vs_ondemand_duckdb_vm": 8.654603866448674
+   },
+   {
+    "platform": "databricks_jobs",
+    "startup_s": 180,
+    "billed_startup_s": 180,
+    "per_run": 0.19704986888888887,
+    "breakeven_runs_per_day_vs_alwayson_vm": 47.25707280348808,
+    "ratio_vs_ondemand_duckdb_vm": 7.769080663652401
+   },
+   {
+    "platform": "fabric_payg",
+    "startup_s": 180,
+    "billed_startup_s": 0.0,
+    "per_run": 0.10757682222222223,
+    "breakeven_runs_per_day_vs_alwayson_vm": 86.56139684777204,
+    "ratio_vs_ondemand_duckdb_vm": 4.241428903741665
+   },
+   {
+    "platform": "databricks_jobs",
+    "startup_s": 300,
+    "billed_startup_s": 300,
+    "per_run": 0.2351832022222222,
+    "breakeven_runs_per_day_vs_alwayson_vm": 39.5946645509197,
+    "ratio_vs_ondemand_duckdb_vm": 6.1410862735119744
+   },
+   {
+    "platform": "fabric_payg",
+    "startup_s": 300,
+    "billed_startup_s": 0.0,
+    "per_run": 0.10757682222222223,
+    "breakeven_runs_per_day_vs_alwayson_vm": 86.56139684777204,
+    "ratio_vs_ondemand_duckdb_vm": 2.8090379757338972
+   },
+   {
+    "platform": "databricks_jobs",
+    "startup_s": 600,
+    "billed_startup_s": 600,
+    "per_run": 0.33051653555555555,
+    "breakeven_runs_per_day_vs_alwayson_vm": 28.174082075342262,
+    "ratio_vs_ondemand_duckdb_vm": 4.6795481178051315
+   },
+   {
+    "platform": "fabric_payg",
+    "startup_s": 600,
+    "billed_startup_s": 0.0,
+    "per_run": 0.10757682222222223,
+    "breakeven_runs_per_day_vs_alwayson_vm": 86.56139684777204,
+    "ratio_vs_ondemand_duckdb_vm": 1.5231035721201927
+   }
+  ],
+  "vm_capacity_runs_per_day_duckdb": 1561.5398517983012
+ }
+}

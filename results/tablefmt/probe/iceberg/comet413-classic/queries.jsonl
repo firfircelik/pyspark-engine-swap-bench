@@ -1,0 +1,8 @@
+{"event": "session", "session_s": 2.962, "version": "4.1.3", "format": "iceberg", "label": "comet413-classic", "pid": 1723807, "base": "s3a://tpch/iceberg/sf1", "workload": "tpch"}
+{"event": "warmup", "q": 1, "wall_s": 2.197, "error": null, "label": "comet413-classic", "pid": 1723807, "base": "s3a://tpch/iceberg/sf1", "workload": "tpch"}
+{"event": "warmup", "q": 6, "wall_s": 0.327, "error": null, "label": "comet413-classic", "pid": 1723807, "base": "s3a://tpch/iceberg/sf1", "workload": "tpch"}
+{"event": "warmup", "q": 3, "wall_s": 1.521, "error": null, "label": "comet413-classic", "pid": 1723807, "base": "s3a://tpch/iceberg/sf1", "workload": "tpch"}
+{"event": "warmup_total", "s": 6.819, "label": "comet413-classic", "pid": 1723807, "base": "s3a://tpch/iceberg/sf1", "workload": "tpch"}
+{"event": "register", "s": 0.263, "s3": {"ListObjectsV2": 24.0, "GetObject": 16.0, "HeadObject": 48.0, "_sent_bytes": 24129.0}, "label": "comet413-classic", "pid": 1723807, "base": "s3a://tpch/iceberg/sf1", "workload": "tpch"}
+{"event": "query_start", "q": 6, "start": 1795676836.907863, "label": "comet413-classic", "pid": 1723807, "base": "s3a://tpch/iceberg/sf1", "workload": "tpch"}
+{"event": "query", "q": 6, "start": 1795676836.9091878, "end": 1795676837.1380327, "wall_s": 0.229, "rows": 1, "s3": {"ListObjectsV2": 6.0, "GetObject": 22.0, "HeadObject": 15.0, "_sent_bytes": 57346229.0}, "error": null, "hash_ordered": "37fc3f716d28d660", "hash_set": "37fc3f716d28d660", "label": "comet413-classic", "pid": 1723807, "base": "s3a://tpch/iceberg/sf1", "workload": "tpch"}

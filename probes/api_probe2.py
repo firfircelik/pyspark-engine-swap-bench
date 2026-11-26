@@ -1,0 +1,173 @@
+"""Wide PySpark API probe: Spark 4.2.0 classic vs Sail 0.7.3 (Spark Connect). Inline data only (no S3).
+Each check returns a DataFrame; we record schema + rows with timestamp columns cast to string in-engine
+(avoids client-side tz conversion noise). Session time zone fixed to Europe/Istanbul in both engines."""
+import argparse, json, os, sys, hashlib, shutil, decimal, datetime
+ap = argparse.ArgumentParser(); ap.add_argument("--remote"); ap.add_argument("--label", required=True)
+ap.add_argument("--out", required=True); ap.add_argument("--tz", default="Europe/Istanbul")
+ap.add_argument("--wdir", default="/workspace/engine-swap/tmp/probe2")
+a = ap.parse_args()
+from pyspark.sql import SparkSession, functions as F, Window as W, types as T
+spark = SparkSession.builder.remote(a.remote).getOrCreate() if a.remote else SparkSession.builder.getOrCreate()
+spark.conf.set("spark.sql.session.timeZone", a.tz)
+WD = f"{a.wdir}/{a.label}"; os.makedirs(WD, exist_ok=True)
+S = spark.sql
+ev = S("""select * from values
+ (1,'a',10, cast(1.50 as decimal(10,2)), timestamp'2026-03-29 02:30:00', date'2024-02-29', 'x'),
+ (1,'a',20, cast(2.25 as decimal(10,2)), timestamp'2026-10-25 03:30:00', date'2024-01-31', null),
+ (1,'b',20, cast(-0.005 as decimal(10,3)), timestamp'1970-01-01 00:00:00', date'1900-01-01', 'y'),
+ (2,'a',null, cast(99999999.99 as decimal(10,2)), timestamp'2000-02-29 23:59:59.999999', date'2026-12-31', 'z'),
+ (2,'c',5, null, null, null, ''),
+ (3,'c',5, cast(0.10 as decimal(10,2)), timestamp'2038-01-19 03:14:08', date'0001-01-01', 'x')
+ as t(k, g, v, d, ts, dt, s)""")
+def W1(): return W.partitionBy("k").orderBy("v", "g")
+C = {}
+def chk(name):
+    def deco(fn): C[name] = fn; return fn
+    return deco
+# ---------------- window functions
+chk("win_rank_dense_rank")(lambda: ev.select("k","g","v", F.rank().over(W1()).alias("r"), F.dense_rank().over(W1()).alias("dr")))
+chk("win_row_number_nulls_first")(lambda: ev.select("k","v", F.row_number().over(W.partitionBy("k").orderBy(F.col("v").asc_nulls_last())).alias("rn")))
+chk("win_ntile")(lambda: ev.select("k","v", F.ntile(3).over(W.orderBy("k","g","v")).alias("nt")))
+chk("win_percent_rank_cume_dist")(lambda: ev.select("k","v", F.percent_rank().over(W1()).alias("pr"), F.cume_dist().over(W1()).alias("cd")))
+chk("win_lag_lead_default")(lambda: ev.select("k","v", F.lag("v", 1, -1).over(W1()).alias("lg"), F.lead("v", 2).over(W1()).alias("ld")))
+chk("win_first_last_ignorenulls")(lambda: ev.select("k", F.first("s", True).over(W.partitionBy("k").orderBy("g","v").rowsBetween(W.unboundedPreceding, W.unboundedFollowing)).alias("f"), F.last("v", True).over(W.partitionBy("k").orderBy("g").rowsBetween(W.unboundedPreceding, W.unboundedFollowing)).alias("l")))
+chk("win_nth_value")(lambda: ev.select("k", F.nth_value("v", 2).over(W.partitionBy("k").orderBy("g","v").rowsBetween(W.unboundedPreceding, W.unboundedFollowing)).alias("n2")))
+chk("win_range_frame_numeric")(lambda: ev.select("k","v", F.sum("v").over(W.partitionBy("k").orderBy("v").rangeBetween(-10, 0)).alias("s")))
+chk("win_range_frame_timestamp_interval")(lambda: S("select k, ts, count(*) over (partition by k order by ts range between interval 1 day preceding and current row) c from {ev}", ev=ev))
+chk("win_sum_decimal_running")(lambda: ev.select("k","g", F.sum("d").over(W.partitionBy("k").orderBy("g","v").rowsBetween(W.unboundedPreceding, 0)).alias("rs")))
+chk("win_avg_decimal")(lambda: ev.select("k", F.avg("d").over(W.partitionBy("k")).alias("a")))
+chk("win_count_distinct_unsupported_in_spark")(lambda: S("select k, count(distinct g) over (partition by k) c from {ev}", ev=ev))
+chk("win_collect_list_ordered")(lambda: ev.select("k", F.collect_list("g").over(W.partitionBy("k").orderBy("g","v")).alias("cl")))
+chk("win_qualify_like_filter")(lambda: S("select * from (select k,g,v, max(v) over (partition by k) mx from {ev}) where v = mx", ev=ev))
+chk("win_unbounded_no_order")(lambda: ev.select("k","v", F.max("v").over(W.partitionBy("k")).alias("m")))
+# ---------------- MERGE-like / set patterns
+src = S("select * from values (1,'a',100),(4,'d',400),(2,'c',null) as u(k,g,v)")
+chk("merge_full_outer_coalesce")(lambda: ev.select("k","g","v").join(src, ["k","g"], "full_outer").select("k","g", F.coalesce(src.v, ev.v).alias("v")))
+chk("merge_left_anti_union")(lambda: ev.select("k","g","v").join(src.select("k","g"), ["k","g"], "left_anti").unionByName(src))
+chk("merge_left_semi")(lambda: ev.join(src, "k", "left_semi").select("k","g","v"))
+chk("merge_null_safe_join")(lambda: ev.select("v").join(src.select(F.col("v").alias("v2")), F.col("v").eqNullSafe(F.col("v2"))))
+chk("except_all_intersect_all")(lambda: ev.select("k").exceptAll(src.select("k")).unionAll(ev.select("k").intersectAll(src.select("k"))))
+chk("dropDuplicates_keep_latest_pattern")(lambda: ev.orderBy(F.col("v").desc_nulls_last()).dropDuplicates(["k"]).select("k"))
+chk("sql_merge_into_tempview")(lambda: (ev.createOrReplaceTempView("ev_t"), src.createOrReplaceTempView("src_t"), S("MERGE INTO ev_t USING src_t ON ev_t.k = src_t.k WHEN MATCHED THEN UPDATE SET v = src_t.v"))[2])
+chk("union_type_widening")(lambda: S("select 1 as x union all select 1.5 as x union all select cast(2 as bigint)"))
+chk("unionByName_allowMissing")(lambda: ev.select("k","g").unionByName(src.select("k","v"), allowMissingColumns=True))
+# ---------------- timestamps / time zones (session tz Europe/Istanbul)
+chk("tz_current_timezone")(lambda: S("select current_timezone() tz"))
+chk("tz_from_utc_to_utc")(lambda: S("select from_utc_timestamp(timestamp'2026-03-29 00:30:00','America/New_York') a, to_utc_timestamp(timestamp'2026-03-08 02:30:00','America/New_York') b"))
+chk("tz_unix_timestamp_string")(lambda: S("select unix_timestamp('2026-03-29 02:30:00') u1, unix_timestamp('1970-01-01 00:00:00') u0, to_unix_timestamp('2026-10-25 03:30:00','yyyy-MM-dd HH:mm:ss') u2"))
+chk("tz_from_unixtime")(lambda: S("select from_unixtime(0) a, from_unixtime(1774744200, 'yyyy-MM-dd HH:mm:ss XXX') b"))
+chk("tz_date_format_patterns")(lambda: ev.select(F.date_format("ts", "yyyy-MM-dd'T'HH:mm:ss.SSSXXX").alias("a"), F.date_format("ts", "EEE, d MMM yyyy").alias("b"), F.date_format("ts","Q w D").alias("c")))
+chk("tz_to_timestamp_formats")(lambda: S("select to_timestamp('2026-11-21 21:00:00.123456') a, to_timestamp('21/11/2026 9:00 PM','dd/MM/yyyy h:mm a') b, to_timestamp('2026-11-21T18:00:00Z') c, to_timestamp('2026-11-21T18:00:00+05:30') d"))
+chk("tz_ntz_vs_ltz_literals")(lambda: S("select timestamp_ntz'2026-03-29 03:30:00' n, timestamp_ltz'2026-03-29 03:30:00' l, cast(timestamp_ntz'2026-03-29 03:30:00' as timestamp) n2l, cast(timestamp'2026-03-29 03:30:00' as timestamp_ntz) l2n"))
+chk("tz_cast_ts_to_date_near_midnight")(lambda: S("select cast(timestamp'2026-11-21 23:30:00' as date) a, cast(to_timestamp('2026-11-21T22:30:00Z') as date) b"))
+chk("tz_cast_string_with_offset")(lambda: S("select cast('2026-07-01 12:00:00+00:00' as timestamp) a, cast('2026-07-01T12:00:00Z' as timestamp) b"))
+chk("tz_extract_hour_dst_gap")(lambda: S("select hour(timestamp'2026-03-08 02:30:00') h, hour(to_utc_timestamp(timestamp'2026-03-08 02:30:00','America/New_York')) h2"))
+chk("tz_make_timestamp")(lambda: S("select make_timestamp(2026, 3, 29, 2, 30, 45.5) a, make_timestamp(2026, 10, 25, 3, 30, 0, 'UTC') b, make_date(2024, 2, 29) c"))
+chk("tz_historic_lmt")(lambda: S("select cast(timestamp'1900-01-01 00:00:00' as string) s, unix_timestamp(timestamp'1900-01-01 00:00:00') u"))
+chk("tz_timestamp_seconds_millis")(lambda: S("select timestamp_seconds(1774744200) a, timestamp_millis(1774744200123) b, timestamp_micros(1774744200123456) c, unix_micros(timestamp'2026-01-01 00:00:00') d"))
+chk("tz_date_trunc_units")(lambda: ev.select(*[F.date_trunc(u, "ts").alias(u) for u in ["year","quarter","month","week","day","hour"]]))
+chk("tz_trunc_date")(lambda: ev.select(F.trunc("dt","month").alias("m"), F.trunc("dt","year").alias("y"), F.trunc("dt","week").alias("w")))
+chk("dt_add_months_eom")(lambda: ev.select(F.add_months("dt", 1).alias("a"), F.add_months("dt", -12).alias("b"), F.last_day("dt").alias("c")))
+chk("dt_months_between")(lambda: S("select months_between(timestamp'2026-03-31 00:00:00', timestamp'2026-02-28 00:00:00') a, months_between(date'2026-03-31', date'2026-02-28', false) b"))
+chk("dt_datediff_next_day")(lambda: ev.select(F.datediff(F.lit("2026-11-21").cast("date"), "dt").alias("dd"), F.next_day("dt","Mon").alias("nd"), F.dayofweek("dt").alias("dw"), F.weekofyear("dt").alias("wy")))
+chk("dt_date_add_interval_ts")(lambda: S("select timestamp'2026-03-28 02:30:00' + interval 1 day a, timestamp'2026-03-28 02:30:00' + interval 24 hours b, date'2026-01-31' + interval 1 month c"))
+chk("dt_window_bucket")(lambda: ev.groupBy(F.window("ts", "1 day")).count())
+chk("dt_to_date_format")(lambda: S("select to_date('2026-02-30') a, to_date('20261121','yyyyMMdd') b, try_to_timestamp('garbage') c"))
+chk("dt_year_0001_and_9999")(lambda: S("select date'0001-01-01' - 1 a, date'9999-12-31' b, year(date'0001-01-01') c"))
+# ---------------- decimals
+chk("dec_mul_precision")(lambda: S("select cast(12345678901234.5678 as decimal(18,4)) * cast(98765.4321 as decimal(9,4)) p"))
+chk("dec_div_precision")(lambda: S("select cast(1 as decimal(10,2)) / cast(3 as decimal(10,2)) a, cast(2 as decimal(38,18)) / cast(3 as decimal(38,18)) b"))
+chk("dec_sum_overflow_38")(lambda: S("select sum(x) s from values (cast(9.9e37 as decimal(38,0))), (cast(9.9e37 as decimal(38,0))) as t(x)"))
+chk("dec_avg_scale")(lambda: S("select avg(x) a, typeof(avg(x)) t from values (cast(1.005 as decimal(10,3))),(cast(2 as decimal(10,3))) as t(x)"))
+chk("dec_round_bround")(lambda: S("select round(2.5) a, round(-2.5) b, bround(2.5) c, round(cast(1.005 as decimal(10,3)), 2) d, round(1.005D, 2) e, round(123.456, -1) f"))
+chk("dec_cast_string")(lambda: S("select cast('1.005' as decimal(10,2)) a, cast(' 12.5 ' as decimal(10,1)) b, cast('1e3' as decimal(10,0)) c, try_cast('abc' as decimal(5,2)) d"))
+chk("dec_cast_double_rounding")(lambda: S("select cast(0.145D as decimal(10,2)) a, cast(2.675D as decimal(10,2)) b, cast(1.005D as decimal(10,2)) c"))
+chk("dec_mixed_int_decimal")(lambda: S("select 1 + cast(1.5 as decimal(3,1)) a, typeof(1 + cast(1.5 as decimal(3,1))) t, 5 / 2 b, 5 div 2 c, -7 % 3 d, pmod(-7,3) e"))
+chk("dec_double_literal_mul")(lambda: ev.select((F.col("d") * F.lit(1.1)).alias("x"), (F.col("d") * F.lit(1.1)).cast("decimal(12,2)").alias("y")))
+chk("dec_typeof_sum_avg")(lambda: ev.agg(F.sum("d").alias("s"), F.avg("d").alias("a"), F.expr("typeof(sum(d))").alias("ts"), F.expr("typeof(avg(d))").alias("ta")))
+chk("dec_format_number")(lambda: S("select format_number(1234567.891, 2) a, format_number(cast(0.005 as decimal(5,3)), 2) b"))
+chk("dec_negative_zero_double")(lambda: S("select cast(-0.0D as string) a, -0.0D = 0.0D b, cast('NaN' as double) > 1e308 c, 1/0 d"))
+chk("dec_float_to_string")(lambda: S("select cast(0.1F as string) a, cast(1e20D as string) b, cast(1.0E-5D as string) c, cast(123456789.0D as string) d"))
+chk("dec_percentile_exact")(lambda: S("select percentile(x, 0.5) p, median(x) m from values (1),(2),(4),(10) as t(x)"))
+chk("dec_stddev_var")(lambda: ev.agg(F.stddev("v"), F.var_pop("v"), F.skewness("v"), F.kurtosis("v")))
+# ---------------- UDFs
+chk("udf_struct_return")(lambda: ev.select(F.udf(lambda x: (x, str(x)), "struct<a:int,b:string>")("v").alias("u")).select("u.*"))
+chk("udf_null_handling")(lambda: ev.select(F.udf(lambda x: None if x is None else x * 2, "int")("v").alias("u")))
+chk("udf_decimal_return")(lambda: ev.select(F.udf(lambda x: x, "decimal(10,3)")("d").alias("u")))
+chk("udf_timestamp_in_out")(lambda: ev.select(F.udf(lambda t: t.replace(microsecond=0) if t else None, "timestamp")("ts").alias("u")))
+chk("udf_date_in_out")(lambda: ev.select(F.udf(lambda d: d.isoformat() if d else None, "string")("dt").alias("u")))
+chk("pandas_udf_series_ts")(lambda: ev.select(F.pandas_udf(lambda s: s.dt.hour, "int")("ts").alias("h")))
+chk("pandas_udf_grouped_agg")(lambda: ev.groupBy("k").agg(F.pandas_udf(lambda s: float(s.mean()), "double")(F.col("v").cast("double")).alias("m")))
+chk("pandas_udf_decimal")(lambda: ev.select(F.pandas_udf(lambda s: s, "decimal(10,3)")("d").alias("u")))
+chk("applyInPandas_ts_roundtrip")(lambda: ev.select("k","ts").groupBy("k").applyInPandas(lambda pdf: pdf, "k int, ts timestamp"))
+chk("mapInArrow")(lambda: ev.select("k","v").mapInArrow(lambda it: it, "k int, v int"))
+chk("udtf_python")(lambda: (spark.udtf.register("split_w", F.udtf(type("SplitW", (), {"eval": lambda self, s: ((w,) for w in (s or "").split())}), returnType="w: string")), S("select * from split_w('a b c')"))[1])
+chk("sql_udf_create_function")(lambda: (S("create or replace temporary function plus1(x int) returns int return x + 1"), S("select plus1(41) r"))[1])
+# ---------------- Parquet write options (write with engine, read back with the same engine)
+def wr(name, fn, read_opts=None):
+    path = f"{WD}/{name}"
+    fn(path)
+    r = spark.read
+    if read_opts:
+        for k, v in read_opts.items(): r = r.option(k, v)
+    return r.parquet(path)
+chk("pq_zstd_roundtrip")(lambda: wr("zstd", lambda p: ev.write.mode("overwrite").option("compression","zstd").parquet(p)))
+chk("pq_gzip_roundtrip")(lambda: wr("gzip", lambda p: ev.write.mode("overwrite").option("compression","gzip").parquet(p)))
+chk("pq_partition_null_and_special")(lambda: wr("part_special", lambda p: ev.withColumn("pk", F.when(F.col("s")=="x", F.lit("a/b c")).when(F.col("s").isNull(), F.lit(None)).otherwise(F.col("s"))).write.mode("overwrite").partitionBy("pk").parquet(p)))
+chk("pq_partition_two_cols_types")(lambda: wr("part2", lambda p: ev.write.mode("overwrite").partitionBy("k","dt").parquet(p)))
+chk("pq_maxRecordsPerFile")(lambda: wr("maxrec", lambda p: ev.write.mode("overwrite").option("maxRecordsPerFile", 2).parquet(p)))
+chk("pq_mode_append_twice")(lambda: wr("append", lambda p: (ev.write.mode("overwrite").parquet(p), ev.write.mode("append").parquet(p))))
+chk("pq_mode_errorifexists")(lambda: wr("errex", lambda p: (ev.write.mode("overwrite").parquet(p), ev.write.mode("errorifexists").parquet(p))))
+chk("pq_mode_ignore")(lambda: wr("ign", lambda p: (ev.write.mode("overwrite").parquet(p), src.write.mode("ignore").parquet(p))))
+chk("pq_ntz_roundtrip_type")(lambda: wr("ntz", lambda p: S("select timestamp_ntz'2026-03-29 03:30:00' n, timestamp'2026-03-29 03:30:00' l").write.mode("overwrite").parquet(p)))
+chk("pq_int96_output")(lambda: (spark.conf.set("spark.sql.parquet.outputTimestampType","INT96"), wr("int96", lambda p: ev.select("ts").write.mode("overwrite").parquet(p)))[1])
+chk("pq_timestamp_millis_output")(lambda: (spark.conf.set("spark.sql.parquet.outputTimestampType","TIMESTAMP_MILLIS"), wr("tsmillis", lambda p: ev.select("ts").write.mode("overwrite").parquet(p)))[1])
+chk("pq_decimal_types_roundtrip")(lambda: (spark.conf.set("spark.sql.parquet.outputTimestampType","TIMESTAMP_MICROS"), wr("dec", lambda p: S("select cast(1.5 as decimal(5,2)) a, cast(1.5 as decimal(18,4)) b, cast(1.5 as decimal(38,10)) c").write.mode("overwrite").parquet(p)))[1])
+chk("pq_legacy_format_decimal")(lambda: (spark.conf.set("spark.sql.parquet.writeLegacyFormat","true"), wr("legacy", lambda p: S("select cast(1.5 as decimal(5,2)) a, array(1,2) b, map('k',1) c").write.mode("overwrite").parquet(p)), spark.conf.set("spark.sql.parquet.writeLegacyFormat","false"))[1])
+chk("pq_nested_types_roundtrip")(lambda: wr("nested", lambda p: S("select struct(1 as a, 'x' as b) s, array(struct(1 as a)) arr, map('k', array(1,2)) m").write.mode("overwrite").parquet(p)))
+chk("pq_sortWithinPartitions_then_write")(lambda: wr("sorted", lambda p: ev.repartition(1).sortWithinPartitions(F.col("v").desc_nulls_last()).write.mode("overwrite").parquet(p)).select(F.spark_partition_id().alias("pid"), "v"))
+chk("pq_mergeSchema_read")(lambda: wr("merge", lambda p: (S("select 1 a").write.mode("overwrite").parquet(p+"/x=1"), S("select 2 a, 'b' b").write.mode("overwrite").parquet(p+"/x=2")), {"mergeSchema":"true"}))
+chk("pq_column_names_with_spaces")(lambda: wr("spaces", lambda p: S("select 1 as `col a`, 2 as `b.c`").write.mode("overwrite").parquet(p)))
+chk("pq_empty_dataframe_write")(lambda: wr("empty", lambda p: ev.filter("1=0").write.mode("overwrite").parquet(p)))
+chk("pq_partition_overwrite_dynamic")(lambda: (spark.conf.set("spark.sql.sources.partitionOverwriteMode","dynamic"), wr("dyn", lambda p: (ev.write.mode("overwrite").partitionBy("k").parquet(p), src.write.mode("overwrite").partitionBy("k").parquet(p))), spark.conf.set("spark.sql.sources.partitionOverwriteMode","static"))[1])
+chk("pq_saveAsTable_and_read")(lambda: (ev.write.mode("overwrite").saveAsTable("probe_tbl"), spark.table("probe_tbl"))[1])
+chk("csv_header_roundtrip")(lambda: (ev.select("k","g","s").write.mode("overwrite").option("header", True).csv(f"{WD}/csv"), spark.read.option("header", True).csv(f"{WD}/csv"))[1])
+chk("json_roundtrip_ts")(lambda: (ev.select("k","ts","d").write.mode("overwrite").json(f"{WD}/json"), spark.read.schema("k int, ts timestamp, d decimal(10,3)").json(f"{WD}/json"))[1])
+# ---------------- misc everyday
+chk("str_funcs")(lambda: ev.select(F.upper("g"), F.lpad("g", 3, "0"), F.concat_ws("-", "g", "s"), F.split(F.lit("a,b,,c"), ",").alias("sp"), F.initcap(F.lit("hello wORLD")), F.translate(F.lit("abc"),"ab","x")))
+chk("str_like_rlike_escape")(lambda: S("select 'a_b' like 'a\\\\_b' a, 'abc' rlike '^a.c$' b, 'ABC' ilike 'a%' c"))
+chk("null_ordering_sort")(lambda: ev.orderBy(F.col("v").desc()).select("v"))
+chk("cube_rollup_grouping_id")(lambda: ev.rollup("k","g").agg(F.count("*").alias("n"), F.grouping_id().alias("gid")))
+chk("array_funcs")(lambda: S("select array_sort(array(3,1,null,2)) a, array_distinct(array(1,1,2)) b, flatten(array(array(1),array(2,3))) c, sequence(1,5,2) d, array_join(array('a',null,'b'),',','N') e"))
+chk("map_funcs")(lambda: S("select map_from_arrays(array('a','b'), array(1,2)) m, element_at(map('a',1),'a') e, map_keys(map('b',1,'a',2)) k"))
+chk("json_funcs")(lambda: S("""select get_json_object('{"a":{"b":[1,2]}}','$.a.b[1]') a, json_tuple('{"x":1,"y":"z"}','x','y'), schema_of_json('{"a":1.5}') s"""))
+chk("hash_funcs")(lambda: S("select hash('a') h, xxhash64('a') x, md5('a') m, sha2('a',256) s, crc32('a') c"))
+chk("cast_string_to_int_ansi")(lambda: S("select try_cast('12a' as int) a, cast('  42 ' as int) b, cast('3.9' as int) c"))
+chk("cast_bool_strings")(lambda: S("select cast('yes' as boolean) a, cast('T' as boolean) b, cast('0' as boolean) c"))
+chk("explode_outer_posexplode")(lambda: S("select posexplode_outer(arr) from values (array(1,2)), (array()), (null) as t(arr)"))
+chk("approx_like_exact_countdistinct")(lambda: ev.agg(F.countDistinct("g","k")))
+chk("df_na_fill_drop")(lambda: ev.na.fill({"v": 0, "s": "?"}).na.drop(subset=["d"]).select("v","s"))
+chk("df_withColumns_renamed")(lambda: ev.withColumns({"v2": F.col("v")*2}).withColumnsRenamed({"g": "grp"}).select("grp","v2"))
+chk("df_crosstab_freqItems")(lambda: ev.crosstab("k","g"))
+chk("df_sample_by")(lambda: ev.sampleBy("k", {1: 1.0, 2: 0.0}, seed=1).select("k"))
+def norm_df(df):
+    cols = []
+    for f in df.schema.fields:
+        t = f.dataType.simpleString()
+        if t.startswith("timestamp") or ("timestamp" in t and t.startswith(("struct","array","map"))): cols.append(F.col(f"`{f.name}`").cast("string").alias(f.name))
+        else: cols.append(F.col(f"`{f.name}`"))
+    return df.select(*cols)
+def dig(rows): return hashlib.sha256("\n".join(sorted(repr(tuple(r)) for r in rows)).encode()).hexdigest()[:12]
+out = open(a.out, "a")
+for name, fn in C.items():
+    rec = {"check": name, "label": a.label, "tz": a.tz}
+    try:
+        df = fn()
+        rec["schema"] = df.schema.simpleString()
+        rows = norm_df(df).collect()
+        rec.update(ok=True, digest=dig(rows), n=len(rows), sample=repr([tuple(r) for r in rows[:4]])[:600])
+    except Exception as e:
+        rec.update(ok=False, error=f"{type(e).__name__}: {(str(e).splitlines() or [''])[0][:400]}")
+    out.write(json.dumps(rec, default=str) + "\n"); out.flush()
+print("checks", len(C))
+spark.stop()

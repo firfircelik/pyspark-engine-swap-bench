@@ -1,0 +1,2 @@
+workload,reason,log_lines
+tpch,CommandResult: CommandResult is not supported,4

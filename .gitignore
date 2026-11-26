@@ -1,0 +1,26 @@
+# data and engine outputs
+data/
+minio-data/
+spark-warehouse/
+results/**/rows/
+results/**/plans/
+blockmgr-*/
+*.parquet
+*.crc
+# local installs and environments
+opt/
+dist/
+venv-*/
+.venv/
+tmp/
+logs/
+*.jar
+*.tgz
+# python
+__pycache__/
+*.pyc
+# credentials and local config
+.env
+*.env
+mc-config/
+*.bak*

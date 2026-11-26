@@ -1,0 +1,13 @@
+{"event": "session", "session_s": 2.622, "version": "4.2.0", "label": "spark420-analytics", "pid": 1499172, "base": "s3a://tpch/tpch-sf30", "workload": "tpch"}
+{"event": "warmup", "q": 1, "wall_s": 4.994, "error": null, "label": "spark420-analytics", "pid": 1499172, "base": "s3a://tpch/tpch-sf30", "workload": "tpch"}
+{"event": "warmup", "q": 6, "wall_s": 0.577, "error": null, "label": "spark420-analytics", "pid": 1499172, "base": "s3a://tpch/tpch-sf30", "workload": "tpch"}
+{"event": "warmup", "q": 3, "wall_s": 1.564, "error": null, "label": "spark420-analytics", "pid": 1499172, "base": "s3a://tpch/tpch-sf30", "workload": "tpch"}
+{"event": "warmup_total", "s": 11.289, "label": "spark420-analytics", "pid": 1499172, "base": "s3a://tpch/tpch-sf30", "workload": "tpch"}
+{"event": "register", "s": 1.352, "s3": {"ListObjectsV2": 32.0, "GetObject": 13.0, "HeadObject": 32.0, "_sent_bytes": 6869622.0}, "label": "spark420-analytics", "pid": 1499172, "base": "s3a://tpch/tpch-sf30", "workload": "tpch"}
+{"event": "query_start", "q": 3, "start": 1795416748.4551065, "label": "spark420-analytics", "pid": 1499172, "base": "s3a://tpch/tpch-sf30", "workload": "tpch"}
+{"event": "query", "q": 3, "start": 1795416748.456183, "end": 1795416774.3411126, "wall_s": 25.885, "rows": 10, "s3": {"GetObject": 6127.0, "HeadObject": 120.0, "_sent_bytes": 8633296676.0}, "error": null, "hash_ordered": "530320e228cd8c87", "hash_set": "03a4d982c46be77e", "label": "spark420-analytics", "pid": 1499172, "base": "s3a://tpch/tpch-sf30", "workload": "tpch"}
+{"event": "query_start", "q": 1, "start": 1795416777.4673963, "label": "spark420-analytics", "pid": 1499172, "base": "s3a://tpch/tpch-sf30", "workload": "tpch"}
+{"event": "query", "q": 1, "start": 1795416777.4691641, "end": 1795417002.1920393, "wall_s": 224.723, "rows": 4, "s3": {"GetObject": 4410.0, "HeadObject": 72.0, "_sent_bytes": 2264796648.0}, "error": null, "hash_ordered": "dc9fb64947ffda53", "hash_set": "dc9fb64947ffda53", "label": "spark420-analytics", "pid": 1499172, "base": "s3a://tpch/tpch-sf30", "workload": "tpch"}
+{"event": "query_start", "q": 6, "start": 1795417005.2447755, "label": "spark420-analytics", "pid": 1499172, "base": "s3a://tpch/tpch-sf30", "workload": "tpch"}
+{"event": "query", "q": 6, "start": 1795417005.2468264, "end": 1795417019.897234, "wall_s": 14.65, "rows": 1, "s3": {"GetObject": 8012.0, "HeadObject": 72.0, "_sent_bytes": 6859516641.0}, "error": null, "hash_ordered": "86f1051af17c11ba", "hash_set": "86f1051af17c11ba", "label": "spark420-analytics", "pid": 1499172, "base": "s3a://tpch/tpch-sf30", "workload": "tpch"}
+{"event": "query_start", "q": 9, "start": 1795417022.9791114, "label": "spark420-analytics", "pid": 1499172, "base": "s3a://tpch/tpch-sf30", "workload": "tpch"}

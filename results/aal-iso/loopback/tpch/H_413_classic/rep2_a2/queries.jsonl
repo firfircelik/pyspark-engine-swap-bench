@@ -1,0 +1,7 @@
+{"event": "session", "session_s": 4.715, "version": "4.1.3", "label": "spark413-classic", "pid": 1525971, "base": "s3a://tpch/tpch-sf30", "workload": "tpch"}
+{"event": "warmup", "q": 1, "wall_s": 3.698, "error": null, "label": "spark413-classic", "pid": 1525971, "base": "s3a://tpch/tpch-sf30", "workload": "tpch"}
+{"event": "warmup", "q": 6, "wall_s": 0.744, "error": null, "label": "spark413-classic", "pid": 1525971, "base": "s3a://tpch/tpch-sf30", "workload": "tpch"}
+{"event": "warmup", "q": 3, "wall_s": 1.862, "error": null, "label": "spark413-classic", "pid": 1525971, "base": "s3a://tpch/tpch-sf30", "workload": "tpch"}
+{"event": "warmup_total", "s": 10.962, "label": "spark413-classic", "pid": 1525971, "base": "s3a://tpch/tpch-sf30", "workload": "tpch"}
+{"event": "register", "s": 0.567, "s3": {"ListObjectsV2": 32.0, "GetObject": 16.0, "HeadObject": 24.0, "_sent_bytes": 245121.0}, "label": "spark413-classic", "pid": 1525971, "base": "s3a://tpch/tpch-sf30", "workload": "tpch"}
+{"event": "query_start", "q": 3, "start": 1795612945.5583, "label": "spark413-classic", "pid": 1525971, "base": "s3a://tpch/tpch-sf30", "workload": "tpch"}

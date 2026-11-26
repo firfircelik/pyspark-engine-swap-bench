@@ -1,0 +1,8 @@
+{"event": "session", "session_s": 0.88, "version": "4.2.0", "format": "iceberg", "label": "sail-noreorder", "pid": 1722265, "base": "s3a://tpch/iceberg/sf1", "workload": "tpch"}
+{"event": "warmup", "q": 1, "wall_s": 0.485, "error": null, "label": "sail-noreorder", "pid": 1722265, "base": "s3a://tpch/iceberg/sf1", "workload": "tpch"}
+{"event": "warmup", "q": 6, "wall_s": 0.114, "error": null, "label": "sail-noreorder", "pid": 1722265, "base": "s3a://tpch/iceberg/sf1", "workload": "tpch"}
+{"event": "warmup", "q": 3, "wall_s": 0.112, "error": null, "label": "sail-noreorder", "pid": 1722265, "base": "s3a://tpch/iceberg/sf1", "workload": "tpch"}
+{"event": "warmup_total", "s": 1.081, "label": "sail-noreorder", "pid": 1722265, "base": "s3a://tpch/iceberg/sf1", "workload": "tpch"}
+{"event": "register", "s": 0.027, "s3": {"ListObjectsV2": 8.0, "GetObject": 8.0, "_sent_bytes": 27204.0}, "label": "sail-noreorder", "pid": 1722265, "base": "s3a://tpch/iceberg/sf1", "workload": "tpch"}
+{"event": "query_start", "q": 6, "start": 1795676794.8098435, "label": "sail-noreorder", "pid": 1722265, "base": "s3a://tpch/iceberg/sf1", "workload": "tpch"}
+{"event": "query", "q": 6, "start": 1795676794.8112137, "end": 1795676794.861135, "wall_s": 0.05, "rows": 1, "s3": {"GetObject": 18.0, "_sent_bytes": 57339057.0}, "error": null, "hash_ordered": "37fc3f716d28d660", "hash_set": "37fc3f716d28d660", "label": "sail-noreorder", "pid": 1722265, "base": "s3a://tpch/iceberg/sf1", "workload": "tpch"}

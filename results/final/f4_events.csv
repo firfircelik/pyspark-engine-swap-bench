@@ -1,0 +1,31 @@
+study,class,job,rep,attempt,attempt_status,cfg,variant,cond,wl,q,elapsed_s,wall_s,detail,dropped_rep
+phase2,LONG_RSS_GAP,r1-loopback-spark413-analytics-tpch,1,1,frozen,spark413-analytics,spark413-analytics,loopback,tpch,,724.8,,"n_query_done=22 frozen=[{'q': 2, 'gap_s': 22.2}, {'q': 18, 'gap_s': 138.6}]",False
+phase2,F4_OOM,r1-loopback-spark413-analytics-tpch,1,2,ok,spark413-analytics,spark413-analytics,loopback,tpch,18,583.1,33.109,"Unable to acquire 65536 bytes of memory, got 0. SQLSTATE: 53200",False
+phase2,F4_OOM,r1-loopback-spark420-analytics-tpch,1,1,qerror,spark420-analytics,spark420-analytics,loopback,tpch,12,530.8,11.084,"Unable to acquire 65536 bytes of memory, got 0. SQLSTATE: 53200",False
+phase2,F4_OOM,r2-loopback-spark413-classic-tpch,2,1,frozen,spark413-classic,spark413-classic,loopback,tpch,12,527.7,11.93,"Unable to acquire 65536 bytes of memory, got 0. SQLSTATE: 53200",False
+phase2,F4_OOM,r2-proxy10-spark420-analytics-tpch,2,1,qerror,spark420-analytics,spark420-analytics,proxy10,tpch,18,621.9,34.558,"Unable to acquire 65536 bytes of memory, got 0. SQLSTATE: 53200",False
+phase2,F4_OOM,r2-loopback-spark420-analytics-tpch,2,1,qerror,spark420-analytics,spark420-analytics,loopback,tpch,3,544.9,17.289,"Unable to acquire 65536 bytes of memory, got 0. SQLSTATE: 53200",False
+phase2,F4_OOM,r2-loopback-spark420-analytics-tpch,2,3,qerror,spark420-analytics,spark420-analytics,loopback,tpch,12,521.9,10.063,"Unable to acquire 65536 bytes of memory, got 0. SQLSTATE: 53200",False
+phase2,LONG_RSS_GAP,r3-proxy10-spark413-classic-tpch,3,1,frozen,spark413-classic,spark413-classic,proxy10,tpch,,1148.6,,"n_query_done=22 frozen=[{'q': 8, 'gap_s': 2.1}, {'q': 19, 'gap_s': 365.3}]",True
+phase2,NO_PROGRESS_STALL,r3-proxy10-spark413-classic-tpch,3,2,timeout,spark413-classic,spark413-classic,proxy10,tpch,,9440.5,,inflight=None n_query_done=0 max_rss_gap_s=0 stalled_event=False,True
+phase2,NO_PROGRESS_STALL,r3-proxy0-spark420-classic-tpch,3,1,frozen,spark420-classic,spark420-classic,proxy0,tpch,3,1759.4,,inflight=3 n_query_done=2 max_rss_gap_s=1722.0 stalled_event=False,True
+phase2,NO_PROGRESS_STALL,r3-proxy0-spark420-classic-tpch,3,2,frozen,spark420-classic,spark420-classic,proxy0,tpch,9,5924.9,,inflight=9 n_query_done=8 max_rss_gap_s=3734.9 stalled_event=False,True
+phase2,NO_PROGRESS_STALL,r3-proxy0-spark420-classic-tpch,3,3,timeout,spark420-classic,spark420-classic,proxy0,tpch,2,13166.9,,inflight=2 n_query_done=1 max_rss_gap_s=0 stalled_event=False,True
+phase2,NO_PROGRESS_STALL,r3-proxy10-spark420-classic-tpch,3,1,frozen,spark420-classic,spark420-classic,proxy10,tpch,5,3759.6,,inflight=5 n_query_done=4 max_rss_gap_s=3616.1 stalled_event=False,True
+phase2,NO_PROGRESS_STALL,r3-proxy10-spark420-classic-tpch,3,2,timeout,spark420-classic,spark420-classic,proxy10,tpch,2,38978.4,,inflight=2 n_query_done=1 max_rss_gap_s=0 stalled_event=False,True
+phase2,F4_OOM,r3-loopback-spark413-analytics-tpch,3,1,qerror,spark413-analytics,spark413-analytics,loopback,tpch,12,687.4,14.12,"Unable to acquire 65536 bytes of memory, got 0. SQLSTATE: 53200",True
+phase2,LONG_RSS_GAP,r3-loopback-spark413-analytics-tpch,3,2,frozen,spark413-analytics,spark413-analytics,loopback,tpch,,3907.2,,"n_query_done=22 frozen=[{'q': 19, 'gap_s': 3162.6}]",True
+aal-iso,F4_OOM,r1-loopback-B_420_aal_default,1,1,qerror,spark420-analytics,B_420_aal_default,loopback,tpch,3,118.9,16.636,"Unable to acquire 65536 bytes of memory, got 0. SQLSTATE: 53200",False
+aal-iso,F4_OOM,r1-loopback-C_420_aal_no_coalesce,1,1,qerror,spark420-analytics,C_420_aal_no_coalesce,loopback,tpch,3,123.3,19.113,"Unable to acquire 65536 bytes of memory, got 0. SQLSTATE: 53200",False
+aal-iso,F4_OOM,r1-loopback-F_420_aal_no_pageindex_prefetch,1,1,qerror,spark420-analytics,F_420_aal_no_pageindex_prefetch,loopback,tpch,3,123.8,19.39,"Unable to acquire 65536 bytes of memory, got 0. SQLSTATE: 53200",False
+aal-iso,F4_OOM,r1-loopback-F_420_aal_no_pageindex_prefetch,1,2,qerror,spark420-analytics,F_420_aal_no_pageindex_prefetch,loopback,tpch,3,123.9,16.825,"Unable to acquire 65536 bytes of memory, got 0. SQLSTATE: 53200",False
+aal-iso,F4_OOM,r2-loopback-E_420_aal_no_vectored,2,1,qerror,spark420-analytics,E_420_aal_no_vectored,loopback,tpch,3,127.0,17.486,"Unable to acquire 65536 bytes of memory, got 0. SQLSTATE: 53200",False
+aal-iso,NO_PROGRESS_STALL,r2-proxy10-E_420_aal_no_vectored,2,1,frozen,spark420-analytics,E_420_aal_no_vectored,proxy10,tpch,9,9223.3,,inflight=9 n_query_done=3 max_rss_gap_s=184.3 stalled_event=False,False
+aal-iso,NO_PROGRESS_STALL,r2-proxy10-A_420_classic,2,1,frozen,spark420-classic,A_420_classic,proxy10,tpch,1,83514.3,,inflight=1 n_query_done=1 max_rss_gap_s=95.4 stalled_event=False,False
+aal-iso,NO_PROGRESS_STALL,r2-proxy10-A_420_classic,2,3,timeout,spark420-classic,A_420_classic,proxy10,tpch,3,102435.7,,inflight=3 n_query_done=0 max_rss_gap_s=0 stalled_event=False,False
+aal-iso,NO_PROGRESS_STALL,r2-loopback-H_413_classic,2,2,timeout,spark413-classic,H_413_classic,loopback,tpch,3,25273.7,,inflight=3 n_query_done=0 max_rss_gap_s=0 stalled_event=False,False
+aal-iso,F4_OOM,r2-loopback-F_420_aal_no_pageindex_prefetch,2,1,qerror,spark420-analytics,F_420_aal_no_pageindex_prefetch,loopback,tpch,3,121.9,16.857,"Unable to acquire 65536 bytes of memory, got 0. SQLSTATE: 53200",False
+aal-iso,F4_OOM,r3-loopback-I_413_aal121,3,1,qerror,spark413-analytics,I_413_aal121,loopback,tpch,3,135.4,19.872,"Unable to acquire 65536 bytes of memory, got 0. SQLSTATE: 53200",False
+aal-iso,F4_OOM,r3-loopback-E_420_aal_no_vectored,3,1,qerror,spark420-analytics,E_420_aal_no_vectored,loopback,tpch,3,123.9,17.987,"Unable to acquire 65536 bytes of memory, got 0. SQLSTATE: 53200",False
+aal-iso,F4_OOM,r3-loopback-D_420_aal_coalesce_128k,3,1,qerror,spark420-analytics,D_420_aal_coalesce_128k,loopback,tpch,3,119.4,16.767,"Unable to acquire 65536 bytes of memory, got 0. SQLSTATE: 53200",False
+aal-iso,F4_OOM,r3-loopback-F_420_aal_no_pageindex_prefetch,3,1,qerror,spark420-analytics,F_420_aal_no_pageindex_prefetch,loopback,tpch,3,116.3,16.08,"Unable to acquire 65536 bytes of memory, got 0. SQLSTATE: 53200",False

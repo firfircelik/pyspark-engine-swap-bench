@@ -1,0 +1,470 @@
+[
+ {
+  "id": "r1-loopback-A_420_classic",
+  "rep": 1,
+  "cond": "loopback",
+  "cfg": "spark420-classic",
+  "wl": "tpch",
+  "variant": "A_420_classic",
+  "env": {
+   "EXTRA_CONF": "",
+   "QARG": "--queries 3,1,6,9"
+  }
+ },
+ {
+  "id": "r1-loopback-I_413_aal121",
+  "rep": 1,
+  "cond": "loopback",
+  "cfg": "spark413-analytics",
+  "wl": "tpch",
+  "variant": "I_413_aal121",
+  "env": {
+   "EXTRA_CONF": "",
+   "QARG": "--queries 3,1,6,9"
+  }
+ },
+ {
+  "id": "r1-loopback-H_413_classic",
+  "rep": 1,
+  "cond": "loopback",
+  "cfg": "spark413-classic",
+  "wl": "tpch",
+  "variant": "H_413_classic",
+  "env": {
+   "EXTRA_CONF": "",
+   "QARG": "--queries 3,1,6,9"
+  }
+ },
+ {
+  "id": "r1-loopback-B_420_aal_default",
+  "rep": 1,
+  "cond": "loopback",
+  "cfg": "spark420-analytics",
+  "wl": "tpch",
+  "variant": "B_420_aal_default",
+  "env": {
+   "EXTRA_CONF": "",
+   "QARG": "--queries 3,1,6,9"
+  }
+ },
+ {
+  "id": "r1-loopback-G_420_aal_prefetch_off",
+  "rep": 1,
+  "cond": "loopback",
+  "cfg": "spark420-analytics",
+  "wl": "tpch",
+  "variant": "G_420_aal_prefetch_off",
+  "env": {
+   "EXTRA_CONF": "--conf spark.hadoop.fs.s3a.analytics.accelerator.logicalio.prefetching.mode=off",
+   "QARG": "--queries 3,1,6,9"
+  }
+ },
+ {
+  "id": "r1-proxy10-C_420_aal_no_coalesce",
+  "rep": 1,
+  "cond": "proxy10",
+  "cfg": "spark420-analytics",
+  "wl": "tpch",
+  "variant": "C_420_aal_no_coalesce",
+  "env": {
+   "EXTRA_CONF": "--conf spark.hadoop.fs.s3a.analytics.accelerator.physicalio.request.coalesce=false",
+   "QARG": "--queries 3,1,6,9"
+  }
+ },
+ {
+  "id": "r1-loopback-C_420_aal_no_coalesce",
+  "rep": 1,
+  "cond": "loopback",
+  "cfg": "spark420-analytics",
+  "wl": "tpch",
+  "variant": "C_420_aal_no_coalesce",
+  "env": {
+   "EXTRA_CONF": "--conf spark.hadoop.fs.s3a.analytics.accelerator.physicalio.request.coalesce=false",
+   "QARG": "--queries 3,1,6,9"
+  }
+ },
+ {
+  "id": "r1-proxy10-A_420_classic",
+  "rep": 1,
+  "cond": "proxy10",
+  "cfg": "spark420-classic",
+  "wl": "tpch",
+  "variant": "A_420_classic",
+  "env": {
+   "EXTRA_CONF": "",
+   "QARG": "--queries 3,1,6,9"
+  }
+ },
+ {
+  "id": "r1-loopback-D_420_aal_coalesce_128k",
+  "rep": 1,
+  "cond": "loopback",
+  "cfg": "spark420-analytics",
+  "wl": "tpch",
+  "variant": "D_420_aal_coalesce_128k",
+  "env": {
+   "EXTRA_CONF": "--conf spark.hadoop.fs.s3a.analytics.accelerator.physicalio.request.coalesce.tolerance=131072",
+   "QARG": "--queries 3,1,6,9"
+  }
+ },
+ {
+  "id": "r1-loopback-F_420_aal_no_pageindex_prefetch",
+  "rep": 1,
+  "cond": "loopback",
+  "cfg": "spark420-analytics",
+  "wl": "tpch",
+  "variant": "F_420_aal_no_pageindex_prefetch",
+  "env": {
+   "EXTRA_CONF": "--conf spark.hadoop.fs.s3a.analytics.accelerator.logicalio.prefetch.page.index.enabled=false",
+   "QARG": "--queries 3,1,6,9"
+  }
+ },
+ {
+  "id": "r1-proxy10-E_420_aal_no_vectored",
+  "rep": 1,
+  "cond": "proxy10",
+  "cfg": "spark420-analytics",
+  "wl": "tpch",
+  "variant": "E_420_aal_no_vectored",
+  "env": {
+   "EXTRA_CONF": "--conf spark.hadoop.parquet.hadoop.vectored.io.enabled=false",
+   "QARG": "--queries 3,1,6,9"
+  }
+ },
+ {
+  "id": "r1-loopback-E_420_aal_no_vectored",
+  "rep": 1,
+  "cond": "loopback",
+  "cfg": "spark420-analytics",
+  "wl": "tpch",
+  "variant": "E_420_aal_no_vectored",
+  "env": {
+   "EXTRA_CONF": "--conf spark.hadoop.parquet.hadoop.vectored.io.enabled=false",
+   "QARG": "--queries 3,1,6,9"
+  }
+ },
+ {
+  "id": "r1-proxy10-B_420_aal_default",
+  "rep": 1,
+  "cond": "proxy10",
+  "cfg": "spark420-analytics",
+  "wl": "tpch",
+  "variant": "B_420_aal_default",
+  "env": {
+   "EXTRA_CONF": "",
+   "QARG": "--queries 3,1,6,9"
+  }
+ },
+ {
+  "id": "r2-loopback-B_420_aal_default",
+  "rep": 2,
+  "cond": "loopback",
+  "cfg": "spark420-analytics",
+  "wl": "tpch",
+  "variant": "B_420_aal_default",
+  "env": {
+   "EXTRA_CONF": "",
+   "QARG": "--queries 3,1,6,9"
+  }
+ },
+ {
+  "id": "r2-loopback-E_420_aal_no_vectored",
+  "rep": 2,
+  "cond": "loopback",
+  "cfg": "spark420-analytics",
+  "wl": "tpch",
+  "variant": "E_420_aal_no_vectored",
+  "env": {
+   "EXTRA_CONF": "--conf spark.hadoop.parquet.hadoop.vectored.io.enabled=false",
+   "QARG": "--queries 3,1,6,9"
+  }
+ },
+ {
+  "id": "r2-proxy10-E_420_aal_no_vectored",
+  "rep": 2,
+  "cond": "proxy10",
+  "cfg": "spark420-analytics",
+  "wl": "tpch",
+  "variant": "E_420_aal_no_vectored",
+  "env": {
+   "EXTRA_CONF": "--conf spark.hadoop.parquet.hadoop.vectored.io.enabled=false",
+   "QARG": "--queries 3,1,6,9"
+  }
+ },
+ {
+  "id": "r2-loopback-D_420_aal_coalesce_128k",
+  "rep": 2,
+  "cond": "loopback",
+  "cfg": "spark420-analytics",
+  "wl": "tpch",
+  "variant": "D_420_aal_coalesce_128k",
+  "env": {
+   "EXTRA_CONF": "--conf spark.hadoop.fs.s3a.analytics.accelerator.physicalio.request.coalesce.tolerance=131072",
+   "QARG": "--queries 3,1,6,9"
+  }
+ },
+ {
+  "id": "r2-loopback-A_420_classic",
+  "rep": 2,
+  "cond": "loopback",
+  "cfg": "spark420-classic",
+  "wl": "tpch",
+  "variant": "A_420_classic",
+  "env": {
+   "EXTRA_CONF": "",
+   "QARG": "--queries 3,1,6,9"
+  }
+ },
+ {
+  "id": "r2-proxy10-A_420_classic",
+  "rep": 2,
+  "cond": "proxy10",
+  "cfg": "spark420-classic",
+  "wl": "tpch",
+  "variant": "A_420_classic",
+  "env": {
+   "EXTRA_CONF": "",
+   "QARG": "--queries 3,1,6,9"
+  }
+ },
+ {
+  "id": "r2-loopback-H_413_classic",
+  "rep": 2,
+  "cond": "loopback",
+  "cfg": "spark413-classic",
+  "wl": "tpch",
+  "variant": "H_413_classic",
+  "env": {
+   "EXTRA_CONF": "",
+   "QARG": "--queries 3,1,6,9"
+  }
+ },
+ {
+  "id": "r2-loopback-G_420_aal_prefetch_off",
+  "rep": 2,
+  "cond": "loopback",
+  "cfg": "spark420-analytics",
+  "wl": "tpch",
+  "variant": "G_420_aal_prefetch_off",
+  "env": {
+   "EXTRA_CONF": "--conf spark.hadoop.fs.s3a.analytics.accelerator.logicalio.prefetching.mode=off",
+   "QARG": "--queries 3,1,6,9"
+  }
+ },
+ {
+  "id": "r2-proxy10-B_420_aal_default",
+  "rep": 2,
+  "cond": "proxy10",
+  "cfg": "spark420-analytics",
+  "wl": "tpch",
+  "variant": "B_420_aal_default",
+  "env": {
+   "EXTRA_CONF": "",
+   "QARG": "--queries 3,1,6,9"
+  }
+ },
+ {
+  "id": "r2-proxy10-C_420_aal_no_coalesce",
+  "rep": 2,
+  "cond": "proxy10",
+  "cfg": "spark420-analytics",
+  "wl": "tpch",
+  "variant": "C_420_aal_no_coalesce",
+  "env": {
+   "EXTRA_CONF": "--conf spark.hadoop.fs.s3a.analytics.accelerator.physicalio.request.coalesce=false",
+   "QARG": "--queries 3,1,6,9"
+  }
+ },
+ {
+  "id": "r2-loopback-C_420_aal_no_coalesce",
+  "rep": 2,
+  "cond": "loopback",
+  "cfg": "spark420-analytics",
+  "wl": "tpch",
+  "variant": "C_420_aal_no_coalesce",
+  "env": {
+   "EXTRA_CONF": "--conf spark.hadoop.fs.s3a.analytics.accelerator.physicalio.request.coalesce=false",
+   "QARG": "--queries 3,1,6,9"
+  }
+ },
+ {
+  "id": "r2-loopback-F_420_aal_no_pageindex_prefetch",
+  "rep": 2,
+  "cond": "loopback",
+  "cfg": "spark420-analytics",
+  "wl": "tpch",
+  "variant": "F_420_aal_no_pageindex_prefetch",
+  "env": {
+   "EXTRA_CONF": "--conf spark.hadoop.fs.s3a.analytics.accelerator.logicalio.prefetch.page.index.enabled=false",
+   "QARG": "--queries 3,1,6,9"
+  }
+ },
+ {
+  "id": "r2-loopback-I_413_aal121",
+  "rep": 2,
+  "cond": "loopback",
+  "cfg": "spark413-analytics",
+  "wl": "tpch",
+  "variant": "I_413_aal121",
+  "env": {
+   "EXTRA_CONF": "",
+   "QARG": "--queries 3,1,6,9"
+  }
+ },
+ {
+  "id": "r3-proxy10-C_420_aal_no_coalesce",
+  "rep": 3,
+  "cond": "proxy10",
+  "cfg": "spark420-analytics",
+  "wl": "tpch",
+  "variant": "C_420_aal_no_coalesce",
+  "env": {
+   "EXTRA_CONF": "--conf spark.hadoop.fs.s3a.analytics.accelerator.physicalio.request.coalesce=false",
+   "QARG": "--queries 3,1,6,9"
+  }
+ },
+ {
+  "id": "r3-proxy10-A_420_classic",
+  "rep": 3,
+  "cond": "proxy10",
+  "cfg": "spark420-classic",
+  "wl": "tpch",
+  "variant": "A_420_classic",
+  "env": {
+   "EXTRA_CONF": "",
+   "QARG": "--queries 3,1,6,9"
+  }
+ },
+ {
+  "id": "r3-loopback-I_413_aal121",
+  "rep": 3,
+  "cond": "loopback",
+  "cfg": "spark413-analytics",
+  "wl": "tpch",
+  "variant": "I_413_aal121",
+  "env": {
+   "EXTRA_CONF": "",
+   "QARG": "--queries 3,1,6,9"
+  }
+ },
+ {
+  "id": "r3-loopback-H_413_classic",
+  "rep": 3,
+  "cond": "loopback",
+  "cfg": "spark413-classic",
+  "wl": "tpch",
+  "variant": "H_413_classic",
+  "env": {
+   "EXTRA_CONF": "",
+   "QARG": "--queries 3,1,6,9"
+  }
+ },
+ {
+  "id": "r3-loopback-A_420_classic",
+  "rep": 3,
+  "cond": "loopback",
+  "cfg": "spark420-classic",
+  "wl": "tpch",
+  "variant": "A_420_classic",
+  "env": {
+   "EXTRA_CONF": "",
+   "QARG": "--queries 3,1,6,9"
+  }
+ },
+ {
+  "id": "r3-proxy10-B_420_aal_default",
+  "rep": 3,
+  "cond": "proxy10",
+  "cfg": "spark420-analytics",
+  "wl": "tpch",
+  "variant": "B_420_aal_default",
+  "env": {
+   "EXTRA_CONF": "",
+   "QARG": "--queries 3,1,6,9"
+  }
+ },
+ {
+  "id": "r3-loopback-B_420_aal_default",
+  "rep": 3,
+  "cond": "loopback",
+  "cfg": "spark420-analytics",
+  "wl": "tpch",
+  "variant": "B_420_aal_default",
+  "env": {
+   "EXTRA_CONF": "",
+   "QARG": "--queries 3,1,6,9"
+  }
+ },
+ {
+  "id": "r3-loopback-E_420_aal_no_vectored",
+  "rep": 3,
+  "cond": "loopback",
+  "cfg": "spark420-analytics",
+  "wl": "tpch",
+  "variant": "E_420_aal_no_vectored",
+  "env": {
+   "EXTRA_CONF": "--conf spark.hadoop.parquet.hadoop.vectored.io.enabled=false",
+   "QARG": "--queries 3,1,6,9"
+  }
+ },
+ {
+  "id": "r3-loopback-G_420_aal_prefetch_off",
+  "rep": 3,
+  "cond": "loopback",
+  "cfg": "spark420-analytics",
+  "wl": "tpch",
+  "variant": "G_420_aal_prefetch_off",
+  "env": {
+   "EXTRA_CONF": "--conf spark.hadoop.fs.s3a.analytics.accelerator.logicalio.prefetching.mode=off",
+   "QARG": "--queries 3,1,6,9"
+  }
+ },
+ {
+  "id": "r3-loopback-D_420_aal_coalesce_128k",
+  "rep": 3,
+  "cond": "loopback",
+  "cfg": "spark420-analytics",
+  "wl": "tpch",
+  "variant": "D_420_aal_coalesce_128k",
+  "env": {
+   "EXTRA_CONF": "--conf spark.hadoop.fs.s3a.analytics.accelerator.physicalio.request.coalesce.tolerance=131072",
+   "QARG": "--queries 3,1,6,9"
+  }
+ },
+ {
+  "id": "r3-loopback-F_420_aal_no_pageindex_prefetch",
+  "rep": 3,
+  "cond": "loopback",
+  "cfg": "spark420-analytics",
+  "wl": "tpch",
+  "variant": "F_420_aal_no_pageindex_prefetch",
+  "env": {
+   "EXTRA_CONF": "--conf spark.hadoop.fs.s3a.analytics.accelerator.logicalio.prefetch.page.index.enabled=false",
+   "QARG": "--queries 3,1,6,9"
+  }
+ },
+ {
+  "id": "r3-proxy10-E_420_aal_no_vectored",
+  "rep": 3,
+  "cond": "proxy10",
+  "cfg": "spark420-analytics",
+  "wl": "tpch",
+  "variant": "E_420_aal_no_vectored",
+  "env": {
+   "EXTRA_CONF": "--conf spark.hadoop.parquet.hadoop.vectored.io.enabled=false",
+   "QARG": "--queries 3,1,6,9"
+  }
+ },
+ {
+  "id": "r3-loopback-C_420_aal_no_coalesce",
+  "rep": 3,
+  "cond": "loopback",
+  "cfg": "spark420-analytics",
+  "wl": "tpch",
+  "variant": "C_420_aal_no_coalesce",
+  "env": {
+   "EXTRA_CONF": "--conf spark.hadoop.fs.s3a.analytics.accelerator.physicalio.request.coalesce=false",
+   "QARG": "--queries 3,1,6,9"
+  }
+ }
+]

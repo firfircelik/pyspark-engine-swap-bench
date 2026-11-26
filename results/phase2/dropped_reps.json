@@ -1,0 +1,21 @@
+{
+  "dropped_reps": [
+    3
+  ],
+  "reason": "Firat approved ('go', 2026-11-23 09:01 Europe/Istanbul) dropping rep 3 of the Phase 2 matrix after repeated Spark timeouts/stalls and query errors on rep 3. Analysis uses reps 1-2 only, for consistent n=2 per config.",
+  "approved_at": "2026-11-23 09:01 Europe/Istanbul",
+  "stopped_at": "2026-11-23 09:03:58 Europe/Istanbul",
+  "phase2_orchestrator_pid": 277847,
+  "stop_method": "STOP file; in-flight r3-loopback-spark413-analytics-tpch a3 was SIGTERM'd (rc=-15, 29.9s) because it is a dropped rep. a2 had already finished frozen (Q19 gap 3162.6s).",
+  "missing_valid_rep_among_1_2": [
+    {
+      "id": "r2-loopback-spark420-analytics-tpch",
+      "cond": "loopback",
+      "wl": "tpch",
+      "cfg": "spark420-analytics",
+      "r1": "valid (a2 ok)",
+      "r2": "exhausted 3 attempts, no valid run (a1 qerror Q3 F4 OOM, a2 frozen Q8, a3 qerror Q12 F4 OOM)",
+      "r3": "valid (a2 ok) \u2014 not used in primary n=2 totals; one extra r2 attempt scheduled AFTER aal-iso"
+    }
+  ]
+}

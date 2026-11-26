@@ -1,0 +1,10 @@
+ENGINE sail 4.2.0
+C1_tz_rules | struct<havana_2026_11_21:string,edmonton_2027_01:string,yellowknife_2027_01:string,casablanca_2027_04:string,control_istanbul:string> | [('2026-11-21 13:00:00', '2027-01-15 11:00:00', '2027-01-15 11:00:00', '2027-04-01 13:00:00', '2025-06-01 15:00:00')]
+C1b_session_tz_havana | struct<local_str:string,h:int> | [('2026-11-21 13:00:00', 13)]
+C2_bround | ERROR SparkRuntimeException Assertion failed: compatible: Failed due to a difference in schemas: original schema: DFSchema { inner: Schema { fields: [Field { name: "#0", data_type: Float64, nullable: true }, Field { name: "#1", 
+C3_round_double | struct<a:double,b:double,c:double,d:double,e:double> | [(1.0, 2.68, 0.14, 2.0, -1.0)]
+C4_format_number | struct<a:string,b:string,c:string,d:string> | [('0.01', '0.12', '2', '1.11')]
+C6_double_to_string | struct<a:string,b:string,c:string,d:string,e:string,f:string,g:string> | [('1e20', '0.00001', '123456789.0', '10000000.0', '0.001', '100.0', 'x0.0001')]
+C7_exp_string_to_decimal | ERROR NumberFormatException Cannot cast string '1e3' to value of Decimal128(38, 10) type
+C5_empty_write | ERROR FileNotFoundError [Errno 2] No such file or directory: '/workspace/engine-swap/tmp/repro_empty_sail'
+C8_json_permissive | ERROR SparkRuntimeException Parser error: parse decimal overflow (99999999.99)

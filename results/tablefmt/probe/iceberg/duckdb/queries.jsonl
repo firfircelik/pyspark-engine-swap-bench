@@ -1,0 +1,1 @@
+{"event": "session", "session_s": 0.076, "version": "2.0.1", "format": "iceberg", "label": "duckdb", "pid": 1722180, "base": "s3a://tpch/iceberg/sf1", "workload": "tpch"}

@@ -1,0 +1,19 @@
+{
+ "pooled_log_sd_query": 0.1693738591876201,
+ "dof_query": 726,
+ "pooled_log_sd_total": 0.08670349772803007,
+ "n_cells_total": 33,
+ "log_sd_by_engine": {
+  "spark420": 0.11987775622707161,
+  "spark413": 0.0801431360807282,
+  "comet420": 0.18737614015776208,
+  "sail": 0.204577377729409,
+  "duckdb": 0.23481295417163325
+ },
+ "min_exact_p_2v2": 0.3333333333333333,
+ "min_exact_p_3v3": 0.1,
+ "min_exact_p_5v5": 0.007936507936507936,
+ "n_mwu_alpha05": 4,
+ "n_mwu_holm22": 6,
+ "n_mwu_holm4": 5
+}

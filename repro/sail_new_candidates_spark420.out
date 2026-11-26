@@ -1,0 +1,10 @@
+ENGINE spark 4.2.0
+C1_tz_rules | struct<havana_2026_11_21:string,edmonton_2027_01:string,yellowknife_2027_01:string,casablanca_2027_04:string,control_istanbul:string> | [('2026-11-21 14:00:00', '2027-01-15 12:00:00', '2027-01-15 12:00:00', '2027-04-01 12:00:00', '2025-06-01 15:00:00')]
+C1b_session_tz_havana | struct<local_str:string,h:int> | [('2026-11-21 14:00:00', 14)]
+C2_bround | struct<a:decimal(2,0),b:decimal(2,0),c:decimal(2,0),d:double,e:decimal(2,0),f:decimal(3,2),g:float> | [(Decimal('2'), Decimal('4'), Decimal('-2'), 2.0, Decimal('2'), Decimal('0.12'), 2.0)]
+C3_round_double | struct<a:double,b:double,c:double,d:double,e:double> | [(1.01, 2.68, 0.15, 2.0, -1.0)]
+C4_format_number | struct<a:string,b:string,c:string,d:string> | [('0.00', '0.12', '2', '1.12')]
+C6_double_to_string | struct<a:string,b:string,c:string,d:string,e:string,f:string,g:string> | [('1.0E20', '1.0E-5', '1.23456789E8', '1.0E7', '0.001', '100.0', 'x1.0E-4')]
+C7_exp_string_to_decimal | struct<a:decimal(10,0),b:decimal(10,1),c:decimal(5,3)> | [(Decimal('1000'), Decimal('150.0'), Decimal('-0.020'))]
+C5_empty_write | struct<a:int,b:string,c:decimal(5,2)> | rows 0 | files ['._SUCCESS.crc', '.part-00000-d861fd7e-8b4a-4e9c-9bb1-950b11406418-c000.snappy.parquet.crc', '_SUCCESS', 'part-00000-d861fd7e-8b4a-4e9c-9bb1-950b11406418-c000.snappy.parquet']
+C8_json_permissive | [(1, Decimal('12.50')), (2, None), (3, None)]

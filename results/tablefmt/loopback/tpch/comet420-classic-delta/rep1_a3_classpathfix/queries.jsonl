@@ -1,0 +1,11 @@
+{"event": "session", "session_s": 3.44, "version": "4.2.0", "format": "delta", "label": "comet420-classic", "pid": 1762404, "base": "s3a://tpch/delta/sf30", "workload": "tpch"}
+{"event": "warmup", "q": 1, "wall_s": 10.449, "error": null, "label": "comet420-classic", "pid": 1762404, "base": "s3a://tpch/delta/sf30", "workload": "tpch"}
+{"event": "warmup", "q": 6, "wall_s": 0.955, "error": null, "label": "comet420-classic", "pid": 1762404, "base": "s3a://tpch/delta/sf30", "workload": "tpch"}
+{"event": "warmup", "q": 3, "wall_s": 5.096, "error": null, "label": "comet420-classic", "pid": 1762404, "base": "s3a://tpch/delta/sf30", "workload": "tpch"}
+{"event": "warmup_total", "s": 20.366, "label": "comet420-classic", "pid": 1762404, "base": "s3a://tpch/delta/sf30", "workload": "tpch"}
+{"event": "register", "s": 0.267, "s3": {"ListObjectsV2": 16.0, "GetObject": 8.0, "HeadObject": 24.0, "_sent_bytes": 85633.0}, "label": "comet420-classic", "pid": 1762404, "base": "s3a://tpch/delta/sf30", "workload": "tpch"}
+{"event": "query_start", "q": 1, "start": 1795679046.3492346, "label": "comet420-classic", "pid": 1762404, "base": "s3a://tpch/delta/sf30", "workload": "tpch"}
+{"event": "query", "q": 1, "start": 1795679046.3505704, "end": 1795679083.5868547, "wall_s": 37.236, "rows": 4, "s3": {"ListObjectsV2": 1.0, "GetObject": 361.0, "HeadObject": 61.0, "_sent_bytes": 1601852875.0}, "error": null, "hash_ordered": "dc9fb64947ffda53", "hash_set": "dc9fb64947ffda53", "label": "comet420-classic", "pid": 1762404, "base": "s3a://tpch/delta/sf30", "workload": "tpch"}
+{"event": "query_start", "q": 3, "start": 1795679086.6721451, "label": "comet420-classic", "pid": 1762404, "base": "s3a://tpch/delta/sf30", "workload": "tpch"}
+{"event": "query", "q": 3, "start": 1795679086.674037, "end": 1795679104.080536, "wall_s": 17.406, "rows": 10, "s3": {"ListObjectsV2": 3.0, "GetObject": 846.0, "HeadObject": 94.0, "_sent_bytes": 2123420218.0}, "error": null, "hash_ordered": "530320e228cd8c87", "hash_set": "03a4d982c46be77e", "label": "comet420-classic", "pid": 1762404, "base": "s3a://tpch/delta/sf30", "workload": "tpch"}
+{"event": "query_start", "q": 6, "start": 1795679107.2065067, "label": "comet420-classic", "pid": 1762404, "base": "s3a://tpch/delta/sf30", "workload": "tpch"}

@@ -1,0 +1,106 @@
+[
+ {
+  "id": "r1-local-sail-reorder-tpch",
+  "rep": 1,
+  "cond": "local",
+  "cfg": "sail-reorder",
+  "wl": "tpch",
+  "env": {
+   "SF": "sf100",
+   "QARG": "--queries 1,3,6,12,18",
+   "TIMEOUT": "7200",
+   "TABLEBASE": "file:///tmp/engine-swap-data/tpch-sf100"
+  }
+ },
+ {
+  "id": "r1-local-comet420-classic-tpch",
+  "rep": 1,
+  "cond": "local",
+  "cfg": "comet420-classic",
+  "wl": "tpch",
+  "env": {
+   "SF": "sf100",
+   "QARG": "--queries 1,3,6,12,18",
+   "TIMEOUT": "7200",
+   "TABLEBASE": "file:///tmp/engine-swap-data/tpch-sf100"
+  }
+ },
+ {
+  "id": "r1-local-spark420-classic-tpch",
+  "rep": 1,
+  "cond": "local",
+  "cfg": "spark420-classic",
+  "wl": "tpch",
+  "env": {
+   "SF": "sf100",
+   "QARG": "--queries 1,3,6,12,18",
+   "TIMEOUT": "7200",
+   "TABLEBASE": "file:///tmp/engine-swap-data/tpch-sf100"
+  }
+ },
+ {
+  "id": "r1-local-duckdb-tpch",
+  "rep": 1,
+  "cond": "local",
+  "cfg": "duckdb",
+  "wl": "tpch",
+  "env": {
+   "SF": "sf100",
+   "QARG": "--queries 1,3,6,12,18",
+   "TIMEOUT": "7200",
+   "TABLEBASE": "file:///tmp/engine-swap-data/tpch-sf100"
+  }
+ },
+ {
+  "id": "r2-local-sail-reorder-tpch",
+  "rep": 2,
+  "cond": "local",
+  "cfg": "sail-reorder",
+  "wl": "tpch",
+  "env": {
+   "SF": "sf100",
+   "QARG": "--queries 1,3,6,12,18",
+   "TIMEOUT": "7200",
+   "TABLEBASE": "file:///tmp/engine-swap-data/tpch-sf100"
+  }
+ },
+ {
+  "id": "r2-local-comet420-classic-tpch",
+  "rep": 2,
+  "cond": "local",
+  "cfg": "comet420-classic",
+  "wl": "tpch",
+  "env": {
+   "SF": "sf100",
+   "QARG": "--queries 1,3,6,12,18",
+   "TIMEOUT": "7200",
+   "TABLEBASE": "file:///tmp/engine-swap-data/tpch-sf100"
+  }
+ },
+ {
+  "id": "r2-local-duckdb-tpch",
+  "rep": 2,
+  "cond": "local",
+  "cfg": "duckdb",
+  "wl": "tpch",
+  "env": {
+   "SF": "sf100",
+   "QARG": "--queries 1,3,6,12,18",
+   "TIMEOUT": "7200",
+   "TABLEBASE": "file:///tmp/engine-swap-data/tpch-sf100"
+  }
+ },
+ {
+  "id": "r2-local-spark420-classic-tpch",
+  "rep": 2,
+  "cond": "local",
+  "cfg": "spark420-classic",
+  "wl": "tpch",
+  "env": {
+   "SF": "sf100",
+   "QARG": "--queries 1,3,6,12,18",
+   "TIMEOUT": "7200",
+   "TABLEBASE": "file:///tmp/engine-swap-data/tpch-sf100"
+  }
+ }
+]

@@ -1,0 +1,1073 @@
+[
+ {
+  "id": "r1-proxy10-spark420-classic-etl",
+  "rep": 1,
+  "cond": "proxy10",
+  "cfg": "spark420-classic",
+  "wl": "etl"
+ },
+ {
+  "id": "r1-proxy10-spark413-classic-etl",
+  "rep": 1,
+  "cond": "proxy10",
+  "cfg": "spark413-classic",
+  "wl": "etl"
+ },
+ {
+  "id": "r1-loopback-comet420-analytics-tpch",
+  "rep": 1,
+  "cond": "loopback",
+  "cfg": "comet420-analytics",
+  "wl": "tpch"
+ },
+ {
+  "id": "r1-loopback-spark413-analytics-etl",
+  "rep": 1,
+  "cond": "loopback",
+  "cfg": "spark413-analytics",
+  "wl": "etl"
+ },
+ {
+  "id": "r1-loopback-duckdb-tpch",
+  "rep": 1,
+  "cond": "loopback",
+  "cfg": "duckdb",
+  "wl": "tpch"
+ },
+ {
+  "id": "r1-loopback-spark413-analytics-tpch",
+  "rep": 1,
+  "cond": "loopback",
+  "cfg": "spark413-analytics",
+  "wl": "tpch"
+ },
+ {
+  "id": "r1-proxy10-spark413-analytics-etl",
+  "rep": 1,
+  "cond": "proxy10",
+  "cfg": "spark413-analytics",
+  "wl": "etl"
+ },
+ {
+  "id": "r1-proxy0-sail-reorder-tpch",
+  "rep": 1,
+  "cond": "proxy0",
+  "cfg": "sail-reorder",
+  "wl": "tpch"
+ },
+ {
+  "id": "r1-proxy10-spark420-analytics-etl",
+  "rep": 1,
+  "cond": "proxy10",
+  "cfg": "spark420-analytics",
+  "wl": "etl"
+ },
+ {
+  "id": "r1-proxy0-spark413-analytics-tpch",
+  "rep": 1,
+  "cond": "proxy0",
+  "cfg": "spark413-analytics",
+  "wl": "tpch"
+ },
+ {
+  "id": "r1-proxy10-sail-noreorder-tpch",
+  "rep": 1,
+  "cond": "proxy10",
+  "cfg": "sail-noreorder",
+  "wl": "tpch"
+ },
+ {
+  "id": "r1-loopback-spark413-classic-tpch",
+  "rep": 1,
+  "cond": "loopback",
+  "cfg": "spark413-classic",
+  "wl": "tpch"
+ },
+ {
+  "id": "r1-proxy0-spark413-classic-tpch",
+  "rep": 1,
+  "cond": "proxy0",
+  "cfg": "spark413-classic",
+  "wl": "tpch"
+ },
+ {
+  "id": "r1-proxy10-comet420-classic-etl",
+  "rep": 1,
+  "cond": "proxy10",
+  "cfg": "comet420-classic",
+  "wl": "etl"
+ },
+ {
+  "id": "r1-loopback-duckdb-etl",
+  "rep": 1,
+  "cond": "loopback",
+  "cfg": "duckdb",
+  "wl": "etl"
+ },
+ {
+  "id": "r1-proxy0-comet420-classic-tpch",
+  "rep": 1,
+  "cond": "proxy0",
+  "cfg": "comet420-classic",
+  "wl": "tpch"
+ },
+ {
+  "id": "r1-loopback-spark413-classic-etl",
+  "rep": 1,
+  "cond": "loopback",
+  "cfg": "spark413-classic",
+  "wl": "etl"
+ },
+ {
+  "id": "r1-proxy0-spark420-classic-tpch",
+  "rep": 1,
+  "cond": "proxy0",
+  "cfg": "spark420-classic",
+  "wl": "tpch"
+ },
+ {
+  "id": "r1-local-comet420-default-tpch",
+  "rep": 1,
+  "cond": "local",
+  "cfg": "comet420-default",
+  "wl": "tpch"
+ },
+ {
+  "id": "r1-proxy10-comet420-analytics-tpch",
+  "rep": 1,
+  "cond": "proxy10",
+  "cfg": "comet420-analytics",
+  "wl": "tpch"
+ },
+ {
+  "id": "r1-loopback-sail-noreorder-etl",
+  "rep": 1,
+  "cond": "loopback",
+  "cfg": "sail-noreorder",
+  "wl": "etl"
+ },
+ {
+  "id": "r1-loopback-spark420-classic-tpch",
+  "rep": 1,
+  "cond": "loopback",
+  "cfg": "spark420-classic",
+  "wl": "tpch"
+ },
+ {
+  "id": "r1-proxy10-spark420-analytics-tpch",
+  "rep": 1,
+  "cond": "proxy10",
+  "cfg": "spark420-analytics",
+  "wl": "tpch"
+ },
+ {
+  "id": "r1-local-sail-reorder-tpch",
+  "rep": 1,
+  "cond": "local",
+  "cfg": "sail-reorder",
+  "wl": "tpch"
+ },
+ {
+  "id": "r1-proxy0-sail-noreorder-tpch",
+  "rep": 1,
+  "cond": "proxy0",
+  "cfg": "sail-noreorder",
+  "wl": "tpch"
+ },
+ {
+  "id": "r1-loopback-sail-reorder-tpch",
+  "rep": 1,
+  "cond": "loopback",
+  "cfg": "sail-reorder",
+  "wl": "tpch"
+ },
+ {
+  "id": "r1-proxy0-comet420-analytics-tpch",
+  "rep": 1,
+  "cond": "proxy0",
+  "cfg": "comet420-analytics",
+  "wl": "tpch"
+ },
+ {
+  "id": "r1-loopback-comet420-analytics-etl",
+  "rep": 1,
+  "cond": "loopback",
+  "cfg": "comet420-analytics",
+  "wl": "etl"
+ },
+ {
+  "id": "r1-proxy10-comet420-classic-tpch",
+  "rep": 1,
+  "cond": "proxy10",
+  "cfg": "comet420-classic",
+  "wl": "tpch"
+ },
+ {
+  "id": "r1-proxy0-spark420-analytics-tpch",
+  "rep": 1,
+  "cond": "proxy0",
+  "cfg": "spark420-analytics",
+  "wl": "tpch"
+ },
+ {
+  "id": "r1-local-spark413-default-tpch",
+  "rep": 1,
+  "cond": "local",
+  "cfg": "spark413-default",
+  "wl": "tpch"
+ },
+ {
+  "id": "r1-loopback-spark420-analytics-tpch",
+  "rep": 1,
+  "cond": "loopback",
+  "cfg": "spark420-analytics",
+  "wl": "tpch"
+ },
+ {
+  "id": "r1-proxy10-duckdb-tpch",
+  "rep": 1,
+  "cond": "proxy10",
+  "cfg": "duckdb",
+  "wl": "tpch"
+ },
+ {
+  "id": "r1-loopback-comet420-classic-etl",
+  "rep": 1,
+  "cond": "loopback",
+  "cfg": "comet420-classic",
+  "wl": "etl"
+ },
+ {
+  "id": "r1-proxy10-sail-reorder-tpch",
+  "rep": 1,
+  "cond": "proxy10",
+  "cfg": "sail-reorder",
+  "wl": "tpch"
+ },
+ {
+  "id": "r1-local-spark420-default-tpch",
+  "rep": 1,
+  "cond": "local",
+  "cfg": "spark420-default",
+  "wl": "tpch"
+ },
+ {
+  "id": "r1-proxy10-sail-reorder-etl",
+  "rep": 1,
+  "cond": "proxy10",
+  "cfg": "sail-reorder",
+  "wl": "etl"
+ },
+ {
+  "id": "r1-proxy10-comet420-analytics-etl",
+  "rep": 1,
+  "cond": "proxy10",
+  "cfg": "comet420-analytics",
+  "wl": "etl"
+ },
+ {
+  "id": "r1-loopback-sail-reorder-etl",
+  "rep": 1,
+  "cond": "loopback",
+  "cfg": "sail-reorder",
+  "wl": "etl"
+ },
+ {
+  "id": "r1-proxy10-spark413-analytics-tpch",
+  "rep": 1,
+  "cond": "proxy10",
+  "cfg": "spark413-analytics",
+  "wl": "tpch"
+ },
+ {
+  "id": "r1-loopback-spark420-analytics-etl",
+  "rep": 1,
+  "cond": "loopback",
+  "cfg": "spark420-analytics",
+  "wl": "etl"
+ },
+ {
+  "id": "r1-proxy0-duckdb-tpch",
+  "rep": 1,
+  "cond": "proxy0",
+  "cfg": "duckdb",
+  "wl": "tpch"
+ },
+ {
+  "id": "r1-proxy10-spark420-classic-tpch",
+  "rep": 1,
+  "cond": "proxy10",
+  "cfg": "spark420-classic",
+  "wl": "tpch"
+ },
+ {
+  "id": "r1-loopback-comet420-classic-tpch",
+  "rep": 1,
+  "cond": "loopback",
+  "cfg": "comet420-classic",
+  "wl": "tpch"
+ },
+ {
+  "id": "r1-proxy10-spark413-classic-tpch",
+  "rep": 1,
+  "cond": "proxy10",
+  "cfg": "spark413-classic",
+  "wl": "tpch"
+ },
+ {
+  "id": "r1-loopback-spark420-classic-etl",
+  "rep": 1,
+  "cond": "loopback",
+  "cfg": "spark420-classic",
+  "wl": "etl"
+ },
+ {
+  "id": "r1-local-duckdb-tpch",
+  "rep": 1,
+  "cond": "local",
+  "cfg": "duckdb",
+  "wl": "tpch"
+ },
+ {
+  "id": "r1-loopback-sail-noreorder-tpch",
+  "rep": 1,
+  "cond": "loopback",
+  "cfg": "sail-noreorder",
+  "wl": "tpch"
+ },
+ {
+  "id": "r1-proxy10-sail-noreorder-etl",
+  "rep": 1,
+  "cond": "proxy10",
+  "cfg": "sail-noreorder",
+  "wl": "etl"
+ },
+ {
+  "id": "r1-local-sail-noreorder-tpch",
+  "rep": 1,
+  "cond": "local",
+  "cfg": "sail-noreorder",
+  "wl": "tpch"
+ },
+ {
+  "id": "r1-proxy10-duckdb-etl",
+  "rep": 1,
+  "cond": "proxy10",
+  "cfg": "duckdb",
+  "wl": "etl"
+ },
+ {
+  "id": "r2-loopback-spark413-analytics-tpch",
+  "rep": 2,
+  "cond": "loopback",
+  "cfg": "spark413-analytics",
+  "wl": "tpch"
+ },
+ {
+  "id": "r2-proxy0-duckdb-tpch",
+  "rep": 2,
+  "cond": "proxy0",
+  "cfg": "duckdb",
+  "wl": "tpch"
+ },
+ {
+  "id": "r2-proxy10-spark413-analytics-etl",
+  "rep": 2,
+  "cond": "proxy10",
+  "cfg": "spark413-analytics",
+  "wl": "etl"
+ },
+ {
+  "id": "r2-loopback-spark420-classic-etl",
+  "rep": 2,
+  "cond": "loopback",
+  "cfg": "spark420-classic",
+  "wl": "etl"
+ },
+ {
+  "id": "r2-proxy0-comet420-classic-tpch",
+  "rep": 2,
+  "cond": "proxy0",
+  "cfg": "comet420-classic",
+  "wl": "tpch"
+ },
+ {
+  "id": "r2-proxy10-sail-reorder-tpch",
+  "rep": 2,
+  "cond": "proxy10",
+  "cfg": "sail-reorder",
+  "wl": "tpch"
+ },
+ {
+  "id": "r2-proxy10-spark413-analytics-tpch",
+  "rep": 2,
+  "cond": "proxy10",
+  "cfg": "spark413-analytics",
+  "wl": "tpch"
+ },
+ {
+  "id": "r2-loopback-comet420-classic-tpch",
+  "rep": 2,
+  "cond": "loopback",
+  "cfg": "comet420-classic",
+  "wl": "tpch"
+ },
+ {
+  "id": "r2-loopback-spark413-analytics-etl",
+  "rep": 2,
+  "cond": "loopback",
+  "cfg": "spark413-analytics",
+  "wl": "etl"
+ },
+ {
+  "id": "r2-proxy10-comet420-classic-tpch",
+  "rep": 2,
+  "cond": "proxy10",
+  "cfg": "comet420-classic",
+  "wl": "tpch"
+ },
+ {
+  "id": "r2-loopback-spark413-classic-tpch",
+  "rep": 2,
+  "cond": "loopback",
+  "cfg": "spark413-classic",
+  "wl": "tpch"
+ },
+ {
+  "id": "r2-loopback-sail-reorder-tpch",
+  "rep": 2,
+  "cond": "loopback",
+  "cfg": "sail-reorder",
+  "wl": "tpch"
+ },
+ {
+  "id": "r2-local-spark420-default-tpch",
+  "rep": 2,
+  "cond": "local",
+  "cfg": "spark420-default",
+  "wl": "tpch"
+ },
+ {
+  "id": "r2-loopback-sail-noreorder-tpch",
+  "rep": 2,
+  "cond": "loopback",
+  "cfg": "sail-noreorder",
+  "wl": "tpch"
+ },
+ {
+  "id": "r2-loopback-comet420-analytics-tpch",
+  "rep": 2,
+  "cond": "loopback",
+  "cfg": "comet420-analytics",
+  "wl": "tpch"
+ },
+ {
+  "id": "r2-proxy0-sail-reorder-tpch",
+  "rep": 2,
+  "cond": "proxy0",
+  "cfg": "sail-reorder",
+  "wl": "tpch"
+ },
+ {
+  "id": "r2-loopback-duckdb-etl",
+  "rep": 2,
+  "cond": "loopback",
+  "cfg": "duckdb",
+  "wl": "etl"
+ },
+ {
+  "id": "r2-proxy0-spark413-analytics-tpch",
+  "rep": 2,
+  "cond": "proxy0",
+  "cfg": "spark413-analytics",
+  "wl": "tpch"
+ },
+ {
+  "id": "r2-loopback-spark420-analytics-etl",
+  "rep": 2,
+  "cond": "loopback",
+  "cfg": "spark420-analytics",
+  "wl": "etl"
+ },
+ {
+  "id": "r2-proxy10-spark413-classic-etl",
+  "rep": 2,
+  "cond": "proxy10",
+  "cfg": "spark413-classic",
+  "wl": "etl"
+ },
+ {
+  "id": "r2-proxy0-comet420-analytics-tpch",
+  "rep": 2,
+  "cond": "proxy0",
+  "cfg": "comet420-analytics",
+  "wl": "tpch"
+ },
+ {
+  "id": "r2-proxy10-duckdb-etl",
+  "rep": 2,
+  "cond": "proxy10",
+  "cfg": "duckdb",
+  "wl": "etl"
+ },
+ {
+  "id": "r2-proxy10-comet420-classic-etl",
+  "rep": 2,
+  "cond": "proxy10",
+  "cfg": "comet420-classic",
+  "wl": "etl"
+ },
+ {
+  "id": "r2-proxy10-sail-reorder-etl",
+  "rep": 2,
+  "cond": "proxy10",
+  "cfg": "sail-reorder",
+  "wl": "etl"
+ },
+ {
+  "id": "r2-proxy10-comet420-analytics-tpch",
+  "rep": 2,
+  "cond": "proxy10",
+  "cfg": "comet420-analytics",
+  "wl": "tpch"
+ },
+ {
+  "id": "r2-proxy10-spark413-classic-tpch",
+  "rep": 2,
+  "cond": "proxy10",
+  "cfg": "spark413-classic",
+  "wl": "tpch"
+ },
+ {
+  "id": "r2-local-sail-reorder-tpch",
+  "rep": 2,
+  "cond": "local",
+  "cfg": "sail-reorder",
+  "wl": "tpch"
+ },
+ {
+  "id": "r2-proxy0-sail-noreorder-tpch",
+  "rep": 2,
+  "cond": "proxy0",
+  "cfg": "sail-noreorder",
+  "wl": "tpch"
+ },
+ {
+  "id": "r2-proxy10-spark420-classic-etl",
+  "rep": 2,
+  "cond": "proxy10",
+  "cfg": "spark420-classic",
+  "wl": "etl"
+ },
+ {
+  "id": "r2-proxy0-spark420-analytics-tpch",
+  "rep": 2,
+  "cond": "proxy0",
+  "cfg": "spark420-analytics",
+  "wl": "tpch"
+ },
+ {
+  "id": "r2-local-spark413-default-tpch",
+  "rep": 2,
+  "cond": "local",
+  "cfg": "spark413-default",
+  "wl": "tpch"
+ },
+ {
+  "id": "r2-proxy10-sail-noreorder-etl",
+  "rep": 2,
+  "cond": "proxy10",
+  "cfg": "sail-noreorder",
+  "wl": "etl"
+ },
+ {
+  "id": "r2-local-comet420-default-tpch",
+  "rep": 2,
+  "cond": "local",
+  "cfg": "comet420-default",
+  "wl": "tpch"
+ },
+ {
+  "id": "r2-proxy10-comet420-analytics-etl",
+  "rep": 2,
+  "cond": "proxy10",
+  "cfg": "comet420-analytics",
+  "wl": "etl"
+ },
+ {
+  "id": "r2-proxy0-spark413-classic-tpch",
+  "rep": 2,
+  "cond": "proxy0",
+  "cfg": "spark413-classic",
+  "wl": "tpch"
+ },
+ {
+  "id": "r2-local-sail-noreorder-tpch",
+  "rep": 2,
+  "cond": "local",
+  "cfg": "sail-noreorder",
+  "wl": "tpch"
+ },
+ {
+  "id": "r2-proxy10-duckdb-tpch",
+  "rep": 2,
+  "cond": "proxy10",
+  "cfg": "duckdb",
+  "wl": "tpch"
+ },
+ {
+  "id": "r2-proxy10-spark420-analytics-tpch",
+  "rep": 2,
+  "cond": "proxy10",
+  "cfg": "spark420-analytics",
+  "wl": "tpch"
+ },
+ {
+  "id": "r2-local-duckdb-tpch",
+  "rep": 2,
+  "cond": "local",
+  "cfg": "duckdb",
+  "wl": "tpch"
+ },
+ {
+  "id": "r2-loopback-sail-noreorder-etl",
+  "rep": 2,
+  "cond": "loopback",
+  "cfg": "sail-noreorder",
+  "wl": "etl"
+ },
+ {
+  "id": "r2-loopback-comet420-classic-etl",
+  "rep": 2,
+  "cond": "loopback",
+  "cfg": "comet420-classic",
+  "wl": "etl"
+ },
+ {
+  "id": "r2-loopback-sail-reorder-etl",
+  "rep": 2,
+  "cond": "loopback",
+  "cfg": "sail-reorder",
+  "wl": "etl"
+ },
+ {
+  "id": "r2-proxy10-spark420-analytics-etl",
+  "rep": 2,
+  "cond": "proxy10",
+  "cfg": "spark420-analytics",
+  "wl": "etl"
+ },
+ {
+  "id": "r2-proxy10-sail-noreorder-tpch",
+  "rep": 2,
+  "cond": "proxy10",
+  "cfg": "sail-noreorder",
+  "wl": "tpch"
+ },
+ {
+  "id": "r2-proxy0-spark420-classic-tpch",
+  "rep": 2,
+  "cond": "proxy0",
+  "cfg": "spark420-classic",
+  "wl": "tpch"
+ },
+ {
+  "id": "r2-loopback-spark420-classic-tpch",
+  "rep": 2,
+  "cond": "loopback",
+  "cfg": "spark420-classic",
+  "wl": "tpch"
+ },
+ {
+  "id": "r2-loopback-spark420-analytics-tpch",
+  "rep": 2,
+  "cond": "loopback",
+  "cfg": "spark420-analytics",
+  "wl": "tpch"
+ },
+ {
+  "id": "r2-loopback-duckdb-tpch",
+  "rep": 2,
+  "cond": "loopback",
+  "cfg": "duckdb",
+  "wl": "tpch"
+ },
+ {
+  "id": "r2-proxy10-spark420-classic-tpch",
+  "rep": 2,
+  "cond": "proxy10",
+  "cfg": "spark420-classic",
+  "wl": "tpch"
+ },
+ {
+  "id": "r2-loopback-comet420-analytics-etl",
+  "rep": 2,
+  "cond": "loopback",
+  "cfg": "comet420-analytics",
+  "wl": "etl"
+ },
+ {
+  "id": "r2-loopback-spark413-classic-etl",
+  "rep": 2,
+  "cond": "loopback",
+  "cfg": "spark413-classic",
+  "wl": "etl"
+ },
+ {
+  "id": "r3-proxy10-spark413-classic-etl",
+  "rep": 3,
+  "cond": "proxy10",
+  "cfg": "spark413-classic",
+  "wl": "etl"
+ },
+ {
+  "id": "r3-loopback-sail-noreorder-tpch",
+  "rep": 3,
+  "cond": "loopback",
+  "cfg": "sail-noreorder",
+  "wl": "tpch"
+ },
+ {
+  "id": "r3-loopback-comet420-analytics-etl",
+  "rep": 3,
+  "cond": "loopback",
+  "cfg": "comet420-analytics",
+  "wl": "etl"
+ },
+ {
+  "id": "r3-proxy0-comet420-classic-tpch",
+  "rep": 3,
+  "cond": "proxy0",
+  "cfg": "comet420-classic",
+  "wl": "tpch"
+ },
+ {
+  "id": "r3-loopback-comet420-classic-etl",
+  "rep": 3,
+  "cond": "loopback",
+  "cfg": "comet420-classic",
+  "wl": "etl"
+ },
+ {
+  "id": "r3-loopback-spark420-analytics-tpch",
+  "rep": 3,
+  "cond": "loopback",
+  "cfg": "spark420-analytics",
+  "wl": "tpch"
+ },
+ {
+  "id": "r3-proxy10-comet420-analytics-etl",
+  "rep": 3,
+  "cond": "proxy10",
+  "cfg": "comet420-analytics",
+  "wl": "etl"
+ },
+ {
+  "id": "r3-loopback-comet420-analytics-tpch",
+  "rep": 3,
+  "cond": "loopback",
+  "cfg": "comet420-analytics",
+  "wl": "tpch"
+ },
+ {
+  "id": "r3-loopback-sail-reorder-tpch",
+  "rep": 3,
+  "cond": "loopback",
+  "cfg": "sail-reorder",
+  "wl": "tpch"
+ },
+ {
+  "id": "r3-local-sail-noreorder-tpch",
+  "rep": 3,
+  "cond": "local",
+  "cfg": "sail-noreorder",
+  "wl": "tpch"
+ },
+ {
+  "id": "r3-loopback-spark420-classic-tpch",
+  "rep": 3,
+  "cond": "loopback",
+  "cfg": "spark420-classic",
+  "wl": "tpch"
+ },
+ {
+  "id": "r3-proxy0-spark413-classic-tpch",
+  "rep": 3,
+  "cond": "proxy0",
+  "cfg": "spark413-classic",
+  "wl": "tpch"
+ },
+ {
+  "id": "r3-loopback-spark413-classic-etl",
+  "rep": 3,
+  "cond": "loopback",
+  "cfg": "spark413-classic",
+  "wl": "etl"
+ },
+ {
+  "id": "r3-loopback-spark413-classic-tpch",
+  "rep": 3,
+  "cond": "loopback",
+  "cfg": "spark413-classic",
+  "wl": "tpch"
+ },
+ {
+  "id": "r3-local-comet420-default-tpch",
+  "rep": 3,
+  "cond": "local",
+  "cfg": "comet420-default",
+  "wl": "tpch"
+ },
+ {
+  "id": "r3-local-spark413-default-tpch",
+  "rep": 3,
+  "cond": "local",
+  "cfg": "spark413-default",
+  "wl": "tpch"
+ },
+ {
+  "id": "r3-loopback-duckdb-etl",
+  "rep": 3,
+  "cond": "loopback",
+  "cfg": "duckdb",
+  "wl": "etl"
+ },
+ {
+  "id": "r3-loopback-comet420-classic-tpch",
+  "rep": 3,
+  "cond": "loopback",
+  "cfg": "comet420-classic",
+  "wl": "tpch"
+ },
+ {
+  "id": "r3-proxy10-spark413-classic-tpch",
+  "rep": 3,
+  "cond": "proxy10",
+  "cfg": "spark413-classic",
+  "wl": "tpch"
+ },
+ {
+  "id": "r3-proxy10-sail-noreorder-etl",
+  "rep": 3,
+  "cond": "proxy10",
+  "cfg": "sail-noreorder",
+  "wl": "etl"
+ },
+ {
+  "id": "r3-proxy0-spark420-classic-tpch",
+  "rep": 3,
+  "cond": "proxy0",
+  "cfg": "spark420-classic",
+  "wl": "tpch"
+ },
+ {
+  "id": "r3-proxy10-spark420-classic-tpch",
+  "rep": 3,
+  "cond": "proxy10",
+  "cfg": "spark420-classic",
+  "wl": "tpch"
+ },
+ {
+  "id": "r3-loopback-spark413-analytics-tpch",
+  "rep": 3,
+  "cond": "loopback",
+  "cfg": "spark413-analytics",
+  "wl": "tpch"
+ },
+ {
+  "id": "r3-proxy0-comet420-analytics-tpch",
+  "rep": 3,
+  "cond": "proxy0",
+  "cfg": "comet420-analytics",
+  "wl": "tpch"
+ },
+ {
+  "id": "r3-loopback-sail-reorder-etl",
+  "rep": 3,
+  "cond": "loopback",
+  "cfg": "sail-reorder",
+  "wl": "etl"
+ },
+ {
+  "id": "r3-proxy10-spark420-analytics-tpch",
+  "rep": 3,
+  "cond": "proxy10",
+  "cfg": "spark420-analytics",
+  "wl": "tpch"
+ },
+ {
+  "id": "r3-proxy10-duckdb-etl",
+  "rep": 3,
+  "cond": "proxy10",
+  "cfg": "duckdb",
+  "wl": "etl"
+ },
+ {
+  "id": "r3-proxy0-sail-reorder-tpch",
+  "rep": 3,
+  "cond": "proxy0",
+  "cfg": "sail-reorder",
+  "wl": "tpch"
+ },
+ {
+  "id": "r3-proxy0-spark413-analytics-tpch",
+  "rep": 3,
+  "cond": "proxy0",
+  "cfg": "spark413-analytics",
+  "wl": "tpch"
+ },
+ {
+  "id": "r3-proxy10-sail-reorder-etl",
+  "rep": 3,
+  "cond": "proxy10",
+  "cfg": "sail-reorder",
+  "wl": "etl"
+ },
+ {
+  "id": "r3-proxy10-spark413-analytics-etl",
+  "rep": 3,
+  "cond": "proxy10",
+  "cfg": "spark413-analytics",
+  "wl": "etl"
+ },
+ {
+  "id": "r3-loopback-sail-noreorder-etl",
+  "rep": 3,
+  "cond": "loopback",
+  "cfg": "sail-noreorder",
+  "wl": "etl"
+ },
+ {
+  "id": "r3-proxy0-spark420-analytics-tpch",
+  "rep": 3,
+  "cond": "proxy0",
+  "cfg": "spark420-analytics",
+  "wl": "tpch"
+ },
+ {
+  "id": "r3-local-duckdb-tpch",
+  "rep": 3,
+  "cond": "local",
+  "cfg": "duckdb",
+  "wl": "tpch"
+ },
+ {
+  "id": "r3-loopback-spark420-analytics-etl",
+  "rep": 3,
+  "cond": "loopback",
+  "cfg": "spark420-analytics",
+  "wl": "etl"
+ },
+ {
+  "id": "r3-proxy10-spark420-classic-etl",
+  "rep": 3,
+  "cond": "proxy10",
+  "cfg": "spark420-classic",
+  "wl": "etl"
+ },
+ {
+  "id": "r3-proxy10-duckdb-tpch",
+  "rep": 3,
+  "cond": "proxy10",
+  "cfg": "duckdb",
+  "wl": "tpch"
+ },
+ {
+  "id": "r3-proxy10-sail-noreorder-tpch",
+  "rep": 3,
+  "cond": "proxy10",
+  "cfg": "sail-noreorder",
+  "wl": "tpch"
+ },
+ {
+  "id": "r3-local-sail-reorder-tpch",
+  "rep": 3,
+  "cond": "local",
+  "cfg": "sail-reorder",
+  "wl": "tpch"
+ },
+ {
+  "id": "r3-proxy0-sail-noreorder-tpch",
+  "rep": 3,
+  "cond": "proxy0",
+  "cfg": "sail-noreorder",
+  "wl": "tpch"
+ },
+ {
+  "id": "r3-local-spark420-default-tpch",
+  "rep": 3,
+  "cond": "local",
+  "cfg": "spark420-default",
+  "wl": "tpch"
+ },
+ {
+  "id": "r3-proxy10-spark413-analytics-tpch",
+  "rep": 3,
+  "cond": "proxy10",
+  "cfg": "spark413-analytics",
+  "wl": "tpch"
+ },
+ {
+  "id": "r3-proxy10-spark420-analytics-etl",
+  "rep": 3,
+  "cond": "proxy10",
+  "cfg": "spark420-analytics",
+  "wl": "etl"
+ },
+ {
+  "id": "r3-loopback-spark413-analytics-etl",
+  "rep": 3,
+  "cond": "loopback",
+  "cfg": "spark413-analytics",
+  "wl": "etl"
+ },
+ {
+  "id": "r3-proxy10-comet420-classic-tpch",
+  "rep": 3,
+  "cond": "proxy10",
+  "cfg": "comet420-classic",
+  "wl": "tpch"
+ },
+ {
+  "id": "r3-proxy10-comet420-analytics-tpch",
+  "rep": 3,
+  "cond": "proxy10",
+  "cfg": "comet420-analytics",
+  "wl": "tpch"
+ },
+ {
+  "id": "r3-proxy10-comet420-classic-etl",
+  "rep": 3,
+  "cond": "proxy10",
+  "cfg": "comet420-classic",
+  "wl": "etl"
+ },
+ {
+  "id": "r3-loopback-duckdb-tpch",
+  "rep": 3,
+  "cond": "loopback",
+  "cfg": "duckdb",
+  "wl": "tpch"
+ },
+ {
+  "id": "r3-proxy0-duckdb-tpch",
+  "rep": 3,
+  "cond": "proxy0",
+  "cfg": "duckdb",
+  "wl": "tpch"
+ },
+ {
+  "id": "r3-loopback-spark420-classic-etl",
+  "rep": 3,
+  "cond": "loopback",
+  "cfg": "spark420-classic",
+  "wl": "etl"
+ },
+ {
+  "id": "r3-proxy10-sail-reorder-tpch",
+  "rep": 3,
+  "cond": "proxy10",
+  "cfg": "sail-reorder",
+  "wl": "tpch"
+ }
+]

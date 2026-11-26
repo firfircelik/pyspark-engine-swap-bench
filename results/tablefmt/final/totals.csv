@@ -1,0 +1,10 @@
+cfg,format,n_complete,median_total_s,min_total_s,max_total_s
+comet413-classic,iceberg,2,46.236,46.136,46.335
+comet420-classic,delta,1,105.592,105.592,105.592
+duckdb,delta,2,9.177,7.105,11.249
+duckdb,iceberg,2,10.881,9.722,12.041
+sail-noreorder,delta,2,15.543,14.813,16.274
+sail-noreorder,iceberg,2,19.072,15.228,22.916
+spark413-classic,delta,2,105.371,100.381,110.361
+spark413-classic,iceberg,2,100.789,97.361,104.217
+spark420-classic,delta,2,105.862,102.657,109.067

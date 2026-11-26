@@ -1,0 +1,86 @@
+id,cfg,rep,attempt,q,wall_s,rows,error,hash_set,hash_ordered,status,complete_ok,outdir
+r1-local-sail-reorder-tpch,sail-reorder,1,1,1,0.083,0,QueryExecutionException: Parquet error: Invalid Parquet file. Corrupt footer,,,qerror,False,results/sf100/local/tpch/sail-reorder/rep1_a1
+r1-local-sail-reorder-tpch,sail-reorder,1,1,3,0.071,0,QueryExecutionException: Parquet error: Invalid Parquet file. Corrupt footer,,,qerror,False,results/sf100/local/tpch/sail-reorder/rep1_a1
+r1-local-sail-reorder-tpch,sail-reorder,1,1,6,0.016,0,QueryExecutionException: Parquet error: Invalid Parquet file. Corrupt footer,,,qerror,False,results/sf100/local/tpch/sail-reorder/rep1_a1
+r1-local-sail-reorder-tpch,sail-reorder,1,1,12,0.055,0,QueryExecutionException: Parquet error: Invalid Parquet file. Corrupt footer,,,qerror,False,results/sf100/local/tpch/sail-reorder/rep1_a1
+r1-local-sail-reorder-tpch,sail-reorder,1,1,18,0.016,0,QueryExecutionException: Parquet error: Invalid Parquet file. Corrupt footer,,,qerror,False,results/sf100/local/tpch/sail-reorder/rep1_a1
+r1-local-sail-reorder-tpch,sail-reorder,1,2,1,0.022,0,QueryExecutionException: Parquet error: Invalid Parquet file. Corrupt footer,,,qerror,False,results/sf100/local/tpch/sail-reorder/rep1_a2
+r1-local-sail-reorder-tpch,sail-reorder,1,2,3,0.034,0,QueryExecutionException: Parquet error: Invalid Parquet file. Corrupt footer,,,qerror,False,results/sf100/local/tpch/sail-reorder/rep1_a2
+r1-local-sail-reorder-tpch,sail-reorder,1,2,6,0.025,0,QueryExecutionException: Parquet error: Invalid Parquet file. Corrupt footer,,,qerror,False,results/sf100/local/tpch/sail-reorder/rep1_a2
+r1-local-sail-reorder-tpch,sail-reorder,1,2,12,0.013,0,QueryExecutionException: Parquet error: Invalid Parquet file. Corrupt footer,,,qerror,False,results/sf100/local/tpch/sail-reorder/rep1_a2
+r1-local-sail-reorder-tpch,sail-reorder,1,2,18,0.05,0,QueryExecutionException: Parquet error: Invalid Parquet file. Corrupt footer,,,qerror,False,results/sf100/local/tpch/sail-reorder/rep1_a2
+r1-local-sail-reorder-tpch,sail-reorder,1,3,1,1.147,0,QueryExecutionException: External: Object at location /workspace/engine-swap/data/tpch-sf100/lineitem/lineitem.27.parquet.box-store-snap-183ec673df3d1c3c not found: No such file or directory (os error 2),,,qerror,False,results/sf100/local/tpch/sail-reorder/rep1_a3
+r1-local-sail-reorder-tpch,sail-reorder,1,3,3,0.095,0,QueryExecutionException: Parquet error: Invalid Parquet file. Corrupt footer,,,qerror,False,results/sf100/local/tpch/sail-reorder/rep1_a3
+r1-local-sail-reorder-tpch,sail-reorder,1,3,6,0.013,0,QueryExecutionException: Parquet error: Invalid Parquet file. Corrupt footer,,,qerror,False,results/sf100/local/tpch/sail-reorder/rep1_a3
+r1-local-sail-reorder-tpch,sail-reorder,1,3,12,0.014,0,QueryExecutionException: Parquet error: Invalid Parquet file. Corrupt footer,,,qerror,False,results/sf100/local/tpch/sail-reorder/rep1_a3
+r1-local-sail-reorder-tpch,sail-reorder,1,3,18,0.013,0,QueryExecutionException: Parquet error: Invalid Parquet file. Corrupt footer,,,qerror,False,results/sf100/local/tpch/sail-reorder/rep1_a3
+r1-local-sail-reorder-tpch,sail-reorder,1,4,1,11.753,4,,44436d26ae1aaca4,44436d26ae1aaca4,qerror,False,results/sf100/local/tpch/sail-reorder/rep1_a4
+r1-local-sail-reorder-tpch,sail-reorder,1,4,3,11.771,10,,8431b1787d0bfc9e,528e4c5e503693af,qerror,False,results/sf100/local/tpch/sail-reorder/rep1_a4
+r1-local-sail-reorder-tpch,sail-reorder,1,4,6,9.045,1,,120f2e2641aca18e,120f2e2641aca18e,qerror,False,results/sf100/local/tpch/sail-reorder/rep1_a4
+r1-local-sail-reorder-tpch,sail-reorder,1,4,12,10.561,2,,1c6cd5758b87b163,1c6cd5758b87b163,qerror,False,results/sf100/local/tpch/sail-reorder/rep1_a4
+r1-local-sail-reorder-tpch,sail-reorder,1,4,18,6.609,0,SERVER_DIED: Spark Connect server exited rc=-9 during the query (see summary cg_events: oom_kill),,,qerror,False,results/sf100/local/tpch/sail-reorder/rep1_a4
+r1-local-sail-reorder-tpch,sail-reorder,1,5,1,13.806,4,,44436d26ae1aaca4,44436d26ae1aaca4,qerror,False,results/sf100/local/tpch/sail-reorder/rep1_a5
+r1-local-sail-reorder-tpch,sail-reorder,1,5,3,9.681,10,,8431b1787d0bfc9e,528e4c5e503693af,qerror,False,results/sf100/local/tpch/sail-reorder/rep1_a5
+r1-local-sail-reorder-tpch,sail-reorder,1,5,6,6.159,1,,120f2e2641aca18e,120f2e2641aca18e,qerror,False,results/sf100/local/tpch/sail-reorder/rep1_a5
+r1-local-sail-reorder-tpch,sail-reorder,1,5,12,7.285,2,,1c6cd5758b87b163,1c6cd5758b87b163,qerror,False,results/sf100/local/tpch/sail-reorder/rep1_a5
+r1-local-sail-reorder-tpch,sail-reorder,1,5,18,4.853,0,SERVER_DIED: Spark Connect server exited rc=-9 during the query (see summary cg_events: oom_kill),,,qerror,False,results/sf100/local/tpch/sail-reorder/rep1_a5
+r1-local-sail-reorder-tpch,sail-reorder,1,6,1,12.506,4,,44436d26ae1aaca4,44436d26ae1aaca4,qerror,False,results/sf100/local/tpch/sail-reorder/rep1_a6
+r1-local-sail-reorder-tpch,sail-reorder,1,6,3,8.491,10,,8431b1787d0bfc9e,528e4c5e503693af,qerror,False,results/sf100/local/tpch/sail-reorder/rep1_a6
+r1-local-sail-reorder-tpch,sail-reorder,1,6,6,6.301,1,,120f2e2641aca18e,120f2e2641aca18e,qerror,False,results/sf100/local/tpch/sail-reorder/rep1_a6
+r1-local-sail-reorder-tpch,sail-reorder,1,6,12,7.293,2,,1c6cd5758b87b163,1c6cd5758b87b163,qerror,False,results/sf100/local/tpch/sail-reorder/rep1_a6
+r1-local-sail-reorder-tpch,sail-reorder,1,6,18,4.869,0,SERVER_DIED: Spark Connect server exited rc=-9 during the query (see summary cg_events: oom_kill),,,qerror,False,results/sf100/local/tpch/sail-reorder/rep1_a6
+r1-local-comet420-classic-tpch,comet420-classic,1,1,1,7.553,0,Py4JJavaError: An error occurred while calling o128.collectToPython. : org.apache.spark.SparkException: [FAILED_READ_FILE.FILE_NOT_EXIST] Encountered error while reading file /workspace/engine-swap/data/tpch-sf100/lineitem/lineitem.33.parquet.box-store-snap-f1659f32e28f52b8. File does not exist. It ,,,qerror,False,results/sf100/local/tpch/comet420-classic/rep1_a1
+r1-local-comet420-classic-tpch,comet420-classic,1,1,3,5.141,0,Py4JJavaError: An error occurred while calling o135.collectToPython. : org.apache.spark.SparkException: [FAILED_READ_FILE.FILE_NOT_EXIST] Encountered error while reading file /workspace/engine-swap/data/tpch-sf100/lineitem/lineitem.32.parquet.box-store-snap-7b6dfcd0fba994c7. File does not exist. It ,,,qerror,False,results/sf100/local/tpch/comet420-classic/rep1_a1
+r1-local-comet420-classic-tpch,comet420-classic,1,1,6,0.283,0,Py4JJavaError: An error occurred while calling o142.collectToPython. : org.apache.spark.SparkException: [FAILED_READ_FILE.FILE_NOT_EXIST] Encountered error while reading file /workspace/engine-swap/data/tpch-sf100/lineitem/lineitem.32.parquet.box-store-snap-7b6dfcd0fba994c7. File does not exist. It ,,,qerror,False,results/sf100/local/tpch/comet420-classic/rep1_a1
+r1-local-comet420-classic-tpch,comet420-classic,1,1,12,6.095,0,Py4JJavaError: An error occurred while calling o149.collectToPython. : org.apache.spark.SparkException: [FAILED_READ_FILE.FILE_NOT_EXIST] Encountered error while reading file /workspace/engine-swap/data/tpch-sf100/lineitem/lineitem.32.parquet.box-store-snap-7b6dfcd0fba994c7. File does not exist. It ,,,qerror,False,results/sf100/local/tpch/comet420-classic/rep1_a1
+r1-local-comet420-classic-tpch,comet420-classic,1,1,18,9.513,0,Py4JJavaError: An error occurred while calling o156.collectToPython. : org.apache.spark.SparkException: [FAILED_READ_FILE.FILE_NOT_EXIST] Encountered error while reading file /workspace/engine-swap/data/tpch-sf100/lineitem/lineitem.32.parquet.box-store-snap-7b6dfcd0fba994c7. File does not exist. It ,,,qerror,False,results/sf100/local/tpch/comet420-classic/rep1_a1
+r1-local-comet420-classic-tpch,comet420-classic,1,2,1,9.821,0,Py4JJavaError: An error occurred while calling o128.collectToPython. : org.apache.spark.SparkException: [FAILED_READ_FILE.FILE_NOT_EXIST] Encountered error while reading file /workspace/engine-swap/data/tpch-sf100/lineitem/lineitem.5.parquet.box-store-snap-3bfdeefc705c7182. File does not exist. It i,,,qerror,False,results/sf100/local/tpch/comet420-classic/rep1_a2
+r1-local-comet420-classic-tpch,comet420-classic,1,2,3,11.641,0,Py4JJavaError: An error occurred while calling o135.collectToPython. : org.apache.spark.SparkException: [FAILED_READ_FILE.FILE_NOT_EXIST] Encountered error while reading file /workspace/engine-swap/data/tpch-sf100/lineitem/lineitem.5.parquet.box-store-snap-3bfdeefc705c7182. File does not exist. It i,,,qerror,False,results/sf100/local/tpch/comet420-classic/rep1_a2
+r1-local-comet420-classic-tpch,comet420-classic,1,2,6,2.32,0,Py4JJavaError: An error occurred while calling o142.collectToPython. : org.apache.spark.SparkException: [FAILED_READ_FILE.FILE_NOT_EXIST] Encountered error while reading file /workspace/engine-swap/data/tpch-sf100/lineitem/lineitem.5.parquet.box-store-snap-3bfdeefc705c7182. File does not exist. It i,,,qerror,False,results/sf100/local/tpch/comet420-classic/rep1_a2
+r1-local-comet420-classic-tpch,comet420-classic,1,2,12,8.821,0,Py4JJavaError: An error occurred while calling o149.collectToPython. : org.apache.spark.SparkException: [FAILED_READ_FILE.FILE_NOT_EXIST] Encountered error while reading file /workspace/engine-swap/data/tpch-sf100/lineitem/lineitem.5.parquet.box-store-snap-3bfdeefc705c7182. File does not exist. It i,,,qerror,False,results/sf100/local/tpch/comet420-classic/rep1_a2
+r1-local-comet420-classic-tpch,comet420-classic,1,2,18,14.125,0,Py4JJavaError: An error occurred while calling o156.collectToPython. : org.apache.spark.SparkException: [STAGE_MATERIALIZATION_MULTIPLE_FAILURES] Multiple failures (2) in stage materialization:    1. SparkException: [FAILED_READ_FILE.FILE_NOT_EXIST] Encountered error while reading file /workspace/en,,,qerror,False,results/sf100/local/tpch/comet420-classic/rep1_a2
+r1-local-comet420-classic-tpch,comet420-classic,1,3,1,23.202,4,,44436d26ae1aaca4,44436d26ae1aaca4,ok,True,results/sf100/local/tpch/comet420-classic/rep1_a3
+r1-local-comet420-classic-tpch,comet420-classic,1,3,3,44.462,10,,8431b1787d0bfc9e,528e4c5e503693af,ok,True,results/sf100/local/tpch/comet420-classic/rep1_a3
+r1-local-comet420-classic-tpch,comet420-classic,1,3,6,7.249,1,,120f2e2641aca18e,120f2e2641aca18e,ok,True,results/sf100/local/tpch/comet420-classic/rep1_a3
+r1-local-comet420-classic-tpch,comet420-classic,1,3,12,18.745,2,,1c6cd5758b87b163,1c6cd5758b87b163,ok,True,results/sf100/local/tpch/comet420-classic/rep1_a3
+r1-local-comet420-classic-tpch,comet420-classic,1,3,18,75.45,100,,0df1e1a9e59b48c8,bab27da8819171b2,ok,True,results/sf100/local/tpch/comet420-classic/rep1_a3
+r1-local-spark420-classic-tpch,spark420-classic,1,1,1,105.467,4,,44436d26ae1aaca4,44436d26ae1aaca4,ok,True,results/sf100/local/tpch/spark420-classic/rep1_a1
+r1-local-spark420-classic-tpch,spark420-classic,1,1,3,69.399,10,,8431b1787d0bfc9e,528e4c5e503693af,ok,True,results/sf100/local/tpch/spark420-classic/rep1_a1
+r1-local-spark420-classic-tpch,spark420-classic,1,1,6,9.64,1,,120f2e2641aca18e,120f2e2641aca18e,ok,True,results/sf100/local/tpch/spark420-classic/rep1_a1
+r1-local-spark420-classic-tpch,spark420-classic,1,1,12,30.207,2,,1c6cd5758b87b163,1c6cd5758b87b163,ok,True,results/sf100/local/tpch/spark420-classic/rep1_a1
+r1-local-spark420-classic-tpch,spark420-classic,1,1,18,156.075,100,,0df1e1a9e59b48c8,bab27da8819171b2,ok,True,results/sf100/local/tpch/spark420-classic/rep1_a1
+r1-local-duckdb-tpch,duckdb,1,1,1,21.558,4,,44436d26ae1aaca4,44436d26ae1aaca4,ok,True,results/sf100/local/tpch/duckdb/rep1_a1
+r1-local-duckdb-tpch,duckdb,1,1,3,26.984,10,,8431b1787d0bfc9e,528e4c5e503693af,ok,True,results/sf100/local/tpch/duckdb/rep1_a1
+r1-local-duckdb-tpch,duckdb,1,1,6,2.015,1,,120f2e2641aca18e,120f2e2641aca18e,ok,True,results/sf100/local/tpch/duckdb/rep1_a1
+r1-local-duckdb-tpch,duckdb,1,1,12,4.247,2,,1c6cd5758b87b163,1c6cd5758b87b163,ok,True,results/sf100/local/tpch/duckdb/rep1_a1
+r1-local-duckdb-tpch,duckdb,1,1,18,26.319,100,,0df1e1a9e59b48c8,bab27da8819171b2,ok,True,results/sf100/local/tpch/duckdb/rep1_a1
+r2-local-sail-reorder-tpch,sail-reorder,2,1,1,24.647,4,,44436d26ae1aaca4,44436d26ae1aaca4,qerror,False,results/sf100/local/tpch/sail-reorder/rep2_a1
+r2-local-sail-reorder-tpch,sail-reorder,2,1,3,17.806,10,,8431b1787d0bfc9e,528e4c5e503693af,qerror,False,results/sf100/local/tpch/sail-reorder/rep2_a1
+r2-local-sail-reorder-tpch,sail-reorder,2,1,6,7.821,1,,120f2e2641aca18e,120f2e2641aca18e,qerror,False,results/sf100/local/tpch/sail-reorder/rep2_a1
+r2-local-sail-reorder-tpch,sail-reorder,2,1,12,10.19,2,,1c6cd5758b87b163,1c6cd5758b87b163,qerror,False,results/sf100/local/tpch/sail-reorder/rep2_a1
+r2-local-sail-reorder-tpch,sail-reorder,2,1,18,6.589,0,SERVER_DIED: Spark Connect server exited rc=-9 during the query (see summary cg_events: oom_kill),,,qerror,False,results/sf100/local/tpch/sail-reorder/rep2_a1
+r2-local-sail-reorder-tpch,sail-reorder,2,2,1,11.596,4,,44436d26ae1aaca4,44436d26ae1aaca4,qerror,False,results/sf100/local/tpch/sail-reorder/rep2_a2
+r2-local-sail-reorder-tpch,sail-reorder,2,2,3,9.524,10,,8431b1787d0bfc9e,528e4c5e503693af,qerror,False,results/sf100/local/tpch/sail-reorder/rep2_a2
+r2-local-sail-reorder-tpch,sail-reorder,2,2,6,6.52,1,,120f2e2641aca18e,120f2e2641aca18e,qerror,False,results/sf100/local/tpch/sail-reorder/rep2_a2
+r2-local-sail-reorder-tpch,sail-reorder,2,2,12,7.789,2,,1c6cd5758b87b163,1c6cd5758b87b163,qerror,False,results/sf100/local/tpch/sail-reorder/rep2_a2
+r2-local-sail-reorder-tpch,sail-reorder,2,2,18,6.117,0,SERVER_DIED: Spark Connect server exited rc=-9 during the query (see summary cg_events: oom_kill),,,qerror,False,results/sf100/local/tpch/sail-reorder/rep2_a2
+r2-local-sail-reorder-tpch,sail-reorder,2,3,1,11.312,4,,44436d26ae1aaca4,44436d26ae1aaca4,qerror,False,results/sf100/local/tpch/sail-reorder/rep2_a3
+r2-local-sail-reorder-tpch,sail-reorder,2,3,3,9.702,10,,8431b1787d0bfc9e,528e4c5e503693af,qerror,False,results/sf100/local/tpch/sail-reorder/rep2_a3
+r2-local-sail-reorder-tpch,sail-reorder,2,3,6,6.293,1,,120f2e2641aca18e,120f2e2641aca18e,qerror,False,results/sf100/local/tpch/sail-reorder/rep2_a3
+r2-local-sail-reorder-tpch,sail-reorder,2,3,12,7.764,2,,1c6cd5758b87b163,1c6cd5758b87b163,qerror,False,results/sf100/local/tpch/sail-reorder/rep2_a3
+r2-local-sail-reorder-tpch,sail-reorder,2,3,18,5.834,0,SERVER_DIED: Spark Connect server exited rc=-9 during the query (see summary cg_events: oom_kill),,,qerror,False,results/sf100/local/tpch/sail-reorder/rep2_a3
+r2-local-comet420-classic-tpch,comet420-classic,2,1,1,19.188,4,,44436d26ae1aaca4,44436d26ae1aaca4,ok,True,results/sf100/local/tpch/comet420-classic/rep2_a1
+r2-local-comet420-classic-tpch,comet420-classic,2,1,3,44.857,10,,8431b1787d0bfc9e,528e4c5e503693af,ok,True,results/sf100/local/tpch/comet420-classic/rep2_a1
+r2-local-comet420-classic-tpch,comet420-classic,2,1,6,7.03,1,,120f2e2641aca18e,120f2e2641aca18e,ok,True,results/sf100/local/tpch/comet420-classic/rep2_a1
+r2-local-comet420-classic-tpch,comet420-classic,2,1,12,17.941,2,,1c6cd5758b87b163,1c6cd5758b87b163,ok,True,results/sf100/local/tpch/comet420-classic/rep2_a1
+r2-local-comet420-classic-tpch,comet420-classic,2,1,18,78.652,100,,0df1e1a9e59b48c8,bab27da8819171b2,ok,True,results/sf100/local/tpch/comet420-classic/rep2_a1
+r2-local-duckdb-tpch,duckdb,2,1,1,6.086,4,,44436d26ae1aaca4,44436d26ae1aaca4,ok,True,results/sf100/local/tpch/duckdb/rep2_a1
+r2-local-duckdb-tpch,duckdb,2,1,3,10.077,10,,8431b1787d0bfc9e,528e4c5e503693af,ok,True,results/sf100/local/tpch/duckdb/rep2_a1
+r2-local-duckdb-tpch,duckdb,2,1,6,2.191,1,,120f2e2641aca18e,120f2e2641aca18e,ok,True,results/sf100/local/tpch/duckdb/rep2_a1
+r2-local-duckdb-tpch,duckdb,2,1,12,3.044,2,,1c6cd5758b87b163,1c6cd5758b87b163,ok,True,results/sf100/local/tpch/duckdb/rep2_a1
+r2-local-duckdb-tpch,duckdb,2,1,18,19.005,100,,0df1e1a9e59b48c8,bab27da8819171b2,ok,True,results/sf100/local/tpch/duckdb/rep2_a1
+r2-local-spark420-classic-tpch,spark420-classic,2,1,1,105.377,4,,44436d26ae1aaca4,44436d26ae1aaca4,ok,True,results/sf100/local/tpch/spark420-classic/rep2_a1
+r2-local-spark420-classic-tpch,spark420-classic,2,1,3,56.296,10,,8431b1787d0bfc9e,528e4c5e503693af,ok,True,results/sf100/local/tpch/spark420-classic/rep2_a1
+r2-local-spark420-classic-tpch,spark420-classic,2,1,6,7.856,1,,120f2e2641aca18e,120f2e2641aca18e,ok,True,results/sf100/local/tpch/spark420-classic/rep2_a1
+r2-local-spark420-classic-tpch,spark420-classic,2,1,12,29.67,2,,1c6cd5758b87b163,1c6cd5758b87b163,ok,True,results/sf100/local/tpch/spark420-classic/rep2_a1
+r2-local-spark420-classic-tpch,spark420-classic,2,1,18,138.629,100,,0df1e1a9e59b48c8,bab27da8819171b2,ok,True,results/sf100/local/tpch/spark420-classic/rep2_a1

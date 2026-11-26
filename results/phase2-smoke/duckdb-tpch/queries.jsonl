@@ -1,0 +1,8 @@
+{"event": "session", "session_s": 0.147, "version": "2.0.1", "label": "duckdb", "pid": 372827, "base": "s3a://tpch/tpch-sf30", "workload": "tpch"}
+{"event": "warmup", "q": 1, "wall_s": 0.187, "error": null, "label": "duckdb", "pid": 372827, "base": "s3a://tpch/tpch-sf30", "workload": "tpch"}
+{"event": "warmup", "q": 6, "wall_s": 0.058, "error": null, "label": "duckdb", "pid": 372827, "base": "s3a://tpch/tpch-sf30", "workload": "tpch"}
+{"event": "warmup", "q": 3, "wall_s": 0.146, "error": null, "label": "duckdb", "pid": 372827, "base": "s3a://tpch/tpch-sf30", "workload": "tpch"}
+{"event": "warmup_total", "s": 0.422, "label": "duckdb", "pid": 372827, "base": "s3a://tpch/tpch-sf30", "workload": "tpch"}
+{"event": "register", "s": 0.042, "s3": {"GetObject": 8.0, "ListObjectsV2": 8.0, "_sent_bytes": 566051.0}, "label": "duckdb", "pid": 372827, "base": "s3a://tpch/tpch-sf30", "workload": "tpch"}
+{"event": "query", "q": 6, "start": 1795284067.1336784, "end": 1795284070.178652, "wall_s": 3.045, "rows": 1, "s3": {"GetObject": 1652.0, "ListObjectsV2": 1.0, "_sent_bytes": 1950109896.0}, "error": null, "hash_ordered": "86f1051af17c11ba", "hash_set": "86f1051af17c11ba", "label": "duckdb", "pid": 372827, "base": "s3a://tpch/tpch-sf30", "workload": "tpch"}
+{"event": "query", "q": 15, "start": 1795284070.183726, "end": 1795284073.1198008, "wall_s": 2.936, "rows": 1, "s3": {"GetObject": 3334.0, "ListObjectsV2": 4.0, "_sent_bytes": 6187433840.0}, "error": null, "hash_ordered": "a1edd416f44ef237", "hash_set": "a1edd416f44ef237", "label": "duckdb", "pid": 372827, "base": "s3a://tpch/tpch-sf30", "workload": "tpch"}

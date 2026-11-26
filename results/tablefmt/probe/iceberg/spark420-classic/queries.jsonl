@@ -1,0 +1,1 @@
+{"event": "session", "session_s": 2.414, "version": "4.2.0", "format": "iceberg", "label": "spark420-classic", "pid": 1723348, "base": "s3a://tpch/iceberg/sf1", "workload": "tpch"}

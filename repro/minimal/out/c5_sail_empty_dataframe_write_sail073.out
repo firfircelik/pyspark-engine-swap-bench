@@ -1,0 +1,3 @@
+ENGINE sail (pyspark client 4.2.0)
+C5_after_write | exists False | files None
+C5_read_back | struct<> | rows 0

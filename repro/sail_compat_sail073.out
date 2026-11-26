@@ -1,0 +1,6 @@
+ENGINE sail 4.2.0
+R1 percentile_approx schema: struct<m:double> value: 25.0
+R1b ERROR AnalysisException Internal error: Function 'approx_percentile_cont' failed to match any signature, errors: Error during planning: Function 'approx_percentile_cont' expects 2 arguments but received 3,Error during planning: Function 'approx_percentile_cont' requires Float64, but received List(non-null Float64) (DataTyp
+R2 describe: [('max', '4.00'), ('min', '1.00'), ('mean', '2.333333'), ('stddev', '1.5275252316519465'), ('count', '3')]
+R2b summary: [('50%', '2.0'), ('min', '1.00'), ('25%', '1.25'), ('75%', '3.5'), ('count', '3'), ('stddev', '1.5275252316519465'), ('mean', '2.333333'), ('max', '4.00')]
+R3 date_trunc schema: struct<m:timestamp_ntz> value: 1993-10-01 00:00:00 as string: 1993-10-01 00:00:00

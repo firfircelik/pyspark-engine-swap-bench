@@ -1,0 +1,16 @@
+cond,wl,engine,classic_s,analytics_s,analytics_over_classic
+loopback,tpch,spark413,434.267,510.628,1.176
+loopback,tpch,spark420,440.087,443.983,1.009
+loopback,tpch,comet420,281.6,289.055,1.026
+loopback,etl,spark413,119.225,131.671,1.104
+loopback,etl,spark420,115.546,112.642,0.975
+loopback,etl,comet420,73.024,71.498,0.979
+proxy0,tpch,spark413,463.414,486.093,1.049
+proxy0,tpch,spark420,495.861,494.802,0.998
+proxy0,tpch,comet420,278.144,268.277,0.965
+proxy10,tpch,spark413,691.361,621.88,0.9
+proxy10,tpch,spark420,702.024,532.065,0.758
+proxy10,tpch,comet420,308.812,292.885,0.948
+proxy10,etl,spark413,221.676,219.089,0.988
+proxy10,etl,spark420,229.351,202.79,0.884
+proxy10,etl,comet420,143.161,150.869,1.054

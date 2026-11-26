@@ -1,0 +1,24 @@
+{"check": "window_row_number_dedup", "ok": true, "digest": "3c588086d063", "sample": "[Row(count=49915)]", "label": "spark420"}
+{"check": "window_lag_running_sum", "ok": true, "digest": "e79531a55b5b", "sample": "[Row(sum(s)=Decimal('10183926.00'))]", "label": "spark420"}
+{"check": "python_udf", "ok": true, "digest": "e99a4c257551", "sample": "[Row(m='TRU'), Row(m='MAI')]", "label": "spark420"}
+{"check": "pandas_udf", "ok": true, "digest": "21fa9665a10f", "sample": "[Row(sum(x)=10206602.0)]", "label": "spark420"}
+{"check": "mapInPandas", "ok": true, "digest": "57626429b75e", "sample": "[Row(count=100035)]", "label": "spark420"}
+{"check": "applyInPandas", "ok": true, "digest": "f584b90b901e", "sample": "[Row(l_returnflag='A', q=1.4851816540560279), Row(l_returnflag='N', q=-8.511352301569275)]", "label": "spark420"}
+{"check": "cache_count", "ok": false, "error": "TypeError: 'int' object is not iterable", "label": "spark420"}
+{"check": "broadcast_hint_join", "ok": true, "digest": "43bd5e078f1b", "sample": "[Row(n_name='IRAN', count=7920), Row(n_name='PERU', count=7989)]", "label": "spark420"}
+{"check": "pivot", "ok": true, "digest": "3700eba0ba8d", "sample": "[Row(l_returnflag='N', F=Decimal('30923.00'), O=Decimal('2552280.00')), Row(l_returnflag='R', F=Decimal('1262294.00'), O=None)]", "label": "spark420"}
+{"check": "explode_split", "ok": true, "digest": "eed76cc7a28f", "sample": "[Row(count=273)]", "label": "spark420"}
+{"check": "approx_percentile", "ok": true, "digest": "458b57b4828a", "sample": "[Row(percentile_approx(l_extendedprice, 0.5, 10000)=Decimal('36757.20'))]", "label": "spark420"}
+{"check": "count_distinct_approx", "ok": true, "digest": "0c2d17932490", "sample": "[Row(approx_count_distinct(l_orderkey)=50264)]", "label": "spark420"}
+{"check": "date_ops", "ok": true, "digest": "903239c6b5a7", "sample": "[Row(m=datetime.datetime(1996, 3, 1, 2, 0), avg(d)=15.80293417922284), Row(m=datetime.datetime(1996, 4, 1, 3, 0), avg(d)=15.73397823458283)]", "label": "spark420"}
+{"check": "regexp_extract", "ok": true, "digest": "cccfbfe529bb", "sample": "[Row(x='careful'), Row(x='sly')]", "label": "spark420"}
+{"check": "struct_json", "ok": true, "digest": "124a406e4f9d", "sample": "[Row(n_name='ALGERIA', n_regionkey=0), Row(n_name='ARGENTINA', n_regionkey=1)]", "label": "spark420"}
+{"check": "dropDuplicates_subset", "ok": true, "digest": "3c588086d063", "sample": "[Row(count=49915)]", "label": "spark420"}
+{"check": "union_by_name", "ok": true, "digest": "6a412d8e8537", "sample": "[Row(count=50)]", "label": "spark420"}
+{"check": "write_parquet_s3_overwrite_partitioned", "ok": true, "digest": "aabd55d5916d", "sample": "[Row(l_returnflag='N', count=101257), Row(l_returnflag='R', count=49446)]", "label": "spark420"}
+{"check": "temp_view_sql_cte", "ok": true, "digest": "aa15850abf9a", "sample": "[Row(f='A', q=Decimal('1257804.00')), Row(f='N', q=Decimal('2583203.00'))]", "label": "spark420"}
+{"check": "rdd_access", "ok": true, "digest": "3b61492abd92", "sample": "['ALGERIA', 'ARGENTINA']", "label": "spark420"}
+{"check": "toPandas", "ok": false, "error": "TypeError: 'int' object is not iterable", "label": "spark420"}
+{"check": "explain_string", "ok": false, "error": "TypeError: 'int' object is not iterable", "label": "spark420"}
+{"check": "sample_seed", "ok": false, "error": "TypeError: 'int' object is not iterable", "label": "spark420"}
+{"check": "describe", "ok": true, "digest": "d3a553ea5960", "sample": "[Row(summary='count', l_quantity='200000'), Row(summary='mean', l_quantity='25.516505')]", "label": "spark420"}

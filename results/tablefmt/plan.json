@@ -1,0 +1,292 @@
+[
+ {
+  "id": "r1-loopback-sail-noreorder-iceberg",
+  "rep": 1,
+  "cond": "loopback",
+  "cfg": "sail-noreorder",
+  "wl": "tpch",
+  "format": "iceberg",
+  "variant": "sail-noreorder-iceberg",
+  "env": {
+   "FORMAT": "iceberg",
+   "TABLEBASE": "s3a://tpch/iceberg/sf30",
+   "WARMUP_BASE": "s3a://tpch/iceberg/sf1",
+   "QARG": "--queries 1,3,6,12,18"
+  }
+ },
+ {
+  "id": "r1-loopback-duckdb-iceberg",
+  "rep": 1,
+  "cond": "loopback",
+  "cfg": "duckdb",
+  "wl": "tpch",
+  "format": "iceberg",
+  "variant": "duckdb-iceberg",
+  "env": {
+   "FORMAT": "iceberg",
+   "TABLEBASE": "s3a://tpch/iceberg/sf30",
+   "WARMUP_BASE": "s3a://tpch/iceberg/sf1",
+   "QARG": "--queries 1,3,6,12,18"
+  }
+ },
+ {
+  "id": "r1-loopback-spark420-classic-delta",
+  "rep": 1,
+  "cond": "loopback",
+  "cfg": "spark420-classic",
+  "wl": "tpch",
+  "format": "delta",
+  "variant": "spark420-classic-delta",
+  "env": {
+   "FORMAT": "delta",
+   "TABLEBASE": "s3a://tpch/delta/sf30",
+   "WARMUP_BASE": "s3a://tpch/delta/sf1",
+   "QARG": "--queries 1,3,6,12,18",
+   "TABLEFMT_JARS": "/workspace/engine-swap/dist/delta-spark_4.2_2.13-4.4.1.jar,/workspace/engine-swap/dist/delta-storage-4.4.1.jar,/workspace/engine-swap/dist/delta-kernel-api-4.4.1.jar,/workspace/engine-swap/dist/delta-kernel-defaults-4.4.1.jar,/workspace/engine-swap/dist/delta-kernel-unitycatalog-4.4.1.jar",
+   "EXTRA_CONF": "--conf spark.sql.extensions=io.delta.sql.DeltaSparkSessionExtension --conf spark.sql.catalog.spark_catalog=org.apache.spark.sql.delta.catalog.DeltaCatalog"
+  }
+ },
+ {
+  "id": "r1-loopback-comet420-classic-delta",
+  "rep": 1,
+  "cond": "loopback",
+  "cfg": "comet420-classic",
+  "wl": "tpch",
+  "format": "delta",
+  "variant": "comet420-classic-delta",
+  "env": {
+   "FORMAT": "delta",
+   "TABLEBASE": "s3a://tpch/delta/sf30",
+   "WARMUP_BASE": "s3a://tpch/delta/sf1",
+   "QARG": "--queries 1,3,6,12,18",
+   "TABLEFMT_JARS": "/workspace/engine-swap/dist/delta-spark_4.2_2.13-4.4.1.jar,/workspace/engine-swap/dist/delta-storage-4.4.1.jar,/workspace/engine-swap/dist/delta-kernel-api-4.4.1.jar,/workspace/engine-swap/dist/delta-kernel-defaults-4.4.1.jar,/workspace/engine-swap/dist/delta-kernel-unitycatalog-4.4.1.jar",
+   "EXTRA_CONF": "--conf spark.sql.extensions=io.delta.sql.DeltaSparkSessionExtension --conf spark.sql.catalog.spark_catalog=org.apache.spark.sql.delta.catalog.DeltaCatalog"
+  }
+ },
+ {
+  "id": "r1-loopback-spark413-classic-iceberg",
+  "rep": 1,
+  "cond": "loopback",
+  "cfg": "spark413-classic",
+  "wl": "tpch",
+  "format": "iceberg",
+  "variant": "spark413-classic-iceberg",
+  "env": {
+   "FORMAT": "iceberg",
+   "TABLEBASE": "s3a://tpch/iceberg/sf30",
+   "WARMUP_BASE": "s3a://tpch/iceberg/sf1",
+   "QARG": "--queries 1,3,6,12,18",
+   "TABLEFMT_JARS": "/workspace/engine-swap/dist/iceberg-spark-runtime-4.1_2.13-1.12.0.jar",
+   "EXTRA_CONF": "--conf spark.sql.extensions=org.apache.iceberg.spark.extensions.IcebergSparkSessionExtensions --conf spark.sql.catalog.ice=org.apache.iceberg.spark.SparkCatalog --conf spark.sql.catalog.ice.type=hadoop --conf spark.sql.catalog.ice.warehouse=s3a://tpch/iceberg --conf spark.sql.catalog.ice.io-impl=org.apache.iceberg.hadoop.HadoopFileIO"
+  }
+ },
+ {
+  "id": "r1-loopback-duckdb-delta",
+  "rep": 1,
+  "cond": "loopback",
+  "cfg": "duckdb",
+  "wl": "tpch",
+  "format": "delta",
+  "variant": "duckdb-delta",
+  "env": {
+   "FORMAT": "delta",
+   "TABLEBASE": "s3a://tpch/delta/sf30",
+   "WARMUP_BASE": "s3a://tpch/delta/sf1",
+   "QARG": "--queries 1,3,6,12,18"
+  }
+ },
+ {
+  "id": "r1-loopback-spark413-classic-delta",
+  "rep": 1,
+  "cond": "loopback",
+  "cfg": "spark413-classic",
+  "wl": "tpch",
+  "format": "delta",
+  "variant": "spark413-classic-delta",
+  "env": {
+   "FORMAT": "delta",
+   "TABLEBASE": "s3a://tpch/delta/sf30",
+   "WARMUP_BASE": "s3a://tpch/delta/sf1",
+   "QARG": "--queries 1,3,6,12,18",
+   "TABLEFMT_JARS": "/workspace/engine-swap/dist/delta-spark_4.1_2.13-4.4.1.jar,/workspace/engine-swap/dist/delta-storage-4.4.1.jar,/workspace/engine-swap/dist/delta-kernel-api-4.4.1.jar,/workspace/engine-swap/dist/delta-kernel-defaults-4.4.1.jar,/workspace/engine-swap/dist/delta-kernel-unitycatalog-4.4.1.jar",
+   "EXTRA_CONF": "--conf spark.sql.extensions=io.delta.sql.DeltaSparkSessionExtension --conf spark.sql.catalog.spark_catalog=org.apache.spark.sql.delta.catalog.DeltaCatalog"
+  }
+ },
+ {
+  "id": "r1-loopback-sail-noreorder-delta",
+  "rep": 1,
+  "cond": "loopback",
+  "cfg": "sail-noreorder",
+  "wl": "tpch",
+  "format": "delta",
+  "variant": "sail-noreorder-delta",
+  "env": {
+   "FORMAT": "delta",
+   "TABLEBASE": "s3a://tpch/delta/sf30",
+   "WARMUP_BASE": "s3a://tpch/delta/sf1",
+   "QARG": "--queries 1,3,6,12,18"
+  }
+ },
+ {
+  "id": "r1-loopback-comet413-classic-iceberg",
+  "rep": 1,
+  "cond": "loopback",
+  "cfg": "comet413-classic",
+  "wl": "tpch",
+  "format": "iceberg",
+  "variant": "comet413-classic-iceberg",
+  "env": {
+   "FORMAT": "iceberg",
+   "TABLEBASE": "s3a://tpch/iceberg/sf30",
+   "WARMUP_BASE": "s3a://tpch/iceberg/sf1",
+   "QARG": "--queries 1,3,6,12,18",
+   "TABLEFMT_JARS": "/workspace/engine-swap/dist/iceberg-spark-runtime-4.1_2.13-1.12.0.jar",
+   "EXTRA_CONF": "--conf spark.sql.extensions=org.apache.iceberg.spark.extensions.IcebergSparkSessionExtensions --conf spark.sql.catalog.ice=org.apache.iceberg.spark.SparkCatalog --conf spark.sql.catalog.ice.type=hadoop --conf spark.sql.catalog.ice.warehouse=s3a://tpch/iceberg --conf spark.sql.catalog.ice.io-impl=org.apache.iceberg.hadoop.HadoopFileIO"
+  }
+ },
+ {
+  "id": "r2-loopback-sail-noreorder-delta",
+  "rep": 2,
+  "cond": "loopback",
+  "cfg": "sail-noreorder",
+  "wl": "tpch",
+  "format": "delta",
+  "variant": "sail-noreorder-delta",
+  "env": {
+   "FORMAT": "delta",
+   "TABLEBASE": "s3a://tpch/delta/sf30",
+   "WARMUP_BASE": "s3a://tpch/delta/sf1",
+   "QARG": "--queries 1,3,6,12,18"
+  }
+ },
+ {
+  "id": "r2-loopback-duckdb-delta",
+  "rep": 2,
+  "cond": "loopback",
+  "cfg": "duckdb",
+  "wl": "tpch",
+  "format": "delta",
+  "variant": "duckdb-delta",
+  "env": {
+   "FORMAT": "delta",
+   "TABLEBASE": "s3a://tpch/delta/sf30",
+   "WARMUP_BASE": "s3a://tpch/delta/sf1",
+   "QARG": "--queries 1,3,6,12,18"
+  }
+ },
+ {
+  "id": "r2-loopback-spark420-classic-delta",
+  "rep": 2,
+  "cond": "loopback",
+  "cfg": "spark420-classic",
+  "wl": "tpch",
+  "format": "delta",
+  "variant": "spark420-classic-delta",
+  "env": {
+   "FORMAT": "delta",
+   "TABLEBASE": "s3a://tpch/delta/sf30",
+   "WARMUP_BASE": "s3a://tpch/delta/sf1",
+   "QARG": "--queries 1,3,6,12,18",
+   "TABLEFMT_JARS": "/workspace/engine-swap/dist/delta-spark_4.2_2.13-4.4.1.jar,/workspace/engine-swap/dist/delta-storage-4.4.1.jar,/workspace/engine-swap/dist/delta-kernel-api-4.4.1.jar,/workspace/engine-swap/dist/delta-kernel-defaults-4.4.1.jar,/workspace/engine-swap/dist/delta-kernel-unitycatalog-4.4.1.jar",
+   "EXTRA_CONF": "--conf spark.sql.extensions=io.delta.sql.DeltaSparkSessionExtension --conf spark.sql.catalog.spark_catalog=org.apache.spark.sql.delta.catalog.DeltaCatalog"
+  }
+ },
+ {
+  "id": "r2-loopback-duckdb-iceberg",
+  "rep": 2,
+  "cond": "loopback",
+  "cfg": "duckdb",
+  "wl": "tpch",
+  "format": "iceberg",
+  "variant": "duckdb-iceberg",
+  "env": {
+   "FORMAT": "iceberg",
+   "TABLEBASE": "s3a://tpch/iceberg/sf30",
+   "WARMUP_BASE": "s3a://tpch/iceberg/sf1",
+   "QARG": "--queries 1,3,6,12,18"
+  }
+ },
+ {
+  "id": "r2-loopback-spark413-classic-delta",
+  "rep": 2,
+  "cond": "loopback",
+  "cfg": "spark413-classic",
+  "wl": "tpch",
+  "format": "delta",
+  "variant": "spark413-classic-delta",
+  "env": {
+   "FORMAT": "delta",
+   "TABLEBASE": "s3a://tpch/delta/sf30",
+   "WARMUP_BASE": "s3a://tpch/delta/sf1",
+   "QARG": "--queries 1,3,6,12,18",
+   "TABLEFMT_JARS": "/workspace/engine-swap/dist/delta-spark_4.1_2.13-4.4.1.jar,/workspace/engine-swap/dist/delta-storage-4.4.1.jar,/workspace/engine-swap/dist/delta-kernel-api-4.4.1.jar,/workspace/engine-swap/dist/delta-kernel-defaults-4.4.1.jar,/workspace/engine-swap/dist/delta-kernel-unitycatalog-4.4.1.jar",
+   "EXTRA_CONF": "--conf spark.sql.extensions=io.delta.sql.DeltaSparkSessionExtension --conf spark.sql.catalog.spark_catalog=org.apache.spark.sql.delta.catalog.DeltaCatalog"
+  }
+ },
+ {
+  "id": "r2-loopback-comet413-classic-iceberg",
+  "rep": 2,
+  "cond": "loopback",
+  "cfg": "comet413-classic",
+  "wl": "tpch",
+  "format": "iceberg",
+  "variant": "comet413-classic-iceberg",
+  "env": {
+   "FORMAT": "iceberg",
+   "TABLEBASE": "s3a://tpch/iceberg/sf30",
+   "WARMUP_BASE": "s3a://tpch/iceberg/sf1",
+   "QARG": "--queries 1,3,6,12,18",
+   "TABLEFMT_JARS": "/workspace/engine-swap/dist/iceberg-spark-runtime-4.1_2.13-1.12.0.jar",
+   "EXTRA_CONF": "--conf spark.sql.extensions=org.apache.iceberg.spark.extensions.IcebergSparkSessionExtensions --conf spark.sql.catalog.ice=org.apache.iceberg.spark.SparkCatalog --conf spark.sql.catalog.ice.type=hadoop --conf spark.sql.catalog.ice.warehouse=s3a://tpch/iceberg --conf spark.sql.catalog.ice.io-impl=org.apache.iceberg.hadoop.HadoopFileIO"
+  }
+ },
+ {
+  "id": "r2-loopback-sail-noreorder-iceberg",
+  "rep": 2,
+  "cond": "loopback",
+  "cfg": "sail-noreorder",
+  "wl": "tpch",
+  "format": "iceberg",
+  "variant": "sail-noreorder-iceberg",
+  "env": {
+   "FORMAT": "iceberg",
+   "TABLEBASE": "s3a://tpch/iceberg/sf30",
+   "WARMUP_BASE": "s3a://tpch/iceberg/sf1",
+   "QARG": "--queries 1,3,6,12,18"
+  }
+ },
+ {
+  "id": "r2-loopback-comet420-classic-delta",
+  "rep": 2,
+  "cond": "loopback",
+  "cfg": "comet420-classic",
+  "wl": "tpch",
+  "format": "delta",
+  "variant": "comet420-classic-delta",
+  "env": {
+   "FORMAT": "delta",
+   "TABLEBASE": "s3a://tpch/delta/sf30",
+   "WARMUP_BASE": "s3a://tpch/delta/sf1",
+   "QARG": "--queries 1,3,6,12,18",
+   "TABLEFMT_JARS": "/workspace/engine-swap/dist/delta-spark_4.2_2.13-4.4.1.jar,/workspace/engine-swap/dist/delta-storage-4.4.1.jar,/workspace/engine-swap/dist/delta-kernel-api-4.4.1.jar,/workspace/engine-swap/dist/delta-kernel-defaults-4.4.1.jar,/workspace/engine-swap/dist/delta-kernel-unitycatalog-4.4.1.jar",
+   "EXTRA_CONF": "--conf spark.sql.extensions=io.delta.sql.DeltaSparkSessionExtension --conf spark.sql.catalog.spark_catalog=org.apache.spark.sql.delta.catalog.DeltaCatalog"
+  }
+ },
+ {
+  "id": "r2-loopback-spark413-classic-iceberg",
+  "rep": 2,
+  "cond": "loopback",
+  "cfg": "spark413-classic",
+  "wl": "tpch",
+  "format": "iceberg",
+  "variant": "spark413-classic-iceberg",
+  "env": {
+   "FORMAT": "iceberg",
+   "TABLEBASE": "s3a://tpch/iceberg/sf30",
+   "WARMUP_BASE": "s3a://tpch/iceberg/sf1",
+   "QARG": "--queries 1,3,6,12,18",
+   "TABLEFMT_JARS": "/workspace/engine-swap/dist/iceberg-spark-runtime-4.1_2.13-1.12.0.jar",
+   "EXTRA_CONF": "--conf spark.sql.extensions=org.apache.iceberg.spark.extensions.IcebergSparkSessionExtensions --conf spark.sql.catalog.ice=org.apache.iceberg.spark.SparkCatalog --conf spark.sql.catalog.ice.type=hadoop --conf spark.sql.catalog.ice.warehouse=s3a://tpch/iceberg --conf spark.sql.catalog.ice.io-impl=org.apache.iceberg.hadoop.HadoopFileIO"
+  }
+ }
+]

@@ -1,0 +1,48 @@
+{"check": "window_row_number_dedup", "ok": true, "digest": "5261b87a3f81", "sample": "[Row(count=50000)]", "label": "spark420"}
+{"check": "window_lag_running_sum", "ok": true, "digest": "c2ffb04bdf9e", "sample": "[Row(sum(s)=Decimal('10212075.00'))]", "label": "spark420"}
+{"check": "python_udf", "ok": true, "digest": "e99a4c257551", "sample": "[Row(m='AIR'), Row(m='REG')]", "label": "spark420"}
+{"check": "pandas_udf", "ok": true, "digest": "77723401136d", "sample": "[Row(sum(x)=10226190.0)]", "label": "spark420"}
+{"check": "mapInPandas", "ok": true, "digest": "026d08b74b45", "sample": "[Row(count=100234)]", "label": "spark420"}
+{"check": "applyInPandas", "ok": true, "digest": "2b6538889540", "sample": "[Row(l_returnflag='A', q=1.4818889023945552), Row(l_returnflag='N', q=-8.514831970040404)]", "label": "spark420"}
+{"check": "cache_count", "ok": true, "digest": "1666f092ee2b", "sample": "[200364]", "label": "spark420"}
+{"check": "broadcast_hint_join", "ok": true, "digest": "3b530e2ed276", "sample": "[Row(n_name='JAPAN', count=8064), Row(n_name='JORDAN', count=7797)]", "label": "spark420"}
+{"check": "pivot", "ok": true, "digest": "880b4f980904", "sample": "[Row(l_returnflag='A', F=Decimal('1259625.00'), O=None), Row(l_returnflag='N', F=Decimal('31038.00'), O=Decimal('2557952.00'))]", "label": "spark420"}
+{"check": "explode_split", "ok": true, "digest": "eed76cc7a28f", "sample": "[Row(count=273)]", "label": "spark420"}
+{"check": "approx_percentile", "ok": true, "digest": "458b57b4828a", "sample": "[Row(percentile_approx(l_extendedprice, 0.5, 10000)=Decimal('36757.20'))]", "label": "spark420"}
+{"check": "count_distinct_approx", "ok": true, "digest": "c03a874411f0", "sample": "[Row(approx_count_distinct(l_orderkey)=50421)]", "label": "spark420"}
+{"check": "date_ops", "ok": true, "digest": "00364f60a1fb", "sample": "[Row(m=datetime.datetime(1993, 10, 1, 2, 0), avg(d)=15.65953307392996), Row(m=datetime.datetime(1998, 2, 1, 2, 0), avg(d)=15.460502692998205)]", "label": "spark420"}
+{"check": "regexp_extract", "ok": true, "digest": "cccfbfe529bb", "sample": "[Row(x='careful'), Row(x='sly')]", "label": "spark420"}
+{"check": "struct_json", "ok": true, "digest": "124a406e4f9d", "sample": "[Row(n_name='ALGERIA', n_regionkey=0), Row(n_name='ARGENTINA', n_regionkey=1)]", "label": "spark420"}
+{"check": "dropDuplicates_subset", "ok": true, "digest": "5261b87a3f81", "sample": "[Row(count=50000)]", "label": "spark420"}
+{"check": "union_by_name", "ok": true, "digest": "6a412d8e8537", "sample": "[Row(count=50)]", "label": "spark420"}
+{"check": "write_parquet_s3_overwrite_partitioned", "ok": true, "digest": "729171b1cb39", "sample": "[Row(l_returnflag='N', count=101470), Row(l_returnflag='R', count=49532)]", "label": "spark420"}
+{"check": "temp_view_sql_cte", "ok": true, "digest": "439a7626cfb3", "sample": "[Row(f='A', q=Decimal('1259625.00')), Row(f='N', q=Decimal('2588990.00'))]", "label": "spark420"}
+{"check": "rdd_access", "ok": true, "digest": "858ed83b1b15", "sample": "['ALGERIA', 'ARGENTINA']", "label": "spark420"}
+{"check": "toPandas", "ok": true, "digest": "b7a56873cd77", "sample": "[25]", "label": "spark420"}
+{"check": "explain_string", "ok": true, "digest": "a89d6642c31c", "sample": "[2079]", "label": "spark420"}
+{"check": "sample_seed", "ok": true, "digest": "27c157c1b64f", "sample": "[19882]", "label": "spark420"}
+{"check": "describe", "ok": true, "digest": "0e4fa03fad05", "sample": "[Row(summary='count', l_quantity='200364'), Row(summary='mean', l_quantity='25.519030')]", "label": "spark420"}
+{"check": "window_row_number_dedup", "ok": true, "digest": "5261b87a3f81", "sample": "[Row(count=50000)]", "label": "sail073"}
+{"check": "window_lag_running_sum", "ok": true, "digest": "c2ffb04bdf9e", "sample": "[Row(sum(s)=Decimal('10212075.00'))]", "label": "sail073"}
+{"check": "python_udf", "ok": true, "digest": "e99a4c257551", "sample": "[Row(m='FOB'), Row(m='RAI')]", "label": "sail073"}
+{"check": "pandas_udf", "ok": true, "digest": "77723401136d", "sample": "[Row(sum(x)=10226190.0)]", "label": "sail073"}
+{"check": "mapInPandas", "ok": true, "digest": "026d08b74b45", "sample": "[Row(count=100234)]", "label": "sail073"}
+{"check": "applyInPandas", "ok": true, "digest": "2b6538889540", "sample": "[Row(l_returnflag='R', q=19.47145279819107), Row(l_returnflag='N', q=-8.514831970040404)]", "label": "sail073"}
+{"check": "cache_count", "ok": true, "digest": "1666f092ee2b", "sample": "[200364]", "label": "sail073"}
+{"check": "broadcast_hint_join", "ok": true, "digest": "3b530e2ed276", "sample": "[Row(n_name='UNITED STATES', count=8020), Row(n_name='CHINA', count=8066)]", "label": "sail073"}
+{"check": "pivot", "ok": true, "digest": "880b4f980904", "sample": "[Row(l_returnflag='A', F=Decimal('1259625.00'), O=None), Row(l_returnflag='R', F=Decimal('1264480.00'), O=None)]", "label": "sail073"}
+{"check": "explode_split", "ok": true, "digest": "eed76cc7a28f", "sample": "[Row(count=273)]", "label": "sail073"}
+{"check": "approx_percentile", "ok": true, "digest": "b18eeca35713", "sample": "[Row(percentile_approx(l_extendedprice, 0.5, 10000)=36763.46984102767)]", "label": "sail073"}
+{"check": "count_distinct_approx", "ok": true, "digest": "ff48c77893c5", "sample": "[Row(approx_count_distinct(l_orderkey)=50078)]", "label": "sail073"}
+{"check": "date_ops", "ok": true, "digest": "a26d5ffc6d0d", "sample": "[Row(m=datetime.datetime(1995, 12, 1, 0, 0), avg(d)=15.593738211995474), Row(m=datetime.datetime(1994, 8, 1, 0, 0), avg(d)=15.513318112633181)]", "label": "sail073"}
+{"check": "regexp_extract", "ok": true, "digest": "cccfbfe529bb", "sample": "[Row(x='careful'), Row(x='sly')]", "label": "sail073"}
+{"check": "struct_json", "ok": true, "digest": "124a406e4f9d", "sample": "[Row(n_name='ALGERIA', n_regionkey=0), Row(n_name='ARGENTINA', n_regionkey=1)]", "label": "sail073"}
+{"check": "dropDuplicates_subset", "ok": true, "digest": "5261b87a3f81", "sample": "[Row(count=50000)]", "label": "sail073"}
+{"check": "union_by_name", "ok": true, "digest": "6a412d8e8537", "sample": "[Row(count=50)]", "label": "sail073"}
+{"check": "write_parquet_s3_overwrite_partitioned", "ok": true, "digest": "729171b1cb39", "sample": "[Row(l_returnflag='A', count=49362), Row(l_returnflag='N', count=101470)]", "label": "sail073"}
+{"check": "temp_view_sql_cte", "ok": true, "digest": "439a7626cfb3", "sample": "[Row(f='A', q=Decimal('1259625.00')), Row(f='N', q=Decimal('2588990.00'))]", "label": "sail073"}
+{"check": "rdd_access", "ok": false, "error": "PySparkAttributeError: [JVM_ATTRIBUTE_NOT_SUPPORTED] Attribute `rdd` is not supported in Spark Connect as it depends on the JVM. If you need to use this attribute, do not use Spark Connect when creating your session. Visit https://spark.apache.org/docs/latest/sql-getting-started.html#starting-point-sparksession for creating regular Spark Session in detail.", "label": "sail073"}
+{"check": "toPandas", "ok": true, "digest": "b7a56873cd77", "sample": "[25]", "label": "sail073"}
+{"check": "explain_string", "ok": true, "digest": "6b86b273ff34", "sample": "[1]", "label": "sail073"}
+{"check": "sample_seed", "ok": true, "digest": "2a52c1a3f592", "sample": "[21758]", "label": "sail073"}
+{"check": "describe", "ok": true, "digest": "7600075a6aff", "sample": "[Row(summary='count', l_quantity='200364'), Row(summary='stddev', l_quantity='14.415348108257161')]", "label": "sail073"}

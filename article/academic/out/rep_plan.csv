@@ -1,0 +1,15 @@
+cond,wl,cfg,have_reps,add_reps,median_process_s,add_hours
+loopback,tpch,spark420-classic,2,3,527.2135,0.4393445833333333
+loopback,tpch,spark420-analytics,2,3,529.3675000000001,0.44113958333333336
+loopback,tpch,spark413-classic,2,3,521.1120000000001,0.4342600000000001
+loopback,tpch,spark413-analytics,2,3,600.557,0.5004641666666667
+loopback,tpch,sail-reorder,2,3,74.76249999999999,0.06230208333333332
+loopback,tpch,duckdb,2,3,56.8305,0.04735875
+loopback,tpch,comet420-classic,2,3,368.1395,0.3067829166666667
+proxy0,tpch,spark420-classic,2,3,582.6595,0.4855495833333333
+proxy0,tpch,spark420-analytics,2,3,581.7,0.48475
+proxy10,tpch,spark420-classic,2,3,790.3585,0.6586320833333333
+proxy10,tpch,spark420-analytics,2,3,620.7574999999999,0.5172979166666666
+local,tpch,spark420-default,2,3,471.08349999999996,0.3925695833333333
+local,tpch,sail-noreorder,2,3,51.493,0.042910833333333336
+local,tpch,duckdb,2,3,49.907,0.04158916666666667

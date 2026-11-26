@@ -1,0 +1,13 @@
+cfg,format,read_ok,rc,elapsed_s,hash_set,error
+duckdb,iceberg,True,0,0.7,37fc3f716d28d660,
+sail-noreorder,iceberg,True,0,3.4,37fc3f716d28d660,
+spark413-classic,iceberg,True,0,17.8,37fc3f716d28d660,
+spark420-classic,iceberg,False,1,5.2,,"java.lang.IncompatibleClassChangeError: Found interface org.apache.spark.sql.connector.catalog.CatalogManager, but class was expected"
+comet420-classic,iceberg,False,1,6.6,,"java.lang.IncompatibleClassChangeError: Found interface org.apache.spark.sql.connector.catalog.CatalogManager, but class was expected"
+comet413-classic,iceberg,True,0,16.1,37fc3f716d28d660,
+duckdb,delta,True,0,1.1,37fc3f716d28d660,
+sail-noreorder,delta,True,0,1.9,37fc3f716d28d660,
+spark413-classic,delta,True,0,23.8,37fc3f716d28d660,
+spark420-classic,delta,True,0,24.6,37fc3f716d28d660,
+comet420-classic,delta,True,0,25.1,37fc3f716d28d660,
+comet413-classic,delta,True,0,22.7,37fc3f716d28d660,

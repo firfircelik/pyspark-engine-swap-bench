@@ -1,0 +1,10 @@
+cond,engine,n_classic,n_analytics,classic_median_total_GET,analytics_median_total_GET,GET_reduction_pct
+loopback,spark413,2,2,231388.0,138370.0,40.2
+loopback,spark420,2,2,231388.0,105029.5,54.6
+loopback,comet420,2,2,64252.0,64252.0,0.0
+proxy0,spark413,2,2,231388.0,137815.0,40.4
+proxy0,spark420,2,2,231388.0,105550.5,54.4
+proxy0,comet420,2,2,64252.0,64252.0,0.0
+proxy10,spark413,2,2,231388.0,138392.5,40.2
+proxy10,spark420,2,2,231388.0,105396.0,54.5
+proxy10,comet420,2,2,64252.0,64252.0,0.0

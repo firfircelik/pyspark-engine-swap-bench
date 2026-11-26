@@ -1,0 +1,9 @@
+{"label": "spark413-classic", "rc": 0, "elapsed_s": 67.585, "peak_tree_rss_bytes": 9470181376, "cpu_user_s": 286.5, "cpu_sys_s": 30.5, "ru_maxrss_kb_largest_child": 9171980}
+{"label": "spark413-analytics", "rc": 0, "elapsed_s": 69.066, "peak_tree_rss_bytes": 9569660928, "cpu_user_s": 318.7, "cpu_sys_s": 39.3, "ru_maxrss_kb_largest_child": 9269844}
+{"label": "spark420-classic", "rc": 0, "elapsed_s": 63.822, "peak_tree_rss_bytes": 9604108288, "cpu_user_s": 305.9, "cpu_sys_s": 34.2, "ru_maxrss_kb_largest_child": 9303096}
+{"label": "spark420-analytics", "rc": 0, "elapsed_s": 511.566, "peak_tree_rss_bytes": 9497427968, "cpu_user_s": 3597.7, "cpu_sys_s": 317.2, "ru_maxrss_kb_largest_child": 9198524}
+{"label": "comet420-classic", "rc": 0, "elapsed_s": 32.381, "peak_tree_rss_bytes": 6336053248, "cpu_user_s": 86.8, "cpu_sys_s": 26.6, "ru_maxrss_kb_largest_child": 6280756}
+{"label": "comet420-analytics", "rc": 0, "elapsed_s": 27.455, "peak_tree_rss_bytes": 6721490944, "cpu_user_s": 87.9, "cpu_sys_s": 20.0, "ru_maxrss_kb_largest_child": 6464552}
+{"label": "sail-noreorder", "rc": 0, "elapsed_s": 10.647, "peak_tree_rss_bytes": 139845632, "cpu_user_s": 1.3, "cpu_sys_s": 0.1, "ru_maxrss_kb_largest_child": 139124}
+{"label": "sail-reorder", "rc": 0, "elapsed_s": 7.976, "peak_tree_rss_bytes": 140193792, "cpu_user_s": 1.2, "cpu_sys_s": 0.1, "ru_maxrss_kb_largest_child": 139460}
+{"label": "duckdb", "rc": 0, "elapsed_s": 3.486, "peak_tree_rss_bytes": 3132936192, "cpu_user_s": 12.0, "cpu_sys_s": 6.0, "ru_maxrss_kb_largest_child": 3105816}

@@ -1,0 +1,7 @@
+{"event": "session", "session_s": 0.07, "version": "2.0.1", "format": "iceberg", "label": "duckdb", "pid": 1728405, "base": "s3a://tpch/iceberg/sf1", "workload": "tpch"}
+{"event": "warmup", "q": 1, "wall_s": 0.067, "error": null, "label": "duckdb", "pid": 1728405, "base": "s3a://tpch/iceberg/sf1", "workload": "tpch"}
+{"event": "warmup", "q": 6, "wall_s": 0.043, "error": null, "label": "duckdb", "pid": 1728405, "base": "s3a://tpch/iceberg/sf1", "workload": "tpch"}
+{"event": "warmup", "q": 3, "wall_s": 0.083, "error": null, "label": "duckdb", "pid": 1728405, "base": "s3a://tpch/iceberg/sf1", "workload": "tpch"}
+{"event": "warmup_total", "s": 0.219, "label": "duckdb", "pid": 1728405, "base": "s3a://tpch/iceberg/sf1", "workload": "tpch"}
+{"event": "register", "s": 0.023, "s3": {"_sent_bytes": 16839.0, "HeadObject": 16.0, "GetObject": 16.0}, "label": "duckdb", "pid": 1728405, "base": "s3a://tpch/iceberg/sf1", "workload": "tpch"}
+{"event": "query", "q": 6, "start": 1795676970.4500186, "end": 1795676970.4825833, "wall_s": 0.033, "rows": 1, "s3": {"_sent_bytes": 48068129.0, "HeadObject": 2.0, "GetObject": 47.0}, "error": null, "hash_ordered": "37fc3f716d28d660", "hash_set": "37fc3f716d28d660", "label": "duckdb", "pid": 1728405, "base": "s3a://tpch/iceberg/sf1", "workload": "tpch"}

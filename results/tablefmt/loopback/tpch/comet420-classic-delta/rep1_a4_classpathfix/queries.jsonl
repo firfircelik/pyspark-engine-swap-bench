@@ -1,0 +1,9 @@
+{"event": "session", "session_s": 2.623, "version": "4.2.0", "format": "delta", "label": "comet420-classic", "pid": 1765077, "base": "s3a://tpch/delta/sf30", "workload": "tpch"}
+{"event": "warmup", "q": 1, "wall_s": 8.274, "error": null, "label": "comet420-classic", "pid": 1765077, "base": "s3a://tpch/delta/sf30", "workload": "tpch"}
+{"event": "warmup", "q": 6, "wall_s": 0.626, "error": null, "label": "comet420-classic", "pid": 1765077, "base": "s3a://tpch/delta/sf30", "workload": "tpch"}
+{"event": "warmup", "q": 3, "wall_s": 4.227, "error": null, "label": "comet420-classic", "pid": 1765077, "base": "s3a://tpch/delta/sf30", "workload": "tpch"}
+{"event": "warmup_total", "s": 16.363, "label": "comet420-classic", "pid": 1765077, "base": "s3a://tpch/delta/sf30", "workload": "tpch"}
+{"event": "register", "s": 0.225, "s3": {"ListObjectsV2": 16.0, "GetObject": 8.0, "HeadObject": 24.0, "_sent_bytes": 85633.0}, "label": "comet420-classic", "pid": 1765077, "base": "s3a://tpch/delta/sf30", "workload": "tpch"}
+{"event": "query_start", "q": 1, "start": 1795679216.254993, "label": "comet420-classic", "pid": 1765077, "base": "s3a://tpch/delta/sf30", "workload": "tpch"}
+{"event": "query", "q": 1, "start": 1795679216.256448, "end": 1795679252.6633582, "wall_s": 36.407, "rows": 4, "s3": {"ListObjectsV2": 1.0, "GetObject": 361.0, "HeadObject": 61.0, "_sent_bytes": 1601852875.0}, "error": null, "hash_ordered": "dc9fb64947ffda53", "hash_set": "dc9fb64947ffda53", "label": "comet420-classic", "pid": 1765077, "base": "s3a://tpch/delta/sf30", "workload": "tpch"}
+{"event": "query_start", "q": 3, "start": 1795679255.7608888, "label": "comet420-classic", "pid": 1765077, "base": "s3a://tpch/delta/sf30", "workload": "tpch"}

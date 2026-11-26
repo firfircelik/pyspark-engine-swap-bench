@@ -1,0 +1,8 @@
+step,digest,matches_spark420,configs
+E1_filter_agg,2412821957367619902,True,comet420-analytics comet420-classic duckdb sail-noreorder sail-reorder spark413-analytics spark413-classic spark420-analytics spark420-classic
+E2_join_agg,224330621390196516,True,comet420-analytics comet420-classic duckdb sail-noreorder sail-reorder spark413-analytics spark413-classic spark420-analytics spark420-classic
+E3_window_latest,14042430638490531309,True,comet420-analytics comet420-classic duckdb sail-noreorder sail-reorder spark413-analytics spark413-classic spark420-analytics spark420-classic
+E4_highcard_agg,13511529601145314440,True,comet420-analytics comet420-classic duckdb sail-noreorder sail-reorder spark413-analytics spark413-classic spark420-analytics spark420-classic
+E5_rewrite_partitioned,1617142080387014082,True,comet420-analytics comet420-classic duckdb sail-noreorder sail-reorder spark413-analytics spark413-classic spark420-analytics spark420-classic
+E6_upsert_antijoin_union,10127593250859995887,True,comet420-analytics comet420-classic duckdb spark413-analytics spark413-classic spark420-analytics spark420-classic
+E6_upsert_antijoin_union,8177247671558987013,False,sail-noreorder sail-reorder

@@ -1,0 +1,3 @@
+ENGINE spark (pyspark client 4.2.0)
+C5_after_write | exists True | files ['._SUCCESS.crc', '.part-00000-695852c2-ae5b-459b-b4a9-821751d73ec8-c000.snappy.parquet.crc', '_SUCCESS', 'part-00000-695852c2-ae5b-459b-b4a9-821751d73ec8-c000.snappy.parquet']
+C5_read_back | struct<a:int,b:string,c:decimal(5,2)> | rows 0

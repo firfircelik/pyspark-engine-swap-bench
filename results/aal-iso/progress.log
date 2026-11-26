@@ -1,0 +1,113 @@
+2026-11-23 09:04:59 START r1-loopback-A_420_classic attempt 1 memavail=10.9GB disk=62.4GB
+2026-11-23 09:07:30 END r1-loopback-A_420_classic status=ok rc=0 151.3s errors=[] frozen=[]
+2026-11-23 09:07:53 mem pump: avail now  GB
+2026-11-23 09:07:53 START r1-loopback-I_413_aal121 attempt 1 memavail=10.7GB disk=62.4GB
+2026-11-23 09:10:23 END r1-loopback-I_413_aal121 status=ok rc=0 150.5s errors=[] frozen=[]
+2026-11-23 09:10:23 START r1-loopback-H_413_classic attempt 1 memavail=10.7GB disk=62.4GB
+2026-11-23 09:12:34 END r1-loopback-H_413_classic status=ok rc=0 130.8s errors=[] frozen=[]
+2026-11-23 09:12:34 START r1-loopback-B_420_aal_default attempt 1 memavail=11.0GB disk=62.4GB
+2026-11-23 09:14:33 END r1-loopback-B_420_aal_default status=qerror rc=0 118.9s errors=[3] frozen=[]
+2026-11-23 09:14:33 START r1-loopback-B_420_aal_default attempt 2 memavail=10.8GB disk=62.4GB
+2026-11-23 09:17:08 END r1-loopback-B_420_aal_default status=ok rc=0 155.5s errors=[] frozen=[]
+2026-11-23 09:17:08 START r1-loopback-G_420_aal_prefetch_off attempt 1 memavail=11.0GB disk=62.4GB
+2026-11-23 09:19:18 END r1-loopback-G_420_aal_prefetch_off status=ok rc=0 129.3s errors=[] frozen=[]
+2026-11-23 09:19:33 mem pump: avail now  GB
+2026-11-23 09:19:33 START r1-proxy10-C_420_aal_no_coalesce attempt 1 memavail=10.7GB disk=62.4GB
+2026-11-23 09:22:06 END r1-proxy10-C_420_aal_no_coalesce status=ok rc=0 152.4s errors=[] frozen=[]
+2026-11-23 09:22:29 mem pump: avail now  GB
+2026-11-23 09:22:29 START r1-loopback-C_420_aal_no_coalesce attempt 1 memavail=10.6GB disk=62.4GB
+2026-11-23 09:24:32 END r1-loopback-C_420_aal_no_coalesce status=qerror rc=0 123.3s errors=[3] frozen=[]
+2026-11-23 09:24:50 mem pump: avail now  GB
+2026-11-23 09:24:50 START r1-loopback-C_420_aal_no_coalesce attempt 2 memavail=10.7GB disk=62.4GB
+2026-11-23 09:26:56 END r1-loopback-C_420_aal_no_coalesce status=ok rc=0 126.2s errors=[] frozen=[]
+2026-11-23 09:26:56 START r1-proxy10-A_420_classic attempt 1 memavail=11.0GB disk=62.4GB
+2026-11-23 09:29:54 END r1-proxy10-A_420_classic status=ok rc=0 177.4s errors=[] frozen=[]
+2026-11-23 09:29:54 START r1-loopback-D_420_aal_coalesce_128k attempt 1 memavail=10.8GB disk=62.4GB
+2026-11-23 09:31:57 END r1-loopback-D_420_aal_coalesce_128k status=ok rc=0 123.3s errors=[] frozen=[]
+2026-11-23 09:31:57 START r1-loopback-F_420_aal_no_pageindex_prefetch attempt 1 memavail=11.7GB disk=62.4GB
+2026-11-23 09:34:01 END r1-loopback-F_420_aal_no_pageindex_prefetch status=qerror rc=0 123.8s errors=[3] frozen=[]
+2026-11-23 09:34:01 START r1-loopback-F_420_aal_no_pageindex_prefetch attempt 2 memavail=12.2GB disk=62.4GB
+2026-11-23 09:36:05 END r1-loopback-F_420_aal_no_pageindex_prefetch status=qerror rc=0 123.9s errors=[3] frozen=[]
+2026-11-23 09:36:05 START r1-loopback-F_420_aal_no_pageindex_prefetch attempt 3 memavail=11.7GB disk=62.4GB
+2026-11-23 09:38:19 END r1-loopback-F_420_aal_no_pageindex_prefetch status=ok rc=0 134.5s errors=[] frozen=[]
+2026-11-23 09:38:19 START r1-proxy10-E_420_aal_no_vectored attempt 1 memavail=12.1GB disk=62.4GB
+2026-11-23 09:40:53 END r1-proxy10-E_420_aal_no_vectored status=ok rc=0 153.4s errors=[] frozen=[]
+2026-11-23 09:40:53 START r1-loopback-E_420_aal_no_vectored attempt 1 memavail=12.1GB disk=62.4GB
+2026-11-23 09:43:06 END r1-loopback-E_420_aal_no_vectored status=ok rc=0 133.3s errors=[] frozen=[]
+2026-11-23 09:43:06 START r1-proxy10-B_420_aal_default attempt 1 memavail=11.7GB disk=62.4GB
+2026-11-23 09:45:36 END r1-proxy10-B_420_aal_default status=ok rc=0 149.9s errors=[] frozen=[]
+2026-11-23 09:45:36 START r2-loopback-B_420_aal_default attempt 1 memavail=12.1GB disk=62.4GB
+2026-11-23 09:47:45 END r2-loopback-B_420_aal_default status=ok rc=0 128.9s errors=[] frozen=[]
+2026-11-23 09:47:45 START r2-loopback-E_420_aal_no_vectored attempt 1 memavail=11.9GB disk=62.4GB
+2026-11-23 09:49:52 END r2-loopback-E_420_aal_no_vectored status=qerror rc=0 127.0s errors=[3] frozen=[]
+2026-11-23 09:49:52 START r2-loopback-E_420_aal_no_vectored attempt 2 memavail=12.1GB disk=62.4GB
+2026-11-23 09:52:11 END r2-loopback-E_420_aal_no_vectored status=ok rc=0 138.4s errors=[] frozen=[]
+2026-11-23 09:52:11 START r2-proxy10-E_420_aal_no_vectored attempt 1 memavail=11.7GB disk=62.4GB
+2026-11-23 12:25:54 END r2-proxy10-E_420_aal_no_vectored status=frozen rc=247 9223.3s errors=[] frozen=[{'q': 1, 'gap_s': 184.3}]
+2026-11-23 12:25:56 START r2-proxy10-E_420_aal_no_vectored attempt 2 memavail=11.8GB disk=62.4GB
+2026-11-23 12:29:29 END r2-proxy10-E_420_aal_no_vectored status=ok rc=0 213.0s errors=[] frozen=[]
+2026-11-23 12:29:29 START r2-loopback-D_420_aal_coalesce_128k attempt 1 memavail=11.3GB disk=62.4GB
+2026-11-23 12:31:35 END r2-loopback-D_420_aal_coalesce_128k status=ok rc=0 126.4s errors=[] frozen=[]
+2026-11-23 12:31:35 START r2-loopback-A_420_classic attempt 1 memavail=12.1GB disk=62.4GB
+2026-11-23 12:33:46 END r2-loopback-A_420_classic status=ok rc=0 130.9s errors=[] frozen=[]
+2026-11-23 12:33:46 START r2-proxy10-A_420_classic attempt 1 memavail=11.7GB disk=62.4GB
+2026-11-24 11:45:41 END r2-proxy10-A_420_classic status=frozen rc=247 83514.3s errors=[] frozen=[{'q': 3, 'gap_s': 95.4}]
+2026-11-24 11:45:42 START r2-proxy10-A_420_classic attempt 2 memavail=10.6GB disk=62.4GB
+2026-11-24 11:50:23 END r2-proxy10-A_420_classic status=frozen rc=0 280.9s errors=[] frozen=[{'q': 1, 'gap_s': 19.1}]
+2026-11-24 11:50:23 START r2-proxy10-A_420_classic attempt 3 memavail=11.4GB disk=62.4GB
+2026-11-25 16:17:39 END r2-proxy10-A_420_classic status=timeout rc=247 102435.7s errors=[] frozen=[]
+2026-11-25 16:17:40 START r2-loopback-H_413_classic attempt 1 memavail=11.1GB disk=62.3GB
+2026-11-25 16:22:03 END r2-loopback-H_413_classic status=frozen rc=0 263.5s errors=[] frozen=[{'q': 1, 'gap_s': 12.6}]
+2026-11-25 16:22:04 START r2-loopback-H_413_classic attempt 2 memavail=11.2GB disk=62.4GB
+2026-11-25 23:23:18 END r2-loopback-H_413_classic status=timeout rc=247 25273.7s errors=[] frozen=[]
+2026-11-25 23:23:19 START r2-loopback-G_420_aal_prefetch_off attempt 1 memavail=11.0GB disk=62.4GB
+2026-11-25 23:27:20 END r2-loopback-G_420_aal_prefetch_off status=ok rc=0 241.5s errors=[] frozen=[]
+2026-11-25 23:27:20 START r2-proxy10-B_420_aal_default attempt 1 memavail=11.1GB disk=62.4GB
+2026-11-25 23:31:34 END r2-proxy10-B_420_aal_default status=frozen rc=0 254.0s errors=[] frozen=[{'q': 1, 'gap_s': 33.4}]
+2026-11-25 23:31:35 START r2-proxy10-B_420_aal_default attempt 2 memavail=11.4GB disk=62.2GB
+2026-11-25 23:34:20 END r2-proxy10-B_420_aal_default status=ok rc=0 165.6s errors=[] frozen=[]
+2026-11-25 23:34:21 START r2-proxy10-C_420_aal_no_coalesce attempt 1 memavail=11.2GB disk=62.4GB
+2026-11-25 23:36:58 END r2-proxy10-C_420_aal_no_coalesce status=ok rc=0 156.8s errors=[] frozen=[]
+2026-11-25 23:36:58 START r2-loopback-C_420_aal_no_coalesce attempt 1 memavail=11.8GB disk=62.4GB
+2026-11-25 23:39:08 END r2-loopback-C_420_aal_no_coalesce status=ok rc=0 130.5s errors=[] frozen=[]
+2026-11-25 23:39:08 START r2-loopback-F_420_aal_no_pageindex_prefetch attempt 1 memavail=11.1GB disk=62.4GB
+2026-11-25 23:41:10 END r2-loopback-F_420_aal_no_pageindex_prefetch status=qerror rc=0 121.9s errors=[3] frozen=[]
+2026-11-25 23:41:10 START r2-loopback-F_420_aal_no_pageindex_prefetch attempt 2 memavail=11.9GB disk=62.4GB
+2026-11-25 23:43:29 END r2-loopback-F_420_aal_no_pageindex_prefetch status=ok rc=0 138.5s errors=[] frozen=[]
+2026-11-25 23:43:29 START r2-loopback-I_413_aal121 attempt 1 memavail=11.3GB disk=62.4GB
+2026-11-25 23:46:02 END r2-loopback-I_413_aal121 status=ok rc=0 153.0s errors=[] frozen=[]
+2026-11-25 23:46:02 START r3-proxy10-C_420_aal_no_coalesce attempt 1 memavail=11.7GB disk=62.4GB
+2026-11-25 23:48:39 END r3-proxy10-C_420_aal_no_coalesce status=ok rc=0 157.0s errors=[] frozen=[]
+2026-11-25 23:48:39 START r3-proxy10-A_420_classic attempt 1 memavail=11.7GB disk=62.4GB
+2026-11-25 23:51:41 END r3-proxy10-A_420_classic status=ok rc=0 182.4s errors=[] frozen=[]
+2026-11-25 23:51:42 START r3-loopback-I_413_aal121 attempt 1 memavail=11.7GB disk=62.4GB
+2026-11-25 23:53:57 END r3-loopback-I_413_aal121 status=qerror rc=0 135.4s errors=[3] frozen=[]
+2026-11-25 23:53:57 START r3-loopback-I_413_aal121 attempt 2 memavail=11.2GB disk=62.4GB
+2026-11-25 23:56:09 END r3-loopback-I_413_aal121 status=ok rc=0 131.9s errors=[] frozen=[]
+2026-11-25 23:56:09 START r3-loopback-H_413_classic attempt 1 memavail=11.7GB disk=62.4GB
+2026-11-25 23:58:09 END r3-loopback-H_413_classic status=ok rc=0 120.4s errors=[] frozen=[]
+2026-11-25 23:58:09 START r3-loopback-A_420_classic attempt 1 memavail=12.1GB disk=62.4GB
+2026-11-26 00:00:16 END r3-loopback-A_420_classic status=ok rc=0 127.0s errors=[] frozen=[]
+2026-11-26 00:00:17 START r3-proxy10-B_420_aal_default attempt 1 memavail=11.6GB disk=62.4GB
+2026-11-26 00:02:46 END r3-proxy10-B_420_aal_default status=ok rc=0 149.4s errors=[] frozen=[]
+2026-11-26 00:02:46 START r3-loopback-B_420_aal_default attempt 1 memavail=11.9GB disk=62.4GB
+2026-11-26 00:04:54 END r3-loopback-B_420_aal_default status=ok rc=0 128.4s errors=[] frozen=[]
+2026-11-26 00:04:54 START r3-loopback-E_420_aal_no_vectored attempt 1 memavail=12.0GB disk=62.4GB
+2026-11-26 00:06:58 END r3-loopback-E_420_aal_no_vectored status=qerror rc=0 123.9s errors=[3] frozen=[]
+2026-11-26 00:06:58 START r3-loopback-E_420_aal_no_vectored attempt 2 memavail=12.1GB disk=62.4GB
+2026-11-26 00:09:05 END r3-loopback-E_420_aal_no_vectored status=ok rc=0 126.4s errors=[] frozen=[]
+2026-11-26 00:09:05 START r3-loopback-G_420_aal_prefetch_off attempt 1 memavail=11.1GB disk=62.4GB
+2026-11-26 00:11:06 END r3-loopback-G_420_aal_prefetch_off status=ok rc=0 121.5s errors=[] frozen=[]
+2026-11-26 00:11:06 START r3-loopback-D_420_aal_coalesce_128k attempt 1 memavail=12.1GB disk=62.4GB
+2026-11-26 00:13:06 END r3-loopback-D_420_aal_coalesce_128k status=qerror rc=0 119.4s errors=[3] frozen=[]
+2026-11-26 00:13:06 START r3-loopback-D_420_aal_coalesce_128k attempt 2 memavail=12.1GB disk=62.4GB
+2026-11-26 00:15:05 END r3-loopback-D_420_aal_coalesce_128k status=ok rc=0 119.4s errors=[] frozen=[]
+2026-11-26 00:15:05 START r3-loopback-F_420_aal_no_pageindex_prefetch attempt 1 memavail=11.3GB disk=62.4GB
+2026-11-26 00:17:01 END r3-loopback-F_420_aal_no_pageindex_prefetch status=qerror rc=0 116.3s errors=[3] frozen=[]
+2026-11-26 00:17:02 START r3-loopback-F_420_aal_no_pageindex_prefetch attempt 2 memavail=11.5GB disk=62.4GB
+2026-11-26 00:19:03 END r3-loopback-F_420_aal_no_pageindex_prefetch status=ok rc=0 121.5s errors=[] frozen=[]
+2026-11-26 00:19:03 START r3-proxy10-E_420_aal_no_vectored attempt 1 memavail=11.9GB disk=62.4GB
+2026-11-26 00:21:31 END r3-proxy10-E_420_aal_no_vectored status=ok rc=0 148.4s errors=[] frozen=[]
+2026-11-26 00:21:32 START r3-loopback-C_420_aal_no_coalesce attempt 1 memavail=11.9GB disk=62.4GB
+2026-11-26 00:23:43 END r3-loopback-C_420_aal_no_coalesce status=ok rc=0 131.4s errors=[] frozen=[]
+2026-11-26 00:23:43 ALL JOBS DONE

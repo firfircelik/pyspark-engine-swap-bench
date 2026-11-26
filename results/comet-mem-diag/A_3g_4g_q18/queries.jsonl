@@ -1,0 +1,7 @@
+{"event": "session", "session_s": 3.367, "version": "4.2.0", "label": "comet420-analytics", "pid": 428778, "base": "s3a://tpch/tpch-sf30", "workload": "tpch"}
+{"event": "warmup", "q": 1, "wall_s": 2.004, "error": null, "label": "comet420-analytics", "pid": 428778, "base": "s3a://tpch/tpch-sf30", "workload": "tpch"}
+{"event": "warmup", "q": 6, "wall_s": 0.308, "error": null, "label": "comet420-analytics", "pid": 428778, "base": "s3a://tpch/tpch-sf30", "workload": "tpch"}
+{"event": "warmup", "q": 3, "wall_s": 3.901, "error": null, "label": "comet420-analytics", "pid": 428778, "base": "s3a://tpch/tpch-sf30", "workload": "tpch"}
+{"event": "warmup_total", "s": 10.503, "label": "comet420-analytics", "pid": 428778, "base": "s3a://tpch/tpch-sf30", "workload": "tpch"}
+{"event": "register", "s": 1.406, "s3": {"ListObjectsV2": 32.0, "GetObject": 13.0, "HeadObject": 32.0, "_sent_bytes": 6869622.0}, "label": "comet420-analytics", "pid": 428778, "base": "s3a://tpch/tpch-sf30", "workload": "tpch"}
+{"event": "query", "q": 18, "start": 1795286305.4863539, "end": 1795286323.652808, "wall_s": 18.166, "rows": 100, "s3": {"GetObject": 7128.0, "_sent_bytes": 2403001716.0}, "error": null, "hash_ordered": "1ecb51ba2f2ef659", "hash_set": "247ac87094aee3e6", "label": "comet420-analytics", "pid": 428778, "base": "s3a://tpch/tpch-sf30", "workload": "tpch"}

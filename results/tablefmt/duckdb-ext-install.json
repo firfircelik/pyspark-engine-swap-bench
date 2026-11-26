@@ -1,0 +1,47 @@
+{
+  "started": "2026-11-26 10:04:44",
+  "version": "2.0.1",
+  "ext_dir": "/workspace/engine-swap/opt/duckdb-ext",
+  "avro": {
+    "ok": true,
+    "s": 0.3
+  },
+  "iceberg": {
+    "ok": true,
+    "s": 0.031
+  },
+  "delta": {
+    "ok": true,
+    "s": 0.061
+  },
+  "files": [
+    {
+      "path": "/workspace/engine-swap/opt/duckdb-ext/v2.0.1/linux_amd64/httpfs.duckdb_extension",
+      "bytes": 26161078
+    },
+    {
+      "path": "/workspace/engine-swap/opt/duckdb-ext/v2.0.1/linux_amd64/iceberg.duckdb_extension",
+      "bytes": 58201158
+    },
+    {
+      "path": "/workspace/engine-swap/opt/duckdb-ext/v2.0.1/linux_amd64/delta.duckdb_extension",
+      "bytes": 103180478
+    },
+    {
+      "path": "/workspace/engine-swap/opt/duckdb-ext/v2.0.1/linux_amd64/avro.duckdb_extension.info",
+      "bytes": 200
+    },
+    {
+      "path": "/workspace/engine-swap/opt/duckdb-ext/v2.0.1/linux_amd64/delta.duckdb_extension.info",
+      "bytes": 201
+    },
+    {
+      "path": "/workspace/engine-swap/opt/duckdb-ext/v2.0.1/linux_amd64/avro.duckdb_extension",
+      "bytes": 2048142
+    },
+    {
+      "path": "/workspace/engine-swap/opt/duckdb-ext/v2.0.1/linux_amd64/iceberg.duckdb_extension.info",
+      "bytes": 203
+    }
+  ]
+}

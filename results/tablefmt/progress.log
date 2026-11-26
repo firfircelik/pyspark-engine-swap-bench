@@ -1,0 +1,53 @@
+2026-11-26 10:15:01 plan written: 18 jobs from 9 supported cells
+2026-11-26 10:15:01 START r1-loopback-sail-noreorder-iceberg attempt 1 memavail=10.7GB disk=40.2GB
+2026-11-26 10:15:27 END r1-loopback-sail-noreorder-iceberg status=ok rc=0 25.8s errors=[] frozen=[] hash_mismatch=[]
+2026-11-26 10:15:44 mem pump: avail now  GB
+2026-11-26 10:15:44 START r1-loopback-duckdb-iceberg attempt 1 memavail=10.2GB disk=40.1GB
+2026-11-26 10:15:55 END r1-loopback-duckdb-iceberg status=ok rc=0 11.3s errors=[] frozen=[] hash_mismatch=[]
+2026-11-26 10:16:13 mem pump: avail now  GB
+2026-11-26 10:16:13 START r1-loopback-spark420-classic-delta attempt 1 memavail=10.1GB disk=40.1GB
+2026-11-26 10:18:42 END r1-loopback-spark420-classic-delta status=ok rc=0 149.1s errors=[] frozen=[] hash_mismatch=[]
+2026-11-26 10:18:42 START r1-loopback-comet420-classic-delta attempt 1 memavail=10.8GB disk=40.2GB
+2026-11-26 10:20:03 END r1-loopback-comet420-classic-delta status=qerror rc=0 80.9s errors=[3, 12, 18] frozen=[] hash_mismatch=[]
+2026-11-26 10:20:03 START r1-loopback-comet420-classic-delta attempt 2 memavail=10.6GB disk=40.2GB
+2026-11-26 10:21:23 END r1-loopback-comet420-classic-delta status=qerror rc=0 79.8s errors=[3, 12, 18] frozen=[] hash_mismatch=[]
+2026-11-26 10:21:41 mem pump: avail now  GB
+2026-11-26 10:21:41 START r1-loopback-spark413-classic-iceberg attempt 1 memavail=10.1GB disk=40.2GB
+2026-11-26 10:23:59 END r1-loopback-spark413-classic-iceberg status=ok rc=0 138.1s errors=[] frozen=[] hash_mismatch=[]
+2026-11-26 10:24:16 mem pump: avail now  GB
+2026-11-26 10:24:16 START r1-loopback-duckdb-delta attempt 1 memavail=10.3GB disk=40.2GB
+2026-11-26 10:24:30 END r1-loopback-duckdb-delta status=ok rc=0 13.3s errors=[] frozen=[] hash_mismatch=[]
+2026-11-26 10:24:52 mem pump: avail now  GB
+2026-11-26 10:24:52 START r1-loopback-spark413-classic-delta attempt 1 memavail=10.4GB disk=40.2GB
+2026-11-26 10:27:23 END r1-loopback-spark413-classic-delta status=ok rc=0 150.5s errors=[] frozen=[] hash_mismatch=[]
+2026-11-26 10:27:37 mem pump: avail now  GB
+2026-11-26 10:27:37 START r1-loopback-sail-noreorder-delta attempt 1 memavail=10.4GB disk=40.2GB
+2026-11-26 10:27:55 END r1-loopback-sail-noreorder-delta status=ok rc=0 17.6s errors=[] frozen=[] hash_mismatch=[]
+2026-11-26 10:27:55 START r1-loopback-comet413-classic-iceberg attempt 1 memavail=10.8GB disk=40.2GB
+2026-11-26 10:29:13 END r1-loopback-comet413-classic-iceberg status=failed rc=1 78.4s errors=[] frozen=[] hash_mismatch=[]
+2026-11-26 10:29:30 mem pump: avail now  GB
+2026-11-26 10:29:30 START r2-loopback-sail-noreorder-delta attempt 1 memavail=10.7GB disk=40.2GB
+2026-11-26 10:29:49 END r2-loopback-sail-noreorder-delta status=ok rc=0 18.7s errors=[] frozen=[] hash_mismatch=[]
+2026-11-26 10:29:49 START r2-loopback-duckdb-delta attempt 1 memavail=10.5GB disk=40.2GB
+2026-11-26 10:29:58 END r2-loopback-duckdb-delta status=ok rc=0 8.8s errors=[] frozen=[] hash_mismatch=[]
+2026-11-26 10:30:21 mem pump: avail now  GB
+2026-11-26 10:30:21 START r2-loopback-spark420-classic-delta attempt 1 memavail=10.7GB disk=40.2GB
+2026-11-26 10:32:42 END r2-loopback-spark420-classic-delta status=ok rc=0 141.4s errors=[] frozen=[] hash_mismatch=[]
+2026-11-26 10:32:57 mem pump: avail now  GB
+2026-11-26 10:32:57 START r2-loopback-duckdb-iceberg attempt 1 memavail=10.4GB disk=40.2GB
+2026-11-26 10:33:11 END r2-loopback-duckdb-iceberg status=ok rc=0 13.8s errors=[] frozen=[] hash_mismatch=[]
+2026-11-26 10:33:11 START r2-loopback-spark413-classic-delta attempt 1 memavail=10.8GB disk=40.2GB
+2026-11-26 10:35:31 END r2-loopback-spark413-classic-delta status=ok rc=0 139.9s errors=[] frozen=[] hash_mismatch=[]
+2026-11-26 10:35:46 mem pump: avail now  GB
+2026-11-26 10:35:46 START r2-loopback-comet413-classic-iceberg attempt 1 memavail=10.2GB disk=40.2GB
+2026-11-26 10:37:03 END r2-loopback-comet413-classic-iceberg status=ok rc=0 77.7s errors=[] frozen=[] hash_mismatch=[]
+2026-11-26 10:37:19 mem pump: avail now  GB
+2026-11-26 10:37:19 START r2-loopback-sail-noreorder-iceberg attempt 1 memavail=10.6GB disk=40.2GB
+2026-11-26 10:37:38 END r2-loopback-sail-noreorder-iceberg status=ok rc=0 18.3s errors=[] frozen=[] hash_mismatch=[]
+2026-11-26 10:37:38 START r2-loopback-comet420-classic-delta attempt 1 memavail=10.6GB disk=40.2GB
+2026-11-26 10:40:05 END r2-loopback-comet420-classic-delta status=ok rc=0 147.3s errors=[] frozen=[] hash_mismatch=[]
+2026-11-26 10:40:05 START r2-loopback-spark413-classic-iceberg attempt 1 memavail=10.7GB disk=40.2GB
+2026-11-26 10:42:16 END r2-loopback-spark413-classic-iceberg status=ok rc=0 131.0s errors=[] frozen=[] hash_mismatch=[]
+2026-11-26 10:42:16 ALL JOBS DONE
+2026-11-26 10:43:39 ALL JOBS DONE
+2026-11-26 10:46:34 ALL JOBS DONE
