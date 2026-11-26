@@ -74,6 +74,7 @@ ax.set_xticks([0, 10]); ax.set_xlim(-1, 11); ax.set_ylim(0, None)
 ax.set_xlabel("added latency per response (ms)"); ax.set_ylabel("TPC-H SF30 total (s)")
 ax.set_title("Latency sensitivity: rep totals and line through the means"); ax.legend(fontsize=7, loc="center left", bbox_to_anchor=(1.01, 0.5))
 save(fig, "devto_latency_all_engines"); info["latency_slopes"] = slopes
+info["latency_rep_totals_s"] = {f"{c}|{k}|rep{r}": round(v, 1) for (c, k, r), v in tot.set_index(["cfg", "cond", "rep"]).wall_s.items()}
 
 # 4 SF100 per-query bars
 sm = pd.read_csv(f"{R}/sf100/final/sf100_query_medians.csv")
