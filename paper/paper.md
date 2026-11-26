@@ -32,6 +32,8 @@ Contributions: (i) a hash-verified comparison under a fixed memory cap with seed
 
 **Benchmarks.** TPC-H is a decision-support benchmark of 22 queries over a generated schema [1]. Its choke points are analyzed in [2]. We use TPC-H as a workload and cross-engine agreement as the result oracle, not as an audited TPC result; our numbers are not TPC-H metrics, and the data come from `tpchgen-cli` [26], not the official `dbgen`. Public engine comparisons such as ClickBench [29] and the DuckDB Labs db-benchmark [30] compare many engines on fixed workloads; they do not hold the job code constant or test semantic edge cases, which is the focus here. Comet publishes its own TPC-H benchmarking guide [22].
 
+**Single-node engine studies.** Mozzillo et al. [35] evaluate Python dataframe libraries for data preparation on a single machine, including the 22 TPC-H queries at SF10: Polars was the fastest CPU-only library, DuckDB (reported as a SQL reference point) was close to Polars, and Spark SQL trailed both overall, although it was faster than Polars on Q6. Szőke [36] reviews SQL-on-Hadoop and lakehouse engines and benchmarks 11 of them on one node (4 cores, 8 threads) at TPC-H SF1 and SF10, where native and vectorized engines such as DuckDB, ClickHouse, Impala and Velox-accelerated Presto ran substantially faster than JVM-only stacks such as Spark SQL and Trino. Our SF30 results point the same way (on loopback storage, DuckDB took 0.126 and Sail 0.164 of Spark 4.2.0's total time), but hardware, versions and settings differ, so only the direction is comparable, not the magnitudes. Both studies measure speed at scale factors up to 10; this study instead keeps the PySpark job code unchanged while swapping the engine underneath it (Sail through Spark Connect, Comet as a plugin), verifies results row by row and traces the differences to their IEEE 754 mechanism, and adds object-store latency with the S3A AAL stream, a cost model, and runs at SF30 and SF100.
+
 **Engines.** Spark SQL introduced the DataFrame API and the Catalyst optimizer on top of Spark's RDD model [3, 4]. DuckDB is an embedded, vectorized analytical database [5], motivated as an in-process engine for data science [6]. Apache DataFusion is a modular Rust query engine on Apache Arrow [7]; both Comet and Sail build on it [21, 22]. Delta Lake adds ACID tables to object storage [8]. Durner, Leis and Neumann study how analytical engines should use cloud object storage, including request concurrency [9]. Spark reads object storage through Hadoop's S3A connector, which in Hadoop 3.4/3.5 can use the AWS Analytics Accelerator Library as its input stream [23, 24].
 
 **Floating point.** IEEE 754 binary64 [10] cannot represent most decimal fractions exactly; Goldberg's survey explains the consequences for rounding [11]. Since JDK 19, `Double.toString` returns the shortest decimal that round-trips (JDK-4511638) [28].
@@ -484,6 +486,10 @@ Guidance for a customer platform:
 [33] Microsoft. Azure Retail Prices REST API. https://prices.azure.com/api/retail/prices (read 2026-11-26)
 
 [34] Microsoft. Azure Databricks pricing. https://azure.microsoft.com/en-us/pricing/details/databricks/ (read 2026-11-26)
+
+[35] A. Mozzillo, L. Zecchini, L. Gagliardelli, A. Aslam, S. Bergamaschi, G. Simonini. Evaluation of Dataframe Libraries for Data Preparation on a Single Machine. EDBT 2025, pp. 337-349. arXiv:2312.11122
+
+[36] M.-A. Szőke. Modern alternatives to Hive: A systematic review and single-node benchmark of SQL-on-Hadoop and lakehouse engines. Information Systems 136, 102635, 2026 (online 2025). doi:10.1016/j.is.2025.102635
 
 # Appendix A: Reproducibility
 
