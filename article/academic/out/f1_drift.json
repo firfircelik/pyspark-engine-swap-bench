@@ -1,0 +1,13 @@
+{
+ "population": 683346,
+ "mismatches": 631,
+ "mismatch_all_below_tie": true,
+ "mismatch_absdist_min_cents": 1.4551915228366852e-11,
+ "mismatch_absdist_max_cents": 3.725290298461914e-09,
+ "exact_ties": 34748,
+ "other_rows_with_absdist_le_mismatch_max": 65647,
+ "other_rows_below_tie_within_mismatch_max": 0,
+ "rows_above_tie_within_1e_8_cents": 32951,
+ "rows_below_tie_within_1e_8_cents": 631,
+ "rows_far_from_tie_ge_0_05_cents": 615016
+}

@@ -1,0 +1,116 @@
+{
+ "heatmap_min_max": {
+  "Sail (reorder) / Spark 4.2, loopback": [
+   0.0955888114079761,
+   0.346680769618213
+  ],
+  "Sail (no reorder) / Spark 4.2, local": [
+   0.062540766603998,
+   0.8327982019585808
+  ],
+  "DuckDB / Spark 4.2, loopback": [
+   0.0493147216155477,
+   0.2245058843403344
+  ],
+  "DuckDB / Spark 4.2, local": [
+   0.026644968545821,
+   0.5017454280206325
+  ],
+  "Comet / Spark 4.2, loopback": [
+   0.2080136402387042,
+   1.4510091743119264
+  ],
+  "AAL / classic, Spark 4.2, +10 ms": [
+   0.4784191035627634,
+   0.9211757305426888
+  ],
+  "AAL / classic, Spark 4.2, loopback": [
+   0.8080733944954127,
+   1.338333102397118
+  ],
+  "AAL / classic, Spark 4.1.3, loopback": [
+   0.9514690834673296,
+   1.623512946116165
+  ]
+ },
+ "duckdb_get_zero_queries": 22,
+ "latency_slopes": {
+  "comet420-analytics": {
+   "mean_proxy0_s": 268.27700000000004,
+   "mean_proxy10_s": 292.8855,
+   "slope_s_per_ms": 2.4608499999999935
+  },
+  "comet420-classic": {
+   "mean_proxy0_s": 278.1435,
+   "mean_proxy10_s": 308.812,
+   "slope_s_per_ms": 3.0668499999999996
+  },
+  "duckdb": {
+   "mean_proxy0_s": 70.162,
+   "mean_proxy10_s": 98.58250000000001,
+   "slope_s_per_ms": 2.8420500000000004
+  },
+  "sail-noreorder": {
+   "mean_proxy0_s": 116.448,
+   "mean_proxy10_s": 122.16550000000001,
+   "slope_s_per_ms": 0.5717500000000015
+  },
+  "sail-reorder": {
+   "mean_proxy0_s": 86.845,
+   "mean_proxy10_s": 121.1645,
+   "slope_s_per_ms": 3.4319500000000005
+  },
+  "spark413-analytics": {
+   "mean_proxy0_s": 486.0935,
+   "mean_proxy10_s": 621.8795,
+   "slope_s_per_ms": 13.5786
+  },
+  "spark413-classic": {
+   "mean_proxy0_s": 463.414,
+   "mean_proxy10_s": 691.361,
+   "slope_s_per_ms": 22.7947
+  },
+  "spark420-analytics": {
+   "mean_proxy0_s": 494.802,
+   "mean_proxy10_s": 532.065,
+   "slope_s_per_ms": 3.7263000000000033
+  },
+  "spark420-classic": {
+   "mean_proxy0_s": 495.8615,
+   "mean_proxy10_s": 702.024,
+   "slope_s_per_ms": 20.61625
+  }
+ },
+ "sail_rss_timeline": {
+  "rep1_a1": {
+   "peak_gb": 9.45068032,
+   "samples": 262
+  },
+  "rep1_a2": {
+   "peak_gb": 9.14552832,
+   "samples": 231
+  }
+ },
+ "f1_drift": {
+  "population": 683346,
+  "mismatches": 631,
+  "mismatch_all_below_tie": true,
+  "mismatch_absdist_min_cents": 1.4551915228366852e-11,
+  "mismatch_absdist_max_cents": 3.725290298461914e-09,
+  "exact_ties": 34748,
+  "other_rows_with_absdist_le_mismatch_max": 65647,
+  "other_rows_below_tie_within_mismatch_max": 0,
+  "rows_above_tie_within_1e_8_cents": 32951,
+  "rows_below_tie_within_1e_8_cents": 631,
+  "rows_far_from_tie_ge_0_05_cents": 615016
+ },
+ "comet_tz_rows_per_zone": {
+  "Africa/Casablanca": 10,
+  "America/Havana": 10,
+  "America/Edmonton": 10,
+  "America/Yellowknife": 10,
+  "Europe/Chisinau": 10,
+  "America/Sao_Paulo": 10,
+  "UTC": 10
+ }
+}

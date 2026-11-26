@@ -49,7 +49,7 @@ All 22 TPC-H results agreed across engines, S3A stream types and storage conditi
 | `probes/` | API compatibility probes |
 | `results/<study>/` | Raw per-run logs: `queries.jsonl` (per-query wall time, S3 GET/HEAD counts, result hashes), `summary.jsonl`, `state.jsonl`, `plan.json`, RSS samples, `dropped_reps.json` |
 | `results/final/`, `results/tablefmt/final/`, `results/sf100/final/` | Published tables (`TABLES.md`), long-format CSVs, hash checks, GET reductions, `f4_events.csv`, Comet fallback reports |
-| `article/academic/analysis/` | `stats.py`, `models.py`, `ieee.py`, `f1_rows.py`, `deviations.py`, `tz.py`, `comet_mem.py`, `figs.py`; outputs in `out/`. Root from `ENGINE_SWAP_ROOT` (default: the checkout) |
+| `article/academic/analysis/` | `stats.py`, `models.py`, `ieee.py`, `f1_rows.py`, `deviations.py`, `tz.py`, `comet_mem.py`, `figs.py`, `f1_drift.py`, `figs_devto.py` (article figures); outputs in `out/`. Root from `ENGINE_SWAP_ROOT` (default: the checkout) |
 | `article/` | Cost tables, migration checklist, figures and `make_figures.py` |
 | `paper/` | `paper.md`, `paper.pdf`, figures |
 | `VERSIONS.md` | Every version, engine setting and jar checksum |
