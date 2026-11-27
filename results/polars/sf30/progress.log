@@ -1,0 +1,35 @@
+2026-11-27 17:23:33 START r1-loopback-polars-tpch attempt 1 memavail=10.6GB disk=19.3GB
+2026-11-27 17:24:48 END r1-loopback-polars-tpch status=ok rc=0 75.0s errors=[] frozen=[]
+2026-11-27 17:25:03 mem pump: avail now  GB
+2026-11-27 17:25:03 START r1-loopback-polars-etl attempt 1 memavail=10.5GB disk=19.3GB
+2026-11-27 17:25:23 END r1-loopback-polars-etl status=ok rc=0 19.7s errors=[] frozen=[]
+2026-11-27 17:25:23 START r1-proxy10-polars-tpch attempt 1 memavail=10.5GB disk=19.1GB
+2026-11-27 17:26:39 END r1-proxy10-polars-tpch status=ok rc=0 76.0s errors=[] frozen=[]
+2026-11-27 17:26:55 mem pump: avail now  GB
+2026-11-27 17:26:55 START r1-proxy0-polars-tpch attempt 1 memavail=9.7GB disk=19.5GB
+2026-11-27 17:28:14 END r1-proxy0-polars-tpch status=ok rc=0 78.5s errors=[] frozen=[]
+2026-11-27 17:28:31 mem pump: avail now  GB
+2026-11-27 17:28:31 START r1-local-polars-tpch attempt 1 memavail=9.6GB disk=19.5GB
+2026-11-27 17:29:37 END r1-local-polars-tpch status=ok rc=0 65.8s errors=[] frozen=[]
+2026-11-27 17:29:51 mem pump: avail now  GB
+2026-11-27 17:29:51 START r1-proxy10-polars-etl attempt 1 memavail=9.6GB disk=19.5GB
+2026-11-27 17:30:24 END r1-proxy10-polars-etl status=ok rc=0 32.7s errors=[] frozen=[]
+2026-11-27 17:30:40 mem pump: avail now  GB
+2026-11-27 17:30:40 START r2-proxy0-polars-tpch attempt 1 memavail=9.6GB disk=19.3GB
+2026-11-27 17:32:04 END r2-proxy0-polars-tpch status=ok rc=0 84.1s errors=[] frozen=[]
+2026-11-27 17:32:19 mem pump: avail now  GB
+2026-11-27 17:34:19 START r2-loopback-polars-etl attempt 1 memavail=9.8GB disk=19.5GB
+2026-11-27 17:34:44 END r2-loopback-polars-etl status=ok rc=0 25.4s errors=[] frozen=[]
+2026-11-27 17:34:58 mem pump: avail now  GB
+2026-11-27 17:34:58 START r2-proxy10-polars-etl attempt 1 memavail=9.6GB disk=19.3GB
+2026-11-27 17:35:19 END r2-proxy10-polars-etl status=ok rc=0 20.8s errors=[] frozen=[]
+2026-11-27 17:35:40 mem pump: avail now  GB
+2026-11-27 17:37:25 START r2-proxy10-polars-tpch attempt 1 memavail=10.2GB disk=19.5GB
+2026-11-27 17:39:07 END r2-proxy10-polars-tpch status=ok rc=0 101.9s errors=[] frozen=[]
+2026-11-27 17:39:25 mem pump: avail now  GB
+2026-11-27 17:39:25 START r2-local-polars-tpch attempt 1 memavail=9.5GB disk=19.5GB
+2026-11-27 17:40:25 END r2-local-polars-tpch status=ok rc=0 60.0s errors=[] frozen=[]
+2026-11-27 17:40:45 mem pump: avail now  GB
+2026-11-27 17:40:45 START r2-loopback-polars-tpch attempt 1 memavail=9.7GB disk=19.5GB
+2026-11-27 17:41:59 END r2-loopback-polars-tpch status=ok rc=0 73.5s errors=[] frozen=[]
+2026-11-27 17:41:59 ALL JOBS DONE

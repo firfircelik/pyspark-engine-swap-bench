@@ -1,0 +1,58 @@
+2026-11-27 17:12:45 START r1-loopback-polars-tpch attempt 1 memavail=11.2GB disk=19.5GB
+2026-11-27 17:13:44 END r1-loopback-polars-tpch status=ok rc=0 59.2s errors=[] frozen=[]
+2026-11-27 17:14:05 mem pump: avail now  GB
+2026-11-27 17:14:05 START r1-loopback-polars-etl attempt 1 memavail=10.7GB disk=19.5GB
+2026-11-27 17:14:13 END r1-loopback-polars-etl status=ok rc=0 8.2s errors=[] frozen=[]
+2026-11-27 17:14:13 START r1-proxy10-polars-tpch attempt 1 memavail=10.9GB disk=19.5GB
+2026-11-27 17:14:32 END r1-proxy10-polars-tpch status=ok rc=0 18.8s errors=[] frozen=[]
+2026-11-27 17:14:32 START r1-proxy0-polars-tpch attempt 1 memavail=10.6GB disk=19.5GB
+2026-11-27 17:14:49 END r1-proxy0-polars-tpch status=ok rc=0 16.7s errors=[] frozen=[]
+2026-11-27 17:14:49 START r1-local-polars-tpch attempt 1 memavail=10.6GB disk=19.5GB
+2026-11-27 17:15:21 END r1-local-polars-tpch status=ok rc=0 31.8s errors=[] frozen=[]
+2026-11-27 17:15:41 mem pump: avail now  GB
+2026-11-27 17:15:41 START r1-proxy10-polars-etl attempt 1 memavail=10.5GB disk=19.5GB
+2026-11-27 17:15:55 END r1-proxy10-polars-etl status=ok rc=0 13.5s errors=[] frozen=[]
+2026-11-27 17:15:55 START r2-proxy0-polars-tpch attempt 1 memavail=10.8GB disk=19.4GB
+2026-11-27 17:16:16 END r2-proxy0-polars-tpch status=ok rc=0 20.8s errors=[] frozen=[]
+2026-11-27 17:16:35 mem pump: avail now  GB
+2026-11-27 17:16:35 START r2-loopback-polars-etl attempt 1 memavail=10.1GB disk=19.4GB
+2026-11-27 17:16:45 END r2-loopback-polars-etl status=ok rc=0 9.6s errors=[] frozen=[]
+2026-11-27 17:17:05 mem pump: avail now  GB
+2026-11-27 17:17:05 START r2-proxy10-polars-etl attempt 1 memavail=10.2GB disk=19.4GB
+2026-11-27 17:17:15 END r2-proxy10-polars-etl status=ok rc=0 9.5s errors=[] frozen=[]
+2026-11-27 17:17:40 mem pump: avail now  GB
+2026-11-27 17:17:40 START r2-proxy10-polars-tpch attempt 1 memavail=10.2GB disk=19.3GB
+2026-11-27 17:18:00 END r2-proxy10-polars-tpch status=ok rc=0 19.8s errors=[] frozen=[]
+2026-11-27 17:18:23 mem pump: avail now  GB
+2026-11-27 17:18:23 START r2-local-polars-tpch attempt 1 memavail=10.2GB disk=19.3GB
+2026-11-27 17:18:38 END r2-local-polars-tpch status=ok rc=0 15.3s errors=[] frozen=[]
+2026-11-27 17:19:01 mem pump: avail now  GB
+2026-11-27 17:19:01 START r2-loopback-polars-tpch attempt 1 memavail=10.2GB disk=19.3GB
+2026-11-27 17:19:18 END r2-loopback-polars-tpch status=ok rc=0 17.2s errors=[] frozen=[]
+2026-11-27 17:19:40 mem pump: avail now  GB
+2026-11-27 17:19:40 START r1-loopback-duckdb-tpch attempt 1 memavail=9.9GB disk=19.3GB
+2026-11-27 17:19:59 END r1-loopback-duckdb-tpch status=ok rc=0 18.8s errors=[] frozen=[]
+2026-11-27 17:20:22 mem pump: avail now  GB
+2026-11-27 17:20:22 START r1-loopback-duckdb-etl attempt 1 memavail=10.4GB disk=19.3GB
+2026-11-27 17:20:29 END r1-loopback-duckdb-etl status=ok rc=0 7.0s errors=[] frozen=[]
+2026-11-27 17:20:29 START r1-proxy10-duckdb-tpch attempt 1 memavail=10.6GB disk=19.2GB
+2026-11-27 17:21:01 END r1-proxy10-duckdb-tpch status=ok rc=0 31.8s errors=[] frozen=[]
+2026-11-27 17:21:01 START r1-proxy0-duckdb-tpch attempt 1 memavail=10.7GB disk=19.2GB
+2026-11-27 17:21:25 END r1-proxy0-duckdb-tpch status=ok rc=0 23.8s errors=[] frozen=[]
+2026-11-27 17:21:25 START r1-local-duckdb-tpch attempt 1 memavail=10.8GB disk=19.2GB
+2026-11-27 17:21:41 END r1-local-duckdb-tpch status=ok rc=0 16.7s errors=[] frozen=[]
+2026-11-27 17:21:41 START r1-proxy10-duckdb-etl attempt 1 memavail=10.6GB disk=19.2GB
+2026-11-27 17:21:51 END r1-proxy10-duckdb-etl status=ok rc=0 9.6s errors=[] frozen=[]
+2026-11-27 17:21:51 START r2-proxy0-duckdb-tpch attempt 1 memavail=10.6GB disk=19.6GB
+2026-11-27 17:22:15 END r2-proxy0-duckdb-tpch status=ok rc=0 24.3s errors=[] frozen=[]
+2026-11-27 17:22:15 START r2-loopback-duckdb-etl attempt 1 memavail=10.6GB disk=19.6GB
+2026-11-27 17:22:22 END r2-loopback-duckdb-etl status=ok rc=0 6.6s errors=[] frozen=[]
+2026-11-27 17:22:22 START r2-proxy10-duckdb-etl attempt 1 memavail=10.7GB disk=19.4GB
+2026-11-27 17:22:32 END r2-proxy10-duckdb-etl status=ok rc=0 9.6s errors=[] frozen=[]
+2026-11-27 17:22:32 START r2-proxy10-duckdb-tpch attempt 1 memavail=10.7GB disk=19.3GB
+2026-11-27 17:23:02 END r2-proxy10-duckdb-tpch status=ok rc=0 30.8s errors=[] frozen=[]
+2026-11-27 17:23:02 START r2-local-duckdb-tpch attempt 1 memavail=10.7GB disk=19.3GB
+2026-11-27 17:23:14 END r2-local-duckdb-tpch status=ok rc=0 11.2s errors=[] frozen=[]
+2026-11-27 17:23:14 START r2-loopback-duckdb-tpch attempt 1 memavail=10.5GB disk=19.3GB
+2026-11-27 17:23:33 END r2-loopback-duckdb-tpch status=ok rc=0 19.2s errors=[] frozen=[]
+2026-11-27 17:23:33 ALL JOBS DONE

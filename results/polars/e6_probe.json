@@ -1,0 +1,74 @@
+{
+  "sf10": {
+    "n_upd": 227841,
+    "ties_approx": 22812,
+    "ties_half": 22812,
+    "price_diff": 11416,
+    "polars_one_cent_low": 11416,
+    "polars_one_cent_high": 0,
+    "diffs_that_are_ties": 11416,
+    "ties_agree": 11396,
+    "duck_result_even": 11396,
+    "polars_result_even": 22812,
+    "samples": [
+      {
+        "o_orderkey": "4390",
+        "orig": "198194.75",
+        "exact": "218014.225",
+        "duck": "218014.23",
+        "polars": "218014.22"
+      },
+      {
+        "o_orderkey": "382530",
+        "orig": "186018.75",
+        "exact": "204620.625",
+        "duck": "204620.63",
+        "polars": "204620.62"
+      },
+      {
+        "o_orderkey": "1129670",
+        "orig": "55995.95",
+        "exact": "61595.545",
+        "duck": "61595.55",
+        "polars": "61595.54"
+      }
+    ],
+    "n_polars_rows": 227841
+  },
+  "sf30": {
+    "n_upd": 683346,
+    "ties_approx": 68330,
+    "ties_half": 68330,
+    "price_diff": 34153,
+    "polars_one_cent_low": 34153,
+    "polars_one_cent_high": 0,
+    "diffs_that_are_ties": 34153,
+    "ties_agree": 34177,
+    "duck_result_even": 34177,
+    "polars_result_even": 68330,
+    "samples": [
+      {
+        "o_orderkey": "759940",
+        "orig": "293975.35",
+        "exact": "323372.885",
+        "duck": "323372.89",
+        "polars": "323372.88"
+      },
+      {
+        "o_orderkey": "769190",
+        "orig": "201089.55",
+        "exact": "221198.505",
+        "duck": "221198.51",
+        "polars": "221198.50"
+      },
+      {
+        "o_orderkey": "377920",
+        "orig": "174282.35",
+        "exact": "191710.585",
+        "duck": "191710.59",
+        "polars": "191710.58"
+      }
+    ],
+    "n_polars_rows": 683346
+  }
+}

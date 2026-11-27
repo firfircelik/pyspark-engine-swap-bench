@@ -1,0 +1,7 @@
+cond,wl,cfg,n_runs,n_complete,median_total_s,min_total_s,max_total_s,rep_walls,median_peak_rss_gb,max_peak_rss_gb,median_cpu_s,oom_runs,failed_runs
+local,tpch,polars,2,2,60.975,57.614,64.336,64.336;57.614,3.751,3.756,187.9,0,0
+loopback,etl,polars,2,2,19.704,17.292,22.116,17.292;22.116,6.407,6.449,80.1,0,0
+loopback,tpch,polars,2,2,72.55,71.225,73.875,73.875;71.225,3.804,3.839,186.4,0,0
+proxy0,tpch,polars,2,2,79.446,76.839,82.053,76.839;82.053,4.385,4.931,198.1,0,0
+proxy10,etl,polars,2,2,23.879,18.662,29.096,29.096;18.662,6.377,6.486,79.45,0,0
+proxy10,tpch,polars,2,2,86.597,74.529,98.666,74.529;98.666,3.81,3.857,205.1,0,0

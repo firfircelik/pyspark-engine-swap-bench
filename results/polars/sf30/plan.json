@@ -1,0 +1,86 @@
+[
+ {
+  "id": "r1-loopback-polars-tpch",
+  "rep": 1,
+  "cond": "loopback",
+  "cfg": "polars",
+  "wl": "tpch"
+ },
+ {
+  "id": "r1-loopback-polars-etl",
+  "rep": 1,
+  "cond": "loopback",
+  "cfg": "polars",
+  "wl": "etl"
+ },
+ {
+  "id": "r1-proxy10-polars-tpch",
+  "rep": 1,
+  "cond": "proxy10",
+  "cfg": "polars",
+  "wl": "tpch"
+ },
+ {
+  "id": "r1-proxy0-polars-tpch",
+  "rep": 1,
+  "cond": "proxy0",
+  "cfg": "polars",
+  "wl": "tpch"
+ },
+ {
+  "id": "r1-local-polars-tpch",
+  "rep": 1,
+  "cond": "local",
+  "cfg": "polars",
+  "wl": "tpch"
+ },
+ {
+  "id": "r1-proxy10-polars-etl",
+  "rep": 1,
+  "cond": "proxy10",
+  "cfg": "polars",
+  "wl": "etl"
+ },
+ {
+  "id": "r2-proxy0-polars-tpch",
+  "rep": 2,
+  "cond": "proxy0",
+  "cfg": "polars",
+  "wl": "tpch"
+ },
+ {
+  "id": "r2-loopback-polars-etl",
+  "rep": 2,
+  "cond": "loopback",
+  "cfg": "polars",
+  "wl": "etl"
+ },
+ {
+  "id": "r2-proxy10-polars-etl",
+  "rep": 2,
+  "cond": "proxy10",
+  "cfg": "polars",
+  "wl": "etl"
+ },
+ {
+  "id": "r2-proxy10-polars-tpch",
+  "rep": 2,
+  "cond": "proxy10",
+  "cfg": "polars",
+  "wl": "tpch"
+ },
+ {
+  "id": "r2-local-polars-tpch",
+  "rep": 2,
+  "cond": "local",
+  "cfg": "polars",
+  "wl": "tpch"
+ },
+ {
+  "id": "r2-loopback-polars-tpch",
+  "rep": 2,
+  "cond": "loopback",
+  "cfg": "polars",
+  "wl": "tpch"
+ }
+]
