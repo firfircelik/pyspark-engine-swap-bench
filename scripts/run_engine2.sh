@@ -69,6 +69,7 @@ case $CFG in
       done
     fi;;
   duckdb) $RUN -- $ROOT/venv-sail/bin/python $ROOT/scripts/bench2_duckdb.py $COMMON > $OUT/engine.log 2>&1;;
+  polars) $RUN -- $ROOT/venv-sail/bin/python $ROOT/scripts/bench2_polars.py $COMMON > $OUT/engine.log 2>&1;;
 esac
 RC=$?
 [ -n "$JOBTMP" ] && case "$JOBTMP" in $ROOT/tmp/spark/job-*) rm -rf -- "$JOBTMP";; esac
